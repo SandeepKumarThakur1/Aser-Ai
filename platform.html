@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#031321">
+    <title>ASER Pantheon | Predictive Risk Intelligence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/responsive.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <a href="./index.html" class="logo" aria-label="ASER AI Home">
+            ASER <span>AI</span>
+        </a>
+
+        <nav class="main-nav" id="mainNavigation">
+
+            <a href="./index.html" class="nav-link">Home</a>
+
+            <a href="./platform.html" class="nav-link">Our Platform</a>
+
+
+            <!-- SOLUTIONS DROPDOWN -->
+            <div class="nav-dropdown">
+
+                <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="solutionsMenu">
+                    Solutions
+                    <span class="nav-chevron"></span>
+                </button>
+
+                <div class="nav-dropdown-menu" id="solutionsMenu">
+
+                    <a href="./operational-intelligence.html">
+                        Battery Energy Storage System
+                    </a>
+
+                    <a href="./insurance-intelligence.html">
+                        Insurance Intelligence
+                    </a>
+
+                    <a href="./research-development.html">
+                        Research &amp; Development
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- COMPANY DROPDOWN -->
+            <div class="nav-dropdown">
+
+                <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="companyMenu">
+                    Company
+                    <span class="nav-chevron"></span>
+                </button>
+
+                <div class="nav-dropdown-menu" id="companyMenu">
+
+                    <a href="./about-us.html">
+                        The Aser AI Way
+                    </a>
+
+                    <a href="./team">
+                        Our Leadership
+                    </a>
+
+                    <a href="./careers">
+                        Careers
+                    </a>
+
+                    <a href="./investors">
+                        Investors
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <a href="./news-media.html" class="nav-link">News &amp; Media</a>
+
+        </nav>
+
+
+        <a href="mailto:info@aser.ai" class="nav-contact">
+
+            <span>Contact Us</span>
+
+            <span class="contact-arrow">
+                ↗
+            </span>
+
+        </a>
+
+
+        <!-- MOBILE TOGGLE -->
+        <button class="site-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"
+            aria-controls="mainNavigation">
+            <span></span>
+            <span></span>
+        </button>
+
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="pantheon-hero" id="platform">
+            <div class="hero-backdrop"></div>
+            <div class="hero-grid"></div>
+            <div class="hero-copy">
+                <p class="eyebrow reveal">ASER PANTHEON</p>
+                <h1 class="reveal delay-1">From asset data<br><span>to risk foresight.</span></h1>
+                <p class="hero-intro reveal delay-2">Connect your existing systems to anticipate emerging risks, assess
+                    potential consequences and prioritise action across critical assets.</p>
+                <a class="pill-button reveal delay-3" href="#architecture">See Pantheon in Action <span
+                        aria-hidden="true">→</span></a>
+            </div>
+            <div class="hero-visual" aria-hidden="true">
+                <svg class="risk-streams" viewBox="0 0 900 440" fill="none">
+                    <defs>
+                        <linearGradient id="stream" x1="0" y1="0" x2="1" y2="0">
+                            <stop stop-color="#08e9ef" stop-opacity="0" />
+                            <stop offset=".55" stop-color="#08e9ef" stop-opacity=".75" />
+                            <stop offset="1" stop-color="#8eeeff" />
+                        </linearGradient>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="4" result="b" />
+                            <feMerge>
+                                <feMergeNode in="b" />
+                                <feMergeNode in="SourceGraphic" />
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <g stroke="url(#stream)" stroke-width="1.7" opacity=".88">
+                        <path d="M0 82 C180 80 220 210 420 220 S680 220 900 80" />
+                        <path d="M0 112 C190 105 250 215 430 220 S690 218 900 125" />
+                        <path d="M0 142 C180 140 265 220 430 220 S700 220 900 175" />
+                        <path d="M0 172 C190 170 280 220 430 220 S710 220 900 220" />
+                        <path d="M0 202 C200 200 300 220 430 220 S700 220 900 270" />
+                        <path d="M0 232 C190 235 270 225 430 220 S690 220 900 320" />
+                        <path d="M0 262 C180 270 250 230 430 220 S690 230 900 365" />
+                        <path d="M0 292 C170 300 245 235 430 220 S680 245 900 405" />
+                    </g>
+                    <path d="M430 15V410" stroke="#b8faff" stroke-dasharray="5 8" opacity=".55" />
+                    <path d="M430 220H900" stroke="#08e9ef" stroke-width="1.5" opacity=".65" />
+                    <circle cx="430" cy="220" r="10" fill="#08e9ef" filter="url(#glow)" />
+                    <circle cx="430" cy="220" r="3.5" fill="#fff" />
+                    <circle cx="700" cy="120" r="5" fill="#08e9ef" filter="url(#glow)" />
+                    <circle cx="700" cy="120" r="2" fill="#fff" />
+                    <g fill="#eafcff" font-family="DM Sans" font-size="16">
+                        <text x="450" y="252">NOW</text>
+                        <text x="575" y="102">Time to act</text>
+                    </g>
+                    <g fill="#08e9ef">
+                        <circle cx="110" cy="112" r="2" />
+                        <circle cx="180" cy="172" r="2" />
+                        <circle cx="255" cy="208" r="2" />
+                        <circle cx="130" cy="280" r="2" />
+                        <circle cx="300" cy="240" r="2" />
+                        <circle cx="810" cy="190" r="2" />
+                    </g>
+                </svg>
+            </div>
+            <div class="hero-bottom-glow"></div>
+        </section>
+
+        <!-- PLATFORM FLOW -->
+        <section class="architecture section-pad" id="architecture">
+            <div class="section-heading reveal">
+                <h2>Connected data. Predictive intelligence. Informed action.</h2>
+            </div>
+            <div class="architecture-layout">
+                <div class="data-inputs">
+                    <article class="flow-card reveal"><span class="line-icon">▤</span>
+                        <p>Operational &amp;<br>sensor data</p>
+                    </article>
+                    <article class="flow-card reveal"><span class="line-icon">▧</span>
+                        <p>Asset &amp;<br>maintenance records</p>
+                    </article>
+                    <article class="flow-card reveal"><span class="line-icon">☁</span>
+                        <p>Environmental &amp;<br>external data</p>
+                    </article>
+                </div>
+                <svg class="architecture-lines" viewBox="0 0 1200 420" preserveAspectRatio="none" aria-hidden="true">
+                    <defs>
+                        <marker id="arrow" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+                            <path d="M0 0L6 3L0 6" fill="none" stroke="#08e9ef" />
+                        </marker>
+                    </defs>
+                    <g fill="none" stroke="#08e9ef" stroke-width="2" opacity=".85" marker-end="url(#arrow)">
+                        <path d="M205 65H280Q320 65 320 105V170Q320 205 365 205H410" />
+                        <path d="M205 210H410" />
+                        <path d="M205 355H280Q320 355 320 315V250Q320 215 365 215H410" />
+                        <path d="M790 210H850Q890 210 890 165V70H950" />
+                        <path d="M790 210H950" />
+                        <path d="M790 210H850Q890 210 890 255V350H950" />
+                    </g>
+                </svg>
+                <div class="pantheon-core reveal">
+                    <div class="core-brand">ASER <span>PANTHEON</span></div>
+                    <div class="core-module"><span>◇</span>Asset Intelligence</div>
+                    <div class="core-module"><span>⌘</span>Quantitative Risk Modelling</div>
+                    <div class="core-module"><span>◎</span>Advanced AI &amp;<br>Predictive Analytics</div>
+                </div>
+                <div class="outcomes">
+                    <article class="flow-card reveal"><span class="line-icon">▥</span>
+                        <p>Risk outlooks</p>
+                    </article>
+                    <article class="flow-card reveal"><span class="line-icon">△</span>
+                        <p>Early warnings</p>
+                    </article>
+                    <article class="flow-card reveal"><span class="line-icon">◎</span>
+                        <p>Prioritised<br>interventions</p>
+                    </article>
+                    <article class="flow-card reveal"><span class="line-icon">▤</span>
+                        <p>Decision support</p>
+                    </article>
+                </div>
+            </div>
+            <p class="architecture-note reveal">Complements BMS, EMS, SCADA and other operational systems.</p>
+        </section>
+
+        <!-- CAPABILITIES -->
+        <section class="capabilities section-pad" id="solutions">
+            <div class="section-heading centered reveal">
+                <p class="eyebrow">PLATFORM CAPABILITIES</p>
+                <h2>Built to turn insight into action.</h2>
+            </div>
+            <div class="capability-grid">
+                <article class="capability-card reveal"><span class="cap-icon">▤</span>
+                    <h3>Connected Data</h3>
+                    <p>Bring fragmented asset and contextual data together.</p>
+                </article>
+                <article class="capability-card reveal"><span class="cap-icon">▥</span>
+                    <h3>Predictive Risk Models</h3>
+                    <p>Identify developing patterns and assess potential consequences.</p>
+                </article>
+                <article class="capability-card reveal"><span class="cap-icon">◫</span>
+                    <h3>Portfolio Visibility</h3>
+                    <p>See emerging changes across assets and sites.</p>
+                </article>
+                <article class="capability-card reveal"><span class="cap-icon">⚙</span>
+                    <h3>Decision Support</h3>
+                    <p>Prioritise investigation, intervention and risk management.</p>
+                </article>
+                <article class="capability-card reveal"><span class="cap-icon">↗</span>
+                    <h3>Open Integration</h3>
+                    <p>Connect through APIs and flexible integration options.</p>
+                </article>
+                <article class="capability-card reveal"><span class="cap-icon">⬡</span>
+                    <h3>Security &amp; Governance</h3>
+                    <p>Align deployment with organisational data requirements.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- BESS USE CASE -->
+        <section class="bess-section" id="insights">
+            <div class="bess-image" role="img" aria-label="Battery energy storage facility at dusk"></div>
+            <div class="bess-content reveal">
+                <p class="eyebrow">RISK FORESIGHT IN PRACTICE</p>
+                <h2>Starting with battery energy storage.</h2>
+                <p class="bess-description">Protect performance throughout remaining useful life, recognise developing
+                    faults and thermal risk conditions, and support insurance and financing discussions.</p>
+                <div class="bess-tags">
+                    <span>⌁ <small>Performance &amp;<br>degradation</small></span>
+                    <span>△ <small>Safety &amp; early<br>warning</small></span>
+                    <span>◇ <small>Asset &amp; portfolio<br>oversight</small></span>
+                </div>
+                <a href="#contact" class="pill-button">Explore BESS Solutions <span>→</span></a>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="closing-cta" id="contact">
+            <div class="closing-overlay"></div>
+            <div class="closing-content reveal">
+                <h2>Anticipate risk. Prioritise action. Protect value.</h2>
+                <a href="mailto:info@aser.ai" class="pill-button">Request a Demo <span>→</span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="aser-footer">
+        <div class="aser-footer-inner">
+
+            <div class="aser-footer-main">
+
+                <!-- BRAND -->
+                <div class="aser-footer-brand">
+                    <div class="aser-footer-logo-wrap">
+                        <div class="aser-footer-mark" aria-hidden="true">
+                            <span>A</span>
+                        </div>
+                        <div class="aser-footer-logo">
+                            ASER <span>AI</span>
+                        </div>
+                    </div>
+
+                    <p>
+                        Turn fragmented operational<br>
+                        data into predictive risk<br>
+                        intelligence.
+                    </p>
+
+                    <a href="#" class="aser-footer-social" aria-label="LinkedIn">
+                        in
+                    </a>
+                </div>
+
+                <!-- COMPANY -->
+                <div class="aser-footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Investors</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+
+                <!-- SOLUTIONS -->
+                <div class="aser-footer-col aser-footer-solutions">
+                    <h3>Solutions</h3>
+                    <ul>
+                        <li><a href="#">Battery Energy Storage<br>System</a></li>
+                        <li><a href="#">Insurance Intelligence</a></li>
+                        <li><a href="#">Research and<br>Development</a></li>
+                    </ul>
+                </div>
+
+                <!-- CONTACT -->
+                <div class="aser-footer-col aser-footer-contact-col">
+                    <h3>Contact</h3>
+                    <ul class="aser-footer-contact-list">
+                        <li>
+                            <a href="tel:+60122299584" class="aser-footer-contact-link">
+                                <span class="aser-footer-contact-icon">⌕</span>
+                                <span class="aser-footer-contact-text">+60 12 229 9584</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="mailto:info@slategrey-porpoise-194817.hostingersite.com"
+                                class="aser-footer-contact-link">
+                                <span class="aser-footer-contact-icon">✉</span>
+                                <span
+                                    class="aser-footer-contact-text">info@slategrey-porpoise-194817.hostingersite.com</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <div class="aser-footer-contact-link">
+                                <span class="aser-footer-contact-icon">⌖</span>
+                                <span class="aser-footer-address">
+                                    Suite 1–3, Level 1, Vertical<br>
+                                    Corporate B No. 8, Jalan<br>
+                                    Kerinchi, Bangsar South<br>
+                                    City 59200 Kuala Lumpur,<br>
+                                    Malaysia
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- BOTTOM BAR -->
+            <div class="aser-footer-bottom">
+                <p class="aser-footer-bottom-copy">
+                    © 2026 <span>Aser AI</span>. All rights reserved.
+                </p>
+
+                <div class="aser-footer-legal">
+                    <a href="#">Privacy policy</a>
+                    <span class="aser-footer-legal-divider"></span>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="./script/main.js" defer></script>
+    <script>
+        /* =====================================================
+   ASER AI — NAVIGATION INTERACTIONS
+===================================================== */
+
+        (() => {
+            "use strict";
+
+            const header = document.querySelector(".site-header");
+
+            if (!header) return;
+
+            const menuToggle = header.querySelector(".site-menu-toggle");
+            const dropdowns = [...header.querySelectorAll(".nav-dropdown")];
+            const dropdownButtons = dropdowns.map((item) =>
+                item.querySelector(".nav-dropdown-toggle")
+            );
+
+
+            /* ================================================
+               CLOSE ALL DROPDOWNS
+            ================================================ */
+
+            function closeDropdowns(except = null) {
+
+                dropdowns.forEach((dropdown) => {
+
+                    if (dropdown === except) return;
+
+                    dropdown.classList.remove("is-open");
+
+                    const button = dropdown.querySelector(
+                        ".nav-dropdown-toggle"
+                    );
+
+                    button?.setAttribute("aria-expanded", "false");
+
+                });
+
+            }
+
+
+            /* ================================================
+               CLOSE MOBILE MENU
+            ================================================ */
+
+            function closeMobileMenu() {
+
+                header.classList.remove("mobile-open");
+
+                menuToggle?.classList.remove("is-active");
+
+                menuToggle?.setAttribute("aria-expanded", "false");
+
+                menuToggle?.setAttribute("aria-label", "Open navigation");
+
+                closeDropdowns();
+
+            }
+
+
+            /* ================================================
+               MOBILE MENU TOGGLE
+            ================================================ */
+
+            if (menuToggle) {
+
+                menuToggle.addEventListener("click", () => {
+
+                    const isOpen = header.classList.toggle("mobile-open");
+
+                    menuToggle.classList.toggle("is-active", isOpen);
+
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        String(isOpen)
+                    );
+
+                    menuToggle.setAttribute(
+                        "aria-label",
+                        isOpen ? "Close navigation" : "Open navigation"
+                    );
+
+                    if (!isOpen) {
+                        closeDropdowns();
+                    }
+
+                });
+
+            }
+
+
+            /* ================================================
+               DROPDOWN TOGGLE
+            ================================================ */
+
+            dropdownButtons.forEach((button) => {
+
+                if (!button) return;
+
+                button.addEventListener("click", (event) => {
+
+                    event.stopPropagation();
+
+                    const currentDropdown = button.closest(".nav-dropdown");
+
+                    const shouldOpen = !currentDropdown.classList.contains(
+                        "is-open"
+                    );
+
+                    closeDropdowns(currentDropdown);
+
+                    currentDropdown.classList.toggle("is-open", shouldOpen);
+
+                    button.setAttribute(
+                        "aria-expanded",
+                        String(shouldOpen)
+                    );
+
+                });
+
+            });
+
+
+            /* ================================================
+               CLOSE AFTER NAVIGATION
+            ================================================ */
+
+            header.querySelectorAll(".main-nav a").forEach((link) => {
+
+                link.addEventListener("click", () => {
+                    closeMobileMenu();
+                });
+
+            });
+
+
+            /* ================================================
+               CLICK OUTSIDE
+            ================================================ */
+
+            document.addEventListener("pointerdown", (event) => {
+
+                if (!header.contains(event.target)) {
+
+                    closeDropdowns();
+
+                    closeMobileMenu();
+
+                }
+
+            });
+
+
+            /* ================================================
+               ESCAPE KEY
+            ================================================ */
+
+            document.addEventListener("keydown", (event) => {
+
+                if (event.key !== "Escape") return;
+
+                closeDropdowns();
+                closeMobileMenu();
+
+            });
+
+
+            /* ================================================
+               RESPONSIVE STATE RESET
+            ================================================ */
+
+            const mobileBreakpoint = window.matchMedia("(max-width: 760px)");
+
+            mobileBreakpoint.addEventListener("change", () => {
+                closeMobileMenu();
+            });
+
+
+            /* ================================================
+               KEYBOARD DROPDOWN NAVIGATION
+            ================================================ */
+
+            dropdownButtons.forEach((button) => {
+
+                button?.addEventListener("keydown", (event) => {
+
+                    if (event.key !== "ArrowDown") return;
+
+                    event.preventDefault();
+
+                    const dropdown = button.closest(".nav-dropdown");
+
+                    closeDropdowns(dropdown);
+
+                    dropdown.classList.add("is-open");
+
+                    button.setAttribute("aria-expanded", "true");
+
+                    dropdown.querySelector(".nav-dropdown-menu a")?.focus();
+
+                });
+
+            });
+
+        })();
+    </script>
+</body>
+
+</html>

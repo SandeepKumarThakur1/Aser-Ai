@@ -1,0 +1,2528 @@
+/* =========================================================
+   ASER AI — SHARED RESPONSIVE SYSTEM
+   Loaded after main.css so breakpoint rules win consistently.
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    nav {
+        gap: 25px;
+    }
+
+    .hero-content {
+        width: 52%;
+    }
+
+    .hero-art {
+        width: 68%;
+        right: -12%;
+    }
+
+    .hero-title {
+        font-size: clamp(52px, 7vw, 82px);
+    }
+
+    .bottom-item {
+        gap: 12px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    header {
+        height: 72px;
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 20px;
+        letter-spacing: 6px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .contact {
+        margin-left: auto;
+        padding: 8px 17px;
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 850px;
+        align-items: flex-start;
+    }
+
+    .hero-content {
+        width: 100%;
+        margin: 0;
+        padding: 70px 25px 260px;
+    }
+
+    .eyebrow {
+        font-size: 10px;
+        letter-spacing: 4px;
+    }
+
+    .hero-title {
+        font-size: clamp(50px, 14vw, 72px);
+        line-height: .94;
+        letter-spacing: -2px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+        max-width: 520px;
+    }
+
+    .hero-button {
+        padding: 16px 22px;
+        font-size: 15px;
+    }
+
+    .hero-art {
+        width: 125%;
+        right: -30%;
+        top: 57%;
+    }
+
+    .hero-bottom {
+        height: 85px;
+    }
+
+    .bottom-item {
+        gap: 0;
+        font-size: 0;
+        letter-spacing: 0;
+    }
+
+    .icon {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero {
+        min-height: 780px;
+    }
+
+    .hero-content {
+        padding-top: 55px;
+    }
+
+    .hero-title {
+        font-size: 48px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .hero-art {
+        width: 145%;
+        right: -42%;
+        top: 61%;
+    }
+
+    .hero-bottom {
+        height: 75px;
+    }
+}
+
+@media (max-width: 1100px) {
+
+    .problem-section {
+        padding: 90px 4% 80px;
+    }
+
+    .signal-cards {
+        width: 360px;
+    }
+
+    .signal-card {
+        padding: 0 20px;
+    }
+
+    .signal-flow {
+        left: 310px;
+        right: 210px;
+    }
+
+    .risk-node {
+        width: 210px;
+        height: 210px;
+    }
+
+    .risk-connections {
+        width: 210px;
+    }
+
+    .risk-labels {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .problem-section {
+        min-height: auto;
+        padding: 75px 22px 80px;
+    }
+
+    .problem-eyebrow {
+        font-size: 10px;
+        letter-spacing: 4px;
+        margin-bottom: 22px;
+    }
+
+    .problem-title {
+        font-size: clamp(43px, 11vw, 65px);
+        line-height: 1;
+        letter-spacing: -1.5px;
+    }
+
+    .problem-description {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    .problem-visual {
+        min-height: 760px;
+    }
+
+    .signal-cards {
+        position: relative;
+
+        width: 100%;
+
+        gap: 14px;
+    }
+
+    .signal-card {
+        height: 78px;
+    }
+
+    .signal-text {
+        font-size: 15px;
+    }
+
+    .mini-graph {
+        width: 85px;
+    }
+
+    .signal-flow {
+        display: none;
+    }
+
+    .disconnected {
+        display: none;
+    }
+
+    .signal-particles {
+        display: none;
+    }
+
+    .risk-node {
+        top: 330px;
+        left: 50%;
+        right: auto;
+
+        transform: translateX(-50%);
+
+        width: 200px;
+        height: 200px;
+    }
+
+    .risk-connections {
+        top: 540px;
+        left: 50%;
+        right: auto;
+
+        transform: translateX(-50%);
+
+        width: 230px;
+    }
+
+    .risk-labels {
+        top: 630px;
+        left: 50%;
+        right: auto;
+
+        transform: translateX(-50%);
+
+        width: 280px;
+
+        font-size: 12px;
+    }
+
+    .problem-divider {
+        margin-top: 40px;
+    }
+
+    .problem-statement {
+        margin-top: 35px;
+
+        font-size: clamp(36px, 9vw, 52px);
+
+        letter-spacing: -1px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .problem-section {
+        padding: 60px 20px 70px;
+    }
+
+    .problem-title {
+        font-size: 42px;
+    }
+
+    .problem-description {
+        font-size: 15px;
+    }
+
+    .signal-card {
+        height: 72px;
+        padding: 0 15px;
+    }
+
+    .signal-icon {
+        width: 38px;
+        min-width: 38px;
+        font-size: 25px;
+        margin-right: 12px;
+    }
+
+    .signal-text {
+        font-size: 14px;
+    }
+
+    .mini-graph {
+        right: 12px;
+        width: 60px;
+    }
+
+    .problem-visual {
+        min-height: 730px;
+    }
+
+    .risk-node {
+        top: 315px;
+        width: 180px;
+        height: 180px;
+    }
+
+    .risk-title {
+        font-size: 17px;
+    }
+
+    .risk-warning {
+        font-size: 32px;
+    }
+
+    .risk-connections {
+        top: 505px;
+        width: 210px;
+    }
+
+    .risk-labels {
+        top: 595px;
+        width: 250px;
+        font-size: 11px;
+    }
+}
+
+@media(max-width:1100px) {
+    .aser3-wrap {
+        width: 92%
+    }
+
+    .aser3-inputs {
+        left: 20px
+    }
+
+    .aser3-core {
+        left: 55%
+    }
+
+    .aser3-cards {
+        gap: 12px
+    }
+
+    .aser3-card {
+        padding: 25px 22px
+    }
+
+    .aser3-cardtop {
+        gap: 18px
+    }
+
+    .aser3-card h3,
+    .aser3-rule,
+    .aser3-card p {
+        margin-left: 0
+    }
+
+    .aser3-card h3 {
+        margin-top: 17px
+    }
+}
+
+@media(max-width:768px) {
+    .aser3-wrap {
+        width: calc(100% - 40px);
+        padding: 70px 0 55px
+    }
+
+    .aser3-heading h2 {
+        font-size: clamp(42px, 11vw, 62px)
+    }
+
+    .aser3-heading p {
+        font-size: 16px
+    }
+
+    .aser3-diagram {
+        height: auto;
+        margin-top: 45px;
+        display: flex;
+        flex-direction: column
+    }
+
+    .aser3-desktop {
+        display: none
+    }
+
+    .aser3-inputs {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 100%;
+        order: 1;
+        gap: 10px
+    }
+
+    .aser3-input {
+        width: 100%;
+        height: 48px
+    }
+
+    .aser3-core {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 100%;
+        height: 105px;
+        transform: translateY(20px);
+        margin: 55px 0;
+        order: 2
+    }
+
+    .aser3-core strong {
+        font-size: 17px;
+        letter-spacing: 3px
+    }
+
+    .aser3-core span {
+        font-size: 13px
+    }
+
+    .aser3-core:before,
+    .aser3-core:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 50%;
+        width: 1px;
+        transform: translateX(-50%);
+        background: linear-gradient(#0bdcff, rgba(0, 218, 255, .05))
+    }
+
+    .aser3-core:before {
+        top: -55px;
+        height: 55px
+    }
+
+    .aser3-core:after {
+        bottom: -55px;
+        height: 55px
+    }
+
+    .aser3-cards {
+        position: relative;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        order: 3
+    }
+
+    .aser3-card {
+        min-height: 205px;
+        padding: 25px
+    }
+
+    .aser3-bottom {
+        margin-top: 55px
+    }
+
+    .aser3-bottom h3 {
+        font-size: 40px
+    }
+
+    .aser3-section.is-visible .aser3-core {
+        transform: translateY(0)
+    }
+}
+
+@media(max-width:480px) {
+    .aser3-wrap {
+        width: calc(100% - 28px)
+    }
+
+    .aser3-eyebrow {
+        font-size: 10px;
+        letter-spacing: 3px
+    }
+
+    .aser3-heading h2 {
+        font-size: 40px
+    }
+
+    .aser3-heading p {
+        font-size: 15px
+    }
+
+    .aser3-core strong {
+        font-size: 15px;
+        letter-spacing: 2.5px
+    }
+
+    .aser3-core span {
+        font-size: 12px
+    }
+
+    .aser3-card {
+        padding: 22px
+    }
+
+    .aser3-bottom h3 {
+        font-size: 34px
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+    .aser3-eyebrow,
+    .aser3-heading h2,
+    .aser3-heading p,
+    .aser3-core,
+    .aser3-input,
+    .aser3-card,
+    .aser3-bottom h3 {
+        opacity: 1;
+        transform: none;
+        transition: none
+    }
+
+    .aser3-line {
+        stroke-dashoffset: 0;
+        opacity: .8;
+        animation: none !important
+    }
+
+    .aser3-core-glow {
+        animation: none
+    }
+}
+
+@media(max-width:1000px) {
+    .aser4-grid {
+        grid-template-columns: 1fr
+    }
+
+    .aser4-card {
+        min-height: 360px
+    }
+
+    .aser4-visual {
+        height: 145px
+    }
+
+    .aser5-main {
+        grid-template-columns: 1fr
+    }
+
+    .aser5-visual {
+        min-height: 360px
+    }
+
+    .aser5-partners {
+        grid-template-columns: 1fr
+    }
+}
+
+@media(max-width:700px) {
+    .aser4-section {
+        padding: 62px 20px 55px;
+        min-height: auto
+    }
+
+    .aser4-eyebrow,
+    .aser5-eyebrow {
+        font-size: 10px;
+        letter-spacing: 3.5px
+    }
+
+    .aser4-title,
+    .aser5-title {
+        letter-spacing: -1.5px
+    }
+
+    .aser4-grid {
+        gap: 16px
+    }
+
+    .aser4-card {
+        padding: 24px;
+        min-height: 340px
+    }
+
+    .aser4-card h3 {
+        font-size: 27px
+    }
+
+    .aser4-card p {
+        font-size: 15px
+    }
+
+    .aser4-sectors {
+        gap: 20px;
+        flex-wrap: wrap;
+        font-size: 14px
+    }
+
+    .aser4-sectors span+span {
+        padding-left: 20px
+    }
+
+    .aser5-section {
+        padding: 60px 20px 45px
+    }
+
+    .aser5-title {
+        margin-bottom: 30px
+    }
+
+    .aser5-main {
+        gap: 28px
+    }
+
+    .aser5-visual {
+        min-height: 280px
+    }
+
+    .aser5-copy p {
+        font-size: 16px
+    }
+
+    .aser5-benefits {
+        grid-template-columns: 1fr;
+        gap: 25px
+    }
+
+    .aser5-benefit {
+        padding: 0
+    }
+
+    .aser5-benefit+.aser5-benefit {
+        border-left: 0;
+        border-top: 1px solid rgba(91, 161, 196, .45);
+        padding: 25px 0 0;
+    }
+
+    .aser5-button {
+        width: 100%;
+        justify-content: space-between;
+        font-size: 15px
+    }
+
+    .aser5-note {
+        font-size: 18px;
+        white-space: normal;
+        text-align: center
+    }
+
+    .aser5-partners {
+        gap: 35px
+    }
+
+    .aser5-logos,
+    .aser5-partner-group:last-child .aser5-logos {
+        grid-template-columns: 1fr
+    }
+}
+
+@media(max-width:700px) {
+    .aser4-reference-bg {
+        opacity: .55;
+    }
+}
+
+@media (max-width: 1100px) {
+    header {
+        padding-left: 3.5%;
+        padding-right: 3.5%;
+    }
+
+    .logo {
+        font-size: 25px;
+        letter-spacing: 7px;
+    }
+
+    nav {
+        gap: 25px;
+    }
+
+    .contact {
+        padding-left: 21px;
+        padding-right: 21px;
+    }
+
+    .hero-content {
+        width: 50%;
+        margin-left: 4%;
+    }
+
+    .hero-art {
+        width: 72%;
+        right: -14%;
+    }
+
+    .hero-bottom {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .bottom-item {
+        min-width: 0;
+        gap: 10px;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .problem-section,
+    .aser3-section,
+    .aser4-section,
+    .aser5-section {
+        overflow-x: hidden;
+    }
+
+    .problem-content,
+    .aser4-inner,
+    .aser5-inner {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .aser4-grid {
+        gap: 18px;
+    }
+
+    .aser4-card {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+
+    .aser5-main {
+        gap: 32px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    /* HEADER */
+    header {
+        height: 74px;
+        padding: 0 24px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .contact {
+        margin-left: auto;
+        font-size: 14px;
+        padding: 9px 18px;
+    }
+
+    /* SECTION 1 — HERO */
+    .hero {
+        min-height: 900px;
+        display: block;
+    }
+
+    .hero-content {
+        width: 100%;
+        margin-left: 0;
+        padding: 72px 6% 360px;
+    }
+
+    .hero-title {
+        max-width: 760px;
+        font-size: clamp(52px, 8vw, 78px);
+    }
+
+    .hero-description {
+        max-width: 650px;
+    }
+
+    .hero-art {
+        width: 100%;
+        right: -12%;
+        top: auto;
+        bottom: 95px;
+        transform: none;
+    }
+
+    .hero-bottom {
+        position: absolute;
+        height: 86px;
+    }
+
+    .bottom-item {
+        font-size: 0;
+        letter-spacing: 0;
+    }
+
+    .icon {
+        font-size: 25px;
+    }
+
+    /* SECTION 2 — PROBLEM */
+    .problem-section {
+        min-height: auto;
+        padding: 85px 5% 85px;
+    }
+
+    .problem-title {
+        max-width: 850px;
+        font-size: clamp(46px, 7vw, 70px);
+    }
+
+    .problem-visual {
+        min-height: 790px;
+    }
+
+    .signal-cards {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: min(100%, 620px);
+        margin: 0 auto;
+    }
+
+    .signal-card {
+        height: 78px;
+    }
+
+    .signal-flow {
+        display: none;
+    }
+
+    .disconnected,
+    .signal-particles {
+        display: none;
+    }
+
+    .risk-node {
+        top: 335px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+    }
+
+    .risk-connections {
+        top: 545px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+    }
+
+    .risk-labels {
+        top: 640px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+    }
+
+    /* SECTION 3 — DELIVERY */
+    .aser3-wrap {
+        width: calc(100% - 48px);
+    }
+
+    .aser3-diagram {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aser3-desktop {
+        display: none;
+    }
+
+    .aser3-inputs {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 100%;
+        order: 1;
+    }
+
+    .aser3-input {
+        width: 100%;
+    }
+
+    .aser3-core {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 100%;
+        height: 110px;
+        margin: 58px 0;
+        transform: translateY(20px);
+        order: 2;
+    }
+
+    .aser3-core::before,
+    .aser3-core::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 50%;
+        width: 1px;
+        transform: translateX(-50%);
+        background: linear-gradient(#0bdcff, rgba(0, 218, 255, .05));
+    }
+
+    .aser3-core::before {
+        top: -58px;
+        height: 58px;
+    }
+
+    .aser3-core::after {
+        bottom: -58px;
+        height: 58px;
+    }
+
+    .aser3-cards {
+        position: relative;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        order: 3;
+    }
+
+    .aser3-card {
+        min-width: 0;
+    }
+
+    .aser3-bottom {
+        margin-top: 55px;
+    }
+
+    /* SECTION 4 — CAPABILITIES */
+    .aser4-section {
+        min-height: auto;
+        padding: 76px 5% 65px;
+    }
+
+    .aser4-heading {
+        margin-bottom: 38px;
+    }
+
+    .aser4-title {
+        font-size: clamp(46px, 7vw, 70px);
+    }
+
+    .aser4-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        max-width: 760px;
+        margin: 0 auto;
+    }
+
+    .aser4-card {
+        min-height: 340px;
+        padding: 28px 30px 32px;
+    }
+
+    .aser4-visual {
+        height: 150px;
+    }
+
+    .aser4-sectors {
+        gap: 28px;
+    }
+
+    .aser4-sectors span+span {
+        padding-left: 28px;
+    }
+
+    /* SECTION 5 — CRITICAL ASSETS */
+    .aser5-section {
+        padding: 76px 5% 58px;
+    }
+
+    .aser5-title {
+        font-size: clamp(46px, 7vw, 70px);
+    }
+
+    .aser5-main {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .aser5-visual {
+        width: 100%;
+        min-height: 390px;
+    }
+
+    .aser5-copy {
+        width: 100%;
+    }
+
+    .aser5-benefits {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .aser5-partners {
+        grid-template-columns: 1fr;
+        gap: 38px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 70px;
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 20px;
+        letter-spacing: 5px;
+    }
+
+    .logo span {
+        margin-left: 3px;
+    }
+
+    .contact {
+        font-size: 13px;
+        padding: 8px 15px;
+    }
+
+    /* HERO */
+    .hero {
+        min-height: 820px;
+    }
+
+    .hero-content {
+        padding: 58px 22px 315px;
+    }
+
+    .eyebrow {
+        font-size: 10px;
+        letter-spacing: 3.5px;
+        margin-bottom: 22px;
+    }
+
+    .hero-title {
+        font-size: clamp(45px, 12vw, 68px);
+        line-height: .95;
+        letter-spacing: -2px;
+        margin-bottom: 26px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+        line-height: 1.55;
+        margin-bottom: 28px;
+    }
+
+    .hero-button {
+        padding: 15px 20px;
+        font-size: 15px;
+        gap: 18px;
+    }
+
+    .hero-art {
+        width: 125%;
+        right: -29%;
+        bottom: 72px;
+    }
+
+    .hero-bottom {
+        height: 72px;
+    }
+
+    .bottom-item {
+        padding: 0 5px;
+    }
+
+    .icon {
+        width: 34px;
+        height: 34px;
+        font-size: 23px;
+    }
+
+    /* PROBLEM */
+    .problem-section {
+        padding: 68px 22px 72px;
+    }
+
+    .problem-eyebrow {
+        font-size: 10px;
+        letter-spacing: 3.5px;
+        margin-bottom: 20px;
+    }
+
+    .problem-title {
+        font-size: clamp(40px, 11vw, 60px);
+        line-height: 1;
+        letter-spacing: -1.5px;
+    }
+
+    .problem-description {
+        font-size: 16px;
+        line-height: 1.55;
+        margin-bottom: 34px;
+    }
+
+    .problem-visual {
+        min-height: 750px;
+    }
+
+    .signal-cards {
+        width: 100%;
+        gap: 12px;
+    }
+
+    .signal-card {
+        height: 72px;
+        padding: 0 14px;
+        border-radius: 11px;
+    }
+
+    .signal-icon {
+        width: 38px;
+        min-width: 38px;
+        font-size: 25px;
+        margin-right: 10px;
+    }
+
+    .signal-text {
+        font-size: 14px;
+        white-space: normal;
+        padding-right: 72px;
+    }
+
+    .mini-graph {
+        right: 12px;
+        width: 55px;
+    }
+
+    .risk-node {
+        top: 315px;
+        width: 180px;
+        height: 180px;
+    }
+
+    .risk-connections {
+        top: 510px;
+        width: 210px;
+    }
+
+    .risk-labels {
+        top: 595px;
+        width: 250px;
+        font-size: 11px;
+    }
+
+    .problem-divider {
+        margin-top: 30px;
+    }
+
+    .problem-statement {
+        margin-top: 30px;
+        font-size: clamp(34px, 9vw, 50px);
+        line-height: 1.02;
+    }
+
+    /* DELIVERY */
+    .aser3-wrap {
+        width: calc(100% - 40px);
+        padding: 65px 0 50px;
+    }
+
+    .aser3-eyebrow {
+        font-size: 10px;
+        letter-spacing: 3.5px;
+    }
+
+    .aser3-heading h2 {
+        font-size: clamp(40px, 11vw, 60px);
+        line-height: 1.02;
+    }
+
+    .aser3-heading p {
+        font-size: 15px;
+        line-height: 1.55;
+    }
+
+    .aser3-diagram {
+        margin-top: 38px;
+    }
+
+    .aser3-inputs {
+        gap: 9px;
+    }
+
+    .aser3-input {
+        height: 48px;
+    }
+
+    .aser3-core {
+        height: 100px;
+        margin: 52px 0;
+    }
+
+    .aser3-core strong {
+        font-size: 16px;
+        letter-spacing: 2.5px;
+    }
+
+    .aser3-core span {
+        font-size: 12px;
+    }
+
+    .aser3-core::before {
+        top: -52px;
+        height: 52px;
+    }
+
+    .aser3-core::after {
+        bottom: -52px;
+        height: 52px;
+    }
+
+    .aser3-cards {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .aser3-card {
+        min-height: 205px;
+        padding: 23px;
+    }
+
+    .aser3-bottom {
+        margin-top: 48px;
+    }
+
+    .aser3-bottom h3 {
+        font-size: clamp(32px, 8vw, 42px);
+        line-height: 1.05;
+    }
+
+    /* CAPABILITIES */
+    .aser4-section {
+        padding: 62px 20px 54px;
+    }
+
+    .aser4-heading {
+        margin-bottom: 30px;
+    }
+
+    .aser4-eyebrow {
+        font-size: 10px;
+        letter-spacing: 3px;
+        margin-bottom: 18px;
+    }
+
+    .aser4-title {
+        font-size: clamp(38px, 10.5vw, 56px);
+        line-height: 1.03;
+        letter-spacing: -1.5px;
+    }
+
+    .aser4-grid {
+        gap: 15px;
+    }
+
+    .aser4-card {
+        min-height: 320px;
+        padding: 23px;
+        border-radius: 10px;
+    }
+
+    .aser4-visual {
+        height: 135px;
+        margin-bottom: 17px;
+    }
+
+    .aser4-visual svg {
+        width: 170px;
+        height: 130px;
+    }
+
+    .aser4-card h3 {
+        font-size: 26px;
+        margin-bottom: 17px;
+    }
+
+    .aser4-card p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .aser4-divider {
+        margin: 30px 0 23px;
+    }
+
+    .aser4-bottom {
+        margin-top: 25px;
+    }
+
+    .aser4-bottom h3 {
+        font-size: clamp(29px, 7.5vw, 40px);
+        line-height: 1.08;
+    }
+
+    .aser4-sectors {
+        gap: 18px;
+        flex-wrap: wrap;
+        font-size: 14px;
+        margin-top: 24px;
+    }
+
+    .aser4-sectors span+span {
+        padding-left: 18px;
+    }
+
+    /* CRITICAL ASSETS */
+    .aser5-section {
+        padding: 60px 20px 45px;
+    }
+
+    .aser5-eyebrow {
+        font-size: 10px;
+        letter-spacing: 3px;
+        margin-bottom: 18px;
+    }
+
+    .aser5-title {
+        font-size: clamp(38px, 10.5vw, 56px);
+        line-height: 1.04;
+        letter-spacing: -1.5px;
+        margin-bottom: 30px;
+    }
+
+    .aser5-main {
+        gap: 27px;
+    }
+
+    .aser5-visual {
+        min-height: 280px;
+    }
+
+    .aser5-copy p {
+        font-size: 16px;
+        line-height: 1.58;
+    }
+
+    .aser5-benefits {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        margin-bottom: 25px;
+    }
+
+    .aser5-benefit {
+        padding: 0;
+    }
+
+    .aser5-benefit+.aser5-benefit {
+        border-left: 0;
+        border-top: 1px solid rgba(91, 161, 196, .45);
+        padding: 22px 0 0;
+    }
+
+    .aser5-label {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .aser5-benefit p {
+        font-size: 15px;
+    }
+
+    .aser5-button {
+        width: 100%;
+        justify-content: space-between;
+        padding: 15px 18px;
+        font-size: 15px;
+        gap: 15px;
+    }
+
+    .aser5-note {
+        margin: 38px 0 26px;
+        font-size: 18px;
+        line-height: 1.25;
+        white-space: normal;
+        text-align: center;
+        gap: 14px;
+    }
+
+    .aser5-partners {
+        gap: 32px;
+        padding-top: 23px;
+    }
+
+    .aser5-logos,
+    .aser5-partner-group:last-child .aser5-logos {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .aser5-logo {
+        height: 68px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 18px;
+        letter-spacing: 4px;
+    }
+
+    .contact {
+        padding: 7px 13px;
+        font-size: 12px;
+    }
+
+    /* HERO */
+    .hero {
+        min-height: 760px;
+    }
+
+    .hero-content {
+        padding: 50px 18px 285px;
+    }
+
+    .hero-title {
+        font-size: 45px;
+        letter-spacing: -1.5px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-art {
+        width: 145%;
+        right: -42%;
+        bottom: 68px;
+    }
+
+    .hero-bottom {
+        height: 68px;
+    }
+
+    .icon {
+        font-size: 21px;
+    }
+
+    /* PROBLEM */
+    .problem-section {
+        padding: 56px 18px 65px;
+    }
+
+    .problem-title {
+        font-size: 40px;
+    }
+
+    .problem-description {
+        font-size: 15px;
+    }
+
+    .problem-visual {
+        min-height: 700px;
+    }
+
+    .signal-card {
+        height: 68px;
+    }
+
+    .signal-text {
+        font-size: 13px;
+        padding-right: 55px;
+    }
+
+    .mini-graph {
+        width: 46px;
+        right: 8px;
+    }
+
+    .risk-node {
+        top: 295px;
+        width: 165px;
+        height: 165px;
+    }
+
+    .risk-connections {
+        top: 485px;
+        width: 190px;
+    }
+
+    .risk-labels {
+        top: 565px;
+        width: 225px;
+        font-size: 10px;
+    }
+
+    .problem-statement {
+        font-size: 34px;
+    }
+
+    /* DELIVERY */
+    .aser3-wrap {
+        width: calc(100% - 28px);
+        padding-top: 56px;
+    }
+
+    .aser3-heading h2 {
+        font-size: 39px;
+    }
+
+    .aser3-heading p {
+        font-size: 14px;
+    }
+
+    .aser3-input {
+        height: 46px;
+    }
+
+    .aser3-core {
+        height: 92px;
+        margin: 47px 0;
+    }
+
+    .aser3-core strong {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    .aser3-core span {
+        font-size: 11px;
+    }
+
+    .aser3-core::before {
+        top: -47px;
+        height: 47px;
+    }
+
+    .aser3-core::after {
+        bottom: -47px;
+        height: 47px;
+    }
+
+    .aser3-card {
+        min-height: 195px;
+        padding: 21px;
+    }
+
+    /* CAPABILITIES */
+    .aser4-section {
+        padding: 54px 16px 48px;
+    }
+
+    .aser4-eyebrow {
+        font-size: 9px;
+        letter-spacing: 2.5px;
+    }
+
+    .aser4-title {
+        font-size: 37px;
+    }
+
+    .aser4-card {
+        min-height: 305px;
+        padding: 20px;
+    }
+
+    .aser4-visual {
+        height: 120px;
+    }
+
+    .aser4-visual svg {
+        width: 155px;
+        height: 118px;
+    }
+
+    .aser4-card h3 {
+        font-size: 24px;
+    }
+
+    .aser4-card p {
+        font-size: 14px;
+    }
+
+    .aser4-sectors {
+        font-size: 13px;
+        gap: 12px;
+    }
+
+    .aser4-sectors span+span {
+        padding-left: 12px;
+    }
+
+    /* CRITICAL ASSETS */
+    .aser5-section {
+        padding: 52px 16px 40px;
+    }
+
+    .aser5-title {
+        font-size: 37px;
+    }
+
+    .aser5-visual {
+        min-height: 235px;
+    }
+
+    .aser5-copy p {
+        font-size: 15px;
+    }
+
+    .aser5-note {
+        font-size: 17px;
+        gap: 10px;
+    }
+
+    .aser5-partner-group h4 {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .aser5-logo {
+        height: 62px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .hero-content {
+        margin-left: max(4.2%, calc((100vw - 1500px) / 2));
+        width: min(48%, 720px);
+    }
+
+    .problem-content,
+    .aser4-inner,
+    .aser5-inner {
+        max-width: 1500px;
+    }
+
+    .aser3-wrap {
+        max-width: 1500px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+    }
+}
+
+@media (max-width: 1050px) {
+    .aser-footer-main {
+        grid-template-columns: 1.3fr 1fr 1fr;
+        row-gap: 42px;
+    }
+
+    .aser-footer-brand {
+        grid-row: span 2;
+    }
+
+    .aser-footer-contact-col {
+        grid-column: 2 / -1;
+    }
+}
+
+@media (max-width: 760px) {
+    .aser-footer-inner {
+        width: calc(100% - 44px);
+    }
+
+    .aser-footer-main {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 35px;
+        padding: 50px 0 35px;
+    }
+
+    .aser-footer-brand {
+        grid-column: 1 / -1;
+        grid-row: auto;
+    }
+
+    .aser-footer-contact-col {
+        grid-column: auto;
+    }
+
+    .aser-footer-col h3 {
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+
+    .aser-footer-col a,
+    .aser-footer-contact-text,
+    .aser-footer-address {
+        font-size: 14px;
+    }
+
+    .aser-footer-bottom {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 22px 0 25px;
+    }
+
+    .aser-footer-legal {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .aser-footer-inner {
+        width: calc(100% - 36px);
+    }
+
+    .aser-footer-main {
+        grid-template-columns: 1fr;
+        row-gap: 34px;
+        padding-top: 42px;
+    }
+
+    .aser-footer-brand,
+    .aser-footer-contact-col {
+        grid-column: auto;
+    }
+
+    .aser-footer-logo {
+        font-size: 19px;
+    }
+
+    .aser-footer-mark {
+        width: 48px;
+        height: 48px;
+    }
+
+    .aser-footer-brand p {
+        font-size: 14px;
+    }
+
+    .aser-footer-social {
+        margin-top: 24px;
+    }
+
+    .aser-footer-bottom {
+        padding-bottom: 28px;
+    }
+}
+
+@media (max-width: 1000px) {
+  .site-header { padding: 0 4%; }
+  .site-header nav { gap: 22px; }
+  .pantheon-hero { min-height: 500px; }
+  .hero-copy { width: 52%; }
+  .hero-visual { width: 68%; right: -13%; opacity: .85; }
+  .architecture-layout { gap: 18px; grid-template-columns: 1fr 1.2fr 1fr; }
+  .flow-card { padding: 11px; gap: 10px; }
+  .flow-card p { font-size: 11px; }
+  .core-module { font-size: 11px; padding: 10px; }
+  .aser-footer-main { grid-template-columns: 1.3fr 1fr 1fr; row-gap: 42px; }
+  .aser-footer-brand { grid-row: span 2; }
+  .aser-footer-contact-col { grid-column: 2 / -1; }
+}
+
+@media (max-width: 720px) {
+  .site-header { height: 68px; padding: 0 20px; }
+  .site-header .logo { font-size: 19px; letter-spacing: 5px; }
+  .site-header nav { display: none; }
+  .site-header .contact { padding: 8px 15px; font-size: 12px; }
+  .pantheon-hero { min-height: 650px; height: auto; align-items: flex-start; padding: 118px 23px 260px; }
+  .hero-backdrop { background-position: 60% center; }
+  .hero-copy { width: 100%; max-width: 520px; }
+  .hero-copy h1 { font-size: clamp(43px,11vw,60px); }
+  .hero-intro { max-width: 440px; font-size: 15px; }
+  .hero-visual { width: 120%; height: 300px; top: auto; bottom: -5px; right: -20%; opacity: .85; }
+  .section-pad { padding: 48px 20px; }
+  .section-heading h2 { font-size: 27px; }
+  .architecture-layout { display: flex; flex-direction: column; gap: 16px; margin-top: 28px; }
+  .data-inputs,.outcomes { width: 100%; display: grid; grid-template-columns: 1fr; gap: 10px; }
+  .flow-card { min-height: 58px; }
+  .flow-card p { font-size: 13px; }
+  .pantheon-core { width: 100%; max-width: 440px; order: 0; }
+  .data-inputs { order: -1; }
+  .outcomes { grid-template-columns: repeat(2,1fr); }
+  .architecture-lines { display: none; }
+  .capability-grid { grid-template-columns: repeat(2,1fr); gap: 10px; }
+  .capability-card { min-height: 155px; padding: 17px; }
+  .capability-card h3 { font-size: 16px; }
+  .capability-card p { font-size: 12px; }
+  .bess-section { min-height: 650px; align-items: flex-end; }
+  .bess-image { background-image: linear-gradient(0deg,#020d18 3%,rgba(1,12,21,.92) 34%,rgba(1,12,21,.1) 100%),url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=80"); background-position: 42% center; }
+  .bess-content { width: auto; margin: 0; padding: 260px 22px 42px; }
+  .bess-content h2 { font-size: 34px; }
+  .bess-tags { gap: 6px; }
+  .bess-tags span { flex: 1; padding: 7px; gap: 5px; }
+  .bess-tags small { font-size: 8px; }
+  .closing-cta { min-height: 245px; padding: 35px 22px; }
+  .closing-content h2 { font-size: 29px; }
+  .aser-footer-inner { width: calc(100% - 44px); }
+  .aser-footer-main { grid-template-columns: 1fr 1fr; column-gap: 28px; padding: 45px 0 35px; }
+  .aser-footer-brand { grid-column: 1/-1; grid-row: auto; }
+  .aser-footer-contact-col { grid-column: auto; }
+  .aser-footer-col h3 { font-size: 17px; margin-bottom: 18px; }
+  .aser-footer-col a,.aser-footer-contact-text,.aser-footer-address { font-size: 13px; }
+  .aser-footer-bottom { grid-template-columns: 1fr; gap: 14px; padding: 20px 0 24px; }
+}
+
+@media (max-width: 420px) {
+  .capability-grid { grid-template-columns: 1fr; }
+  .capability-card { min-height: 130px; }
+  .outcomes { grid-template-columns: 1fr 1fr; }
+  .bess-content h2 { font-size: 30px; }
+  .bess-tags small { font-size: 7px; }
+  .aser-footer-main { grid-template-columns: 1fr; row-gap: 28px; }
+  .aser-footer-brand,.aser-footer-contact-col { grid-column: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,*::before,*::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .js-ready .reveal { opacity: 1; transform: none; }
+}
+
+
+
+/* =========================================================
+   ASER AI — CROSS-PAGE RESPONSIVE ALIGNMENT
+   Loaded after main.css. Keep breakpoint rules here.
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    :root {
+        --aser-page-gutter: 36px;
+        --aser-section-space: 78px;
+    }
+
+    .site-header {
+        gap: 20px;
+    }
+
+    .site-header nav {
+        gap: 24px;
+    }
+
+    .site-header nav a {
+        font-size: 11px;
+    }
+
+    .pantheon-hero .hero-copy {
+        max-width: 520px;
+    }
+
+    .solutions-page .solution-hero-inner {
+        gap: 24px;
+    }
+
+    .research-page .research-hero-inner {
+        gap: 22px;
+    }
+
+    .research-page .research-case-content {
+        padding: 36px;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    :root {
+        --aser-page-gutter: 28px;
+        --aser-section-space: 68px;
+    }
+
+    html {
+        scroll-padding-top: 72px;
+    }
+
+    .site-header {
+        min-height: 72px;
+        padding-right: var(--aser-page-gutter);
+        padding-left: var(--aser-page-gutter);
+    }
+
+    .site-header .logo {
+        font-size: 20px;
+        letter-spacing: 4px;
+    }
+
+    .site-header nav {
+        gap: 18px;
+    }
+
+    .site-header nav a {
+        font-size: 10px;
+    }
+
+    .site-header .contact {
+        min-width: 90px;
+        padding: 9px 14px;
+        font-size: 10px;
+    }
+
+    .hero,
+    .pantheon-hero,
+    .insurance-hero,
+    .solution-hero,
+    .research-hero {
+        min-height: auto;
+    }
+
+    .section-pad,
+    .problem-section,
+    .aser3-section,
+    .aser4-section,
+    .aser5-section {
+        padding-top: 68px;
+        padding-bottom: 68px;
+    }
+
+    .section-heading {
+        margin-bottom: 32px;
+    }
+
+    .capability-grid {
+        gap: 18px;
+    }
+
+    .capability-card,
+    .risk-capability-card,
+    .solution-capability-card {
+        min-height: 0;
+    }
+
+    .pantheon-insurance-page .insurance-hero-grid,
+    .solutions-page .solution-hero-inner,
+    .research-page .research-hero-inner {
+        width: calc(100% - 2 * var(--aser-page-gutter));
+    }
+
+    .pantheon-insurance-page .section-divider,
+    .solutions-page .solution-capabilities,
+    .solutions-page .solution-process {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .research-page .research-case,
+    .research-page .research-case-image {
+        min-height: 330px;
+    }
+
+    .research-page .research-case-content {
+        padding: 32px;
+    }
+
+    .aser-footer {
+        padding-top: 30px;
+        padding-bottom: 26px;
+    }
+
+}
+
+
+@media (max-width: 640px) {
+
+    :root {
+        --aser-page-gutter: 22px;
+        --aser-section-space: 58px;
+    }
+
+    .site-header {
+        min-height: 68px;
+        gap: 12px;
+    }
+
+    .site-header .logo {
+        font-size: 18px;
+        letter-spacing: 3px;
+    }
+
+    .site-header nav {
+        display: none;
+    }
+
+    .site-header .contact {
+        margin-left: auto;
+    }
+
+    /* The current pages use a simple header without a menu button.
+       Keep the header compact and prevent nav overflow on mobile. */
+
+    .hero,
+    .pantheon-hero,
+    .insurance-hero,
+    .solution-hero,
+    .research-hero {
+        min-height: auto;
+    }
+
+    .hero {
+        padding-top: 90px;
+        padding-bottom: 55px;
+    }
+
+    .pantheon-hero,
+    .insurance-hero,
+    .solution-hero,
+    .research-hero {
+        padding-top: 88px;
+        padding-bottom: 48px;
+    }
+
+    .section-pad,
+    .problem-section,
+    .aser3-section,
+    .aser4-section,
+    .aser5-section {
+        padding-top: 56px;
+        padding-bottom: 56px;
+    }
+
+    .section-heading {
+        margin-bottom: 27px;
+    }
+
+    .section-heading h2,
+    .aser3-heading h2,
+    .aser4-heading h2,
+    .aser5-heading h2 {
+        font-size: clamp(27px, 7vw, 34px);
+        line-height: 1.2;
+    }
+
+    .aser3-card,
+    .aser4-card,
+    .aser5-unit,
+    .capability-card,
+    .risk-capability-card,
+    .solution-capability-card,
+    .solution-audience-card,
+    .audience-card,
+    .flow-card {
+        border-radius: 10px;
+    }
+
+    .pantheon-insurance-page .section-divider,
+    .solutions-page .solution-capabilities,
+    .solutions-page .solution-process {
+        padding-top: 54px;
+        padding-bottom: 54px;
+    }
+
+    .pantheon-insurance-page .insurance-hero-grid,
+    .solutions-page .solution-hero-inner,
+    .research-page .research-hero-inner {
+        width: calc(100% - 2 * var(--aser-page-gutter));
+    }
+
+    .research-page .research-hero-inner {
+        padding-top: 20px;
+        padding-bottom: 25px;
+        grid-template-columns: 1fr;
+    }
+
+    .research-page .research-hero-visual {
+        height: 330px;
+        margin-top: 10px;
+    }
+
+    .research-page .research-approach-inner {
+        width: calc(100% - 2 * var(--aser-page-gutter));
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .research-page .research-approach-note {
+        min-height: 135px;
+        border-top: 1px solid rgba(0, 193, 225, .3);
+        border-left: 0;
+        padding-top: 22px;
+    }
+
+    .research-page .research-section-heading,
+    .research-page .research-process-heading {
+        width: calc(100% - 2 * var(--aser-page-gutter));
+    }
+
+    .research-page .research-case,
+    .research-page .research-case-reverse {
+        grid-template-columns: 1fr;
+    }
+
+    .research-page .research-case-image {
+        min-height: 270px;
+    }
+
+    .research-page .research-case-content {
+        min-height: 0;
+        padding: 32px var(--aser-page-gutter);
+    }
+
+    .research-page .research-case-reverse .research-case-content {
+        order: 2;
+    }
+
+    .research-page .research-case-reverse .research-case-image {
+        order: 1;
+    }
+
+    .research-page .research-process-steps {
+        width: calc(100% - 2 * var(--aser-page-gutter));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px 18px;
+    }
+
+    .research-page .research-step-arrow {
+        display: none;
+    }
+
+    .research-page .research-cta {
+        min-height: 330px;
+        padding: 48px var(--aser-page-gutter);
+    }
+
+    .aser-footer {
+        padding: 28px 0;
+    }
+
+    .aser-footer-inner {
+        width: calc(100% - 2 * var(--aser-page-gutter));
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    :root {
+        --aser-page-gutter: 18px;
+    }
+
+    .site-header .logo {
+        font-size: 17px;
+        letter-spacing: 2.5px;
+    }
+
+    .site-header .contact {
+        min-width: 82px;
+        padding: 8px 11px;
+        font-size: 9px;
+    }
+
+    .hero,
+    .pantheon-hero,
+    .insurance-hero,
+    .solution-hero,
+    .research-hero {
+        padding-top: 82px;
+    }
+
+    .research-page .research-hero-visual {
+        height: 285px;
+    }
+
+    .research-page .research-case-image {
+        min-height: 235px;
+    }
+
+    .research-page .research-case-content {
+        padding: 29px var(--aser-page-gutter);
+    }
+
+    .research-page .research-process-steps {
+        gap: 25px 12px;
+    }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY — MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+
+}
+
+
+
+@media (max-width: 640px) {
+    .site-header .site-menu-toggle {
+        display: flex;
+    }
+
+    .site-header nav {
+        position: absolute;
+        top: calc(100% + 1px);
+        left: var(--aser-page-gutter);
+        right: var(--aser-page-gutter);
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        margin: 0;
+        padding: 8px 18px;
+        border: 1px solid rgba(8, 233, 239, .22);
+        border-radius: 0 0 12px 12px;
+        background: rgba(2, 17, 29, .97);
+        box-shadow: 0 18px 35px rgba(0, 0, 0, .3);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-8px);
+        transition: opacity .25s ease, transform .25s ease, visibility .25s ease;
+    }
+
+    .site-header.menu-open nav {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    .site-header nav a {
+        padding: 14px 2px;
+        border-bottom: 1px solid rgba(91, 161, 196, .12);
+        font-size: 12px;
+    }
+
+    .site-header nav a:last-child {
+        border-bottom: 0;
+    }
+
+    .site-header nav a::after {
+        display: none;
+    }
+}
+
+
+/* =====================================================
+   ASER AI — RESPONSIVE NAVIGATION
+===================================================== */
+
+
+/* TABLET */
+
+@media (max-width: 1050px) {
+
+    .site-header {
+        min-height: 76px;
+        padding: 0 4%;
+        gap: 20px;
+    }
+
+    .main-nav {
+        gap: 20px;
+    }
+
+    .nav-link,
+    .nav-dropdown-toggle {
+        font-size: 12px;
+    }
+
+    .nav-contact {
+        min-width: 125px;
+        height: 43px;
+        padding-left: 15px;
+        font-size: 11px;
+    }
+
+    .contact-arrow {
+        width: 33px;
+        height: 33px;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 760px) {
+
+    .site-header {
+        min-height: 72px;
+        padding: 0 5%;
+        gap: 13px;
+    }
+
+    .site-header .logo {
+        font-size: 21px;
+    }
+
+    .nav-contact {
+        min-width: auto;
+        height: 40px;
+        margin-left: auto;
+        padding: 0 4px 0 14px;
+        gap: 10px;
+        font-size: 11px;
+    }
+
+    .contact-arrow {
+        width: 31px;
+        height: 31px;
+        font-size: 17px;
+    }
+
+    .site-menu-toggle {
+        display: flex;
+        flex-shrink: 0;
+    }
+
+
+    /* MOBILE NAV PANEL */
+
+    .main-nav {
+        position: absolute;
+
+        top: calc(100% + 1px);
+        left: 0;
+        right: 0;
+
+        height: auto;
+        max-height: calc(100dvh - 75px);
+
+        padding: 15px 5% 24px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+
+        gap: 0;
+
+        overflow-y: auto;
+
+        background: rgba(2, 15, 27, .98);
+
+        border-bottom: 1px solid var(--nav-border);
+
+        box-shadow: 0 20px 35px rgba(0, 0, 0, .35);
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transform: translateY(-10px);
+
+        transition:
+            opacity .3s ease,
+            visibility .3s ease,
+            transform .3s ease;
+    }
+
+    .site-header.mobile-open .main-nav {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+
+        transform: translateY(0);
+    }
+
+
+    /* MOBILE LINKS */
+
+    .nav-link,
+    .nav-dropdown-toggle {
+        width: 100%;
+        min-height: 54px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 0 3px;
+
+        border-bottom: 1px solid rgba(0, 191, 220, .12);
+
+        color: #d9e5ec;
+
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .nav-link.active::after,
+    .nav-dropdown.is-open > .nav-dropdown-toggle::after {
+        display: none;
+    }
+
+    .nav-dropdown {
+        width: 100%;
+        height: auto;
+
+        display: block;
+    }
+
+    .nav-dropdown-toggle {
+        cursor: pointer;
+    }
+
+
+    /* MOBILE DROPDOWN */
+
+    .nav-dropdown-menu {
+        position: static;
+
+        width: 100%;
+        max-height: 0;
+
+        padding: 0 0 0 13px;
+
+        display: flex;
+
+        overflow: hidden;
+
+        border: 0;
+        border-radius: 0;
+
+        background: rgba(0, 190, 220, .035);
+
+        box-shadow: none;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transform: none;
+
+        transition:
+            max-height .35s ease,
+            opacity .25s ease,
+            visibility .25s ease,
+            padding .3s ease;
+    }
+
+    .nav-dropdown.is-open .nav-dropdown-menu {
+        max-height: 320px;
+
+        padding-top: 5px;
+        padding-bottom: 8px;
+
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+
+        transform: none;
+    }
+
+    .nav-dropdown-menu a {
+        min-height: 47px;
+
+        padding: 12px 13px;
+
+        border-radius: 5px;
+
+        font-size: 12px;
+    }
+
+    .nav-dropdown-menu a + a {
+        border-top: 1px solid rgba(0, 191, 220, .08);
+    }
+
+    .nav-dropdown-menu a:hover {
+        padding-left: 18px;
+    }
+
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 420px) {
+
+    .site-header {
+        min-height: 67px;
+        padding: 0 4%;
+        gap: 9px;
+    }
+
+    .site-header .logo {
+        font-size: 19px;
+        letter-spacing: 2px;
+    }
+
+    .nav-contact {
+        height: 37px;
+        padding-left: 12px;
+        font-size: 10px;
+    }
+
+    .contact-arrow {
+        width: 28px;
+        height: 28px;
+        font-size: 15px;
+    }
+
+    .site-menu-toggle {
+        width: 39px;
+        height: 39px;
+    }
+
+    .main-nav {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+}

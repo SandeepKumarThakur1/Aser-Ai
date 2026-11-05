@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#031321">
+
+    <title>Solutions | ASER AI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/responsive.css">
+</head>
+
+<body class="solutions-page">
+
+    <!-- HEADER -->
+    <header class="site-header">
+
+        <a href="./index.html" class="logo" aria-label="ASER AI Home">
+            ASER <span>AI</span>
+        </a>
+
+        <nav class="main-nav" id="mainNavigation">
+
+            <a href="./index.html" class="nav-link">Home</a>
+
+            <a href="./platform.html" class="nav-link">Our Platform</a>
+
+
+            <!-- SOLUTIONS DROPDOWN -->
+            <div class="nav-dropdown">
+
+                <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="solutionsMenu">
+                    Solutions
+                    <span class="nav-chevron"></span>
+                </button>
+
+                <div class="nav-dropdown-menu" id="solutionsMenu">
+
+                    <a href="./operational-intelligence.html">
+                        Battery Energy Storage System
+                    </a>
+
+                    <a href="./insurance-intelligence.html">
+                        Insurance Intelligence
+                    </a>
+
+                    <a href="./research-development.html">
+                        Research &amp; Development
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- COMPANY DROPDOWN -->
+            <div class="nav-dropdown">
+
+                <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="companyMenu">
+                    Company
+                    <span class="nav-chevron"></span>
+                </button>
+
+                <div class="nav-dropdown-menu" id="companyMenu">
+
+                    <a href="./about-us.html">
+                        The Aser AI Way
+                    </a>
+
+                    <a href="./team">
+                        Our Leadership
+                    </a>
+
+                    <a href="./careers">
+                        Careers
+                    </a>
+
+                    <a href="./investors">
+                        Investors
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <a href="./news-media.html" class="nav-link">News &amp; Media</a>
+
+        </nav>
+
+
+        <a href="mailto:info@aser.ai" class="nav-contact">
+
+            <span>Contact Us</span>
+
+            <span class="contact-arrow">
+                ↗
+            </span>
+
+        </a>
+
+
+        <!-- MOBILE TOGGLE -->
+        <button class="site-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"
+            aria-controls="mainNavigation">
+            <span></span>
+            <span></span>
+        </button>
+
+    </header>
+
+
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="solution-hero">
+
+            <div class="solution-hero-bg"></div>
+            <div class="solution-hero-overlay"></div>
+
+            <div class="solution-hero-content">
+
+                <p class="solution-eyebrow">
+                    PANTHEON FOR OPERATIONAL INTELLIGENCE
+                </p>
+
+                <h1>
+                    From operational visibility
+                    <span>to performance and risk foresight.</span>
+                </h1>
+
+                <p class="solution-hero-description">
+                    Connect battery data and operating conditions to anticipate
+                    developing issues, understand future performance and
+                    prioritise interventions across your BESS assets.
+                </p>
+
+                <a href="#solution-contact" class="solution-button">
+                    Explore a BESS Pilot
+                    <span>→</span>
+                </a>
+
+            </div>
+
+
+            <!-- DATA VISUALISATION -->
+            <div class="solution-hero-visual">
+
+                <svg class="data-connections" viewBox="0 0 650 400" preserveAspectRatio="none">
+                    <defs>
+                        <filter id="cyanGlow">
+                            <feGaussianBlur stdDeviation="4" result="blur" />
+                            <feMerge>
+                                <feMergeNode in="blur" />
+                                <feMergeNode in="SourceGraphic" />
+                            </feMerge>
+                        </filter>
+                    </defs>
+
+                    <g class="connection-lines" filter="url(#cyanGlow)">
+                        <path d="M260 120 C270 200 300 220 330 300" />
+                        <path d="M430 65 C410 170 350 200 330 300" />
+                        <path d="M565 175 C500 230 410 245 330 300" />
+                        <path d="M260 120 C310 190 410 220 565 175" />
+                        <path d="M430 65 C390 160 300 190 260 120" />
+                        <path d="M565 175 C470 280 390 275 330 300" />
+                    </g>
+
+                    <g class="connection-particles">
+                        <circle cx="260" cy="120" r="3" />
+                        <circle cx="430" cy="65" r="3" />
+                        <circle cx="565" cy="175" r="3" />
+                        <circle cx="330" cy="300" r="4" />
+                    </g>
+                </svg>
+
+
+                <!-- BATTERY HEALTH -->
+                <div class="hero-data-panel battery-panel">
+
+                    <span class="panel-title">Battery health</span>
+
+                    <svg viewBox="0 0 160 65">
+                        <path class="chart-grid" d="M0 15H160 M0 35H160 M0 55H160" />
+                        <path class="chart-line"
+                            d="M0 40 C15 10 25 55 42 35 S65 20 80 36 S105 48 120 28 S140 30 160 35" />
+                    </svg>
+
+                </div>
+
+
+                <!-- PERFORMANCE OUTLOOK -->
+                <div class="hero-data-panel performance-panel">
+
+                    <span class="panel-title">Performance outlook</span>
+
+                    <svg viewBox="0 0 190 75">
+                        <path class="chart-grid" d="M0 15H190 M0 40H190 M0 65H190" />
+                        <path class="chart-line"
+                            d="M0 48 C20 20 30 58 50 40 S80 25 100 42 S130 55 150 25 S170 15 190 5" />
+                        <path class="chart-future" d="M130 42 C150 25 170 15 190 5" />
+                        <circle cx="190" cy="5" r="4" class="chart-dot" />
+                    </svg>
+
+                </div>
+
+
+                <!-- EARLY WARNING -->
+                <div class="hero-data-panel warning-panel">
+
+                    <span class="panel-title">Early warning</span>
+
+                    <svg viewBox="0 0 160 65">
+                        <path class="chart-grid" d="M0 15H160 M0 35H160 M0 55H160" />
+                        <path class="chart-line warning-line"
+                            d="M0 40 C20 25 30 50 50 35 S75 20 95 38 S120 45 140 20 S150 15 160 8" />
+                        <circle cx="160" cy="8" r="4" class="warning-dot" />
+                    </svg>
+
+                </div>
+
+            </div>
+
+            <div class="hero-bottom-fade"></div>
+
+        </section>
+
+        <!-- OPERATIONAL CHALLENGE -->
+        <section class="operational-challenge">
+            <div class="challenge-inner">
+
+                <div class="challenge-content">
+                    <span class="challenge-eyebrow">THE OPERATIONAL CHALLENGE</span>
+
+                    <h2>
+                        Knowing what is happening<br>
+                        is only the beginning.
+                    </h2>
+
+                    <p>
+                        BMS, EMS and SCADA provide essential monitoring,
+                        protection and control. Pantheon connects their
+                        signals to help teams understand what could happen next—
+                        and where action matters most.
+                    </p>
+                </div>
+
+                <div class="challenge-visual">
+
+                    <svg class="signal-visual" viewBox="0 0 620 340" role="img"
+                        aria-label="BMS, EMS and SCADA signals converge at the present moment and branch into future outcomes">
+
+                        <defs>
+                            <filter id="signalGlow">
+                                <feGaussianBlur stdDeviation="4" result="blur" />
+                                <feMerge>
+                                    <feMergeNode in="blur" />
+                                    <feMergeNode in="SourceGraphic" />
+                                </feMerge>
+                            </filter>
+
+                            <linearGradient id="cyanFade" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0%" stop-color="#00D9E8" stop-opacity=".1" />
+                                <stop offset="75%" stop-color="#00D9E8" />
+                                <stop offset="100%" stop-color="#00D9E8" />
+                            </linearGradient>
+
+                            <linearGradient id="amberFade" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0%" stop-color="#F5A623" stop-opacity=".15" />
+                                <stop offset="100%" stop-color="#F5A623" />
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Subtle background grid -->
+                        <g class="signal-grid">
+                            <path d="M20 70 H600 M20 170 H600 M20 270 H600" />
+                            <path d="M100 25 V315 M250 25 V315 M400 25 V315 M550 25 V315" />
+                        </g>
+
+                        <!-- Signal labels -->
+                        <g class="signal-labels">
+                            <text x="8" y="104">BMS</text>
+                            <text x="8" y="171">EMS</text>
+                            <text x="0" y="238">SCADA</text>
+                        </g>
+
+                        <!-- Input signals -->
+                        <g class="input-signals">
+
+                            <path class="signal-line signal-bms"
+                                d="M75 98 C95 98 100 97 112 86 S136 113 157 99 S181 93 196 108 S218 84 236 104 S258 97 277 115 S302 100 322 139 L345 170" />
+
+                            <path class="signal-line signal-ems"
+                                d="M75 165 C94 165 104 164 116 150 S139 182 157 163 S183 149 199 170 S220 145 239 163 S261 151 279 170 S306 155 325 170 L345 170" />
+
+                            <path class="signal-line signal-scada"
+                                d="M75 232 C96 232 103 234 116 221 S138 248 157 230 S184 243 200 221 S223 242 241 226 S263 236 282 214 S309 220 328 187 L345 170" />
+
+                        </g>
+
+                        <!-- NOW marker -->
+                        <g class="now-marker">
+                            <text x="345" y="34" text-anchor="middle">NOW</text>
+                            <path d="M345 48 V300" />
+                            <circle cx="345" cy="170" r="5" />
+                            <circle class="now-pulse" cx="345" cy="170" r="12" />
+                        </g>
+
+                        <!-- Future outcomes -->
+                        <g class="future-signals">
+
+                            <path class="future-line future-amber"
+                                d="M345 170 C405 150 445 112 500 83 S550 65 590 55" />
+
+                            <path class="future-line future-cyan" d="M345 170 C415 170 470 170 590 170" />
+
+                            <path class="future-line future-blue"
+                                d="M345 170 C410 188 460 230 510 258 S558 278 590 286" />
+
+                            <path class="future-line future-muted" d="M345 170 C400 145 440 80 510 58 S562 45 590 43" />
+
+                            <path class="future-line future-muted lower"
+                                d="M345 170 C400 195 440 265 510 290 S560 302 590 306" />
+
+                        </g>
+
+                        <!-- Time to act -->
+                        <g class="time-to-act">
+                            <text x="590" y="22" text-anchor="end">Time to act</text>
+                            <circle cx="590" cy="55" r="8" />
+                            <circle class="action-pulse" cx="590" cy="55" r="16" />
+                        </g>
+
+                        <!-- End points -->
+                        <g class="signal-endpoints">
+                            <circle cx="590" cy="170" r="3" />
+                            <circle cx="590" cy="286" r="3" />
+                        </g>
+
+                    </svg>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CAPABILITIES -->
+        <section class="solution-capabilities section-container">
+
+            <div class="solution-section-heading reveal">
+
+                <p class="solution-eyebrow">
+                    INTELLIGENCE FOR EVERY OPERATING DECISION
+                </p>
+
+                <h2>
+                    Anticipate issues. Protect performance.
+                </h2>
+
+            </div>
+
+
+            <div class="solution-capability-grid">
+
+                <article class="solution-capability-card reveal">
+                    <div class="solution-card-heading">
+                        <span class="solution-icon">
+                            <svg viewBox="0 0 48 48">
+                                <rect x="5" y="20" width="9" height="22" rx="1" />
+                                <rect x="20" y="12" width="9" height="30" rx="1" />
+                                <rect x="35" y="5" width="9" height="37" rx="1" />
+                                <path d="M3 44H46" />
+                            </svg>
+                        </span>
+                        <h3>Battery Health &amp;<br>Performance Forecasting</h3>
+                    </div>
+                    <p>
+                        Predict performance and degradation throughout
+                        remaining useful life against intended operating requirements.
+                    </p>
+                </article>
+
+
+                <article class="solution-capability-card reveal">
+                    <div class="solution-card-heading">
+                        <span class="solution-icon">
+                            <svg viewBox="0 0 48 48">
+                                <path d="M24 5L45 42H3L24 5Z" />
+                                <path d="M24 18V29M24 35V36" />
+                            </svg>
+                        </span>
+                        <h3>Safety &amp; Early Warning</h3>
+                    </div>
+                    <p>
+                        Identify abnormal patterns and developing faults
+                        that warrant investigation.
+                    </p>
+                </article>
+
+
+                <article class="solution-capability-card reveal">
+                    <div class="solution-card-heading">
+                        <span class="solution-icon">
+                            <svg viewBox="0 0 48 48">
+                                <path
+                                    d="M29 5A13 13 0 0 0 17 22L5 34L14 43L26 31A13 13 0 0 0 43 19L34 26L25 17L32 8Z" />
+                            </svg>
+                        </span>
+                        <h3>Predictive Maintenance</h3>
+                    </div>
+                    <p>
+                        Prioritise inspections and maintenance using asset
+                        condition and emerging risk.
+                    </p>
+                </article>
+
+
+                <article class="solution-capability-card reveal">
+                    <div class="solution-card-heading">
+                        <span class="solution-icon">
+                            <svg viewBox="0 0 48 48">
+                                <path d="M4 38L16 26L25 31L43 9" />
+                                <path d="M32 9H43V20" />
+                                <path d="M4 44H45" />
+                            </svg>
+                        </span>
+                        <h3>Availability &amp;<br>Operational Value</h3>
+                    </div>
+                    <p>
+                        Understand performance losses and implications for
+                        availability, usable energy and revenue.
+                    </p>
+                </article>
+
+
+                <article class="solution-capability-card reveal">
+                    <div class="solution-card-heading">
+                        <span class="solution-icon">
+                            <svg viewBox="0 0 48 48">
+                                <path d="M5 12H43M5 24H43M5 36H43" />
+                                <circle cx="17" cy="12" r="4" />
+                                <circle cx="31" cy="24" r="4" />
+                                <circle cx="13" cy="36" r="4" />
+                            </svg>
+                        </span>
+                        <h3>Intelligence for<br>Operating Strategies</h3>
+                    </div>
+                    <p>
+                        Assess how duty cycles and loading influence
+                        degradation, performance and risk.
+                    </p>
+                </article>
+
+
+                <article class="solution-capability-card reveal">
+                    <div class="solution-card-heading">
+                        <span class="solution-icon">
+                            <svg viewBox="0 0 48 48">
+                                <path d="M24 4L43 14L24 24L5 14L24 4Z" />
+                                <path d="M5 24L24 34L43 24" />
+                                <path d="M5 34L24 44L43 34" />
+                            </svg>
+                        </span>
+                        <h3>Fleet &amp; Portfolio Oversight</h3>
+                    </div>
+                    <p>
+                        Compare sites and focus resources where
+                        potential impact is greatest.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- HOW PANTHEON SUPPORTS YOUR TEAM -->
+        <section class="solution-process section-container">
+
+            <div class="solution-section-heading reveal">
+
+                <p class="solution-eyebrow">
+                    HOW PANTHEON SUPPORTS YOUR TEAM
+                </p>
+
+                <h2>
+                    Many signals. Clearer priorities.
+                </h2>
+
+            </div>
+
+
+            <div class="solution-process-grid">
+
+                <article class="solution-process-item reveal">
+                    <div class="process-icon">
+                        <svg viewBox="0 0 48 48">
+                            <ellipse cx="24" cy="10" rx="17" ry="6" />
+                            <path d="M7 10V37C7 45 41 45 41 37V10" />
+                            <path d="M7 19C7 27 41 27 41 19" />
+                            <path d="M7 28C7 36 41 36 41 28" />
+                        </svg>
+                    </div>
+                    <h3>CONNECT</h3>
+                    <p>
+                        Battery telemetry, operating history and context
+                    </p>
+                </article>
+
+
+                <div class="process-arrow">⟶</div>
+
+
+                <article class="solution-process-item reveal">
+                    <div class="process-icon">
+                        <svg viewBox="0 0 48 48">
+                            <path
+                                d="M19 5H29L31 11L36 13L42 10L47 19L42 24L42 29L47 34L42 43L35 40L30 43L29 48H19L17 42L12 40L6 43L1 34L6 29V23L1 18L6 9L13 12L17 10Z" />
+                            <circle cx="24" cy="24" r="8" />
+                        </svg>
+                    </div>
+                    <h3>INTERPRET</h3>
+                    <p>
+                        Battery intelligence, risk modelling and predictive analytics
+                    </p>
+                </article>
+
+
+                <div class="process-arrow">⟶</div>
+
+
+                <article class="solution-process-item reveal">
+                    <div class="process-icon">
+                        <svg viewBox="0 0 48 48">
+                            <path d="M10 4H30L40 14V44H10Z" />
+                            <path d="M30 4V14H40M17 23H33M17 30H33M17 37H29" />
+                        </svg>
+                    </div>
+                    <h3>PRIORITISE</h3>
+                    <p>
+                        Early warnings and intervention priorities
+                    </p>
+                </article>
+
+
+                <div class="process-arrow">⟶</div>
+
+
+                <article class="solution-process-item reveal">
+                    <div class="process-icon">
+                        <svg viewBox="0 0 48 48">
+                            <path d="M5 42H43" />
+                            <rect x="8" y="27" width="7" height="15" rx="1" />
+                            <rect x="21" y="16" width="7" height="26" rx="1" />
+                            <rect x="34" y="5" width="7" height="37" rx="1" />
+                        </svg>
+                    </div>
+                    <h3>TRACK</h3>
+                    <p>
+                        Asset condition and the effect of actions
+                    </p>
+                </article>
+
+            </div>
+
+            <p class="solution-process-note reveal">
+                Pantheon complements BMS, EMS and SCADA. Operational control
+                and dispatch remain with those systems and your teams.
+            </p>
+
+        </section>
+
+        <!-- AUDIENCE SECTION -->
+        <section class="solution-audience">
+
+            <div class="solution-audience-background"></div>
+
+            <div class="solution-audience-content section-container">
+
+                <div class="solution-section-heading reveal">
+
+                    <p class="solution-eyebrow">
+                        BUILT AROUND OPERATIONAL NEEDS
+                    </p>
+
+                    <h2>
+                        The right insight for the right decision.
+                    </h2>
+
+                </div>
+
+
+                <div class="solution-audience-grid">
+
+                    <article class="solution-audience-card reveal">
+                        <span class="solution-icon">
+                            <svg viewBox="0 0 48 48">
+                                <circle cx="18" cy="14" r="8" />
+                                <path d="M4 42V37C4 29 10 25 18 25S32 29 32 37V42" />
+                                <circle cx="36" cy="17" r="6" />
+                                <path d="M34 29C41 29 45 33 45 39V42" />
+                            </svg>
+                        </span>
+                        <div>
+                            <h3>Owners &amp; Asset Managers</h3>
+                            <p>
+                                Support asset planning and protect investment value.
+                            </p>
+                        </div>
+                    </article>
+
+
+                    <article class="solution-audience-card reveal">
+                        <span class="solution-icon">
+                            <svg viewBox="0 0 48 48">
+                                <path d="M8 25V20A16 16 0 0 1 40 20V25" />
+                                <path d="M8 23H4V34H12V23ZM40 23H44V34H36V23Z" />
+                                <path d="M12 34C15 42 32 42 36 34" />
+                                <path d="M24 4V9" />
+                            </svg>
+                        </span>
+                        <div>
+                            <h3>Operations &amp; Maintenance Teams</h3>
+                            <p>
+                                Focus investigations, plan maintenance and
+                                respond with clearer context.
+                            </p>
+                        </div>
+                    </article>
+
+
+                    <article class="solution-audience-card reveal">
+                        <span class="solution-icon">
+                            <svg viewBox="0 0 48 48">
+                                <path d="M24 4A20 20 0 1 0 44 24H24Z" />
+                                <path d="M29 4V19H44" />
+                                <path d="M24 24L10 36" />
+                            </svg>
+                        </span>
+                        <div>
+                            <h3>Portfolio Managers</h3>
+                            <p>
+                                Compare assets and prioritise resources across sites.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="solution-cta" id="solution-contact">
+
+            <div class="solution-cta-wave"></div>
+
+            <div class="solution-cta-content reveal">
+
+                <h2>
+                    Turn your BESS data into
+                    <span>operational foresight.</span>
+                </h2>
+
+                <p>
+                    Define a focused pilot around your asset, available data
+                    and operating priorities—with agreed use cases and
+                    measurable success criteria.
+                </p>
+
+                <a href="mailto:info@aser.ai" class="solution-button">
+                    Discuss a BESS Operational Pilot <span>→</span>
+                </a>
+
+                <div class="solution-cta-caption">
+                    Anticipate risk. Prioritise action. Protect value.
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- EXISTING ASER AI FOOTER -->
+    <footer class="aser-footer">
+
+        <div class="aser-footer-inner">
+
+            <div class="aser-footer-main">
+
+                <div class="aser-footer-brand">
+
+                    <div class="aser-footer-logo-wrap">
+
+                        <div class="aser-footer-mark" aria-hidden="true">
+                            <span>A</span>
+                        </div>
+
+                        <div class="aser-footer-logo">
+                            ASER <span>AI</span>
+                        </div>
+
+                    </div>
+
+                    <p>
+                        Turn fragmented operational<br>
+                        data into predictive risk<br>
+                        intelligence.
+                    </p>
+
+                    <a href="#" class="aser-footer-social" aria-label="LinkedIn">
+                        in
+                    </a>
+
+                </div>
+
+
+                <div class="aser-footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Investors</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="aser-footer-col aser-footer-solutions">
+                    <h3>Solutions</h3>
+                    <ul>
+                        <li><a href="./operational-intelligence.html">Battery Energy Storage<br>System</a></li>
+                        <li><a href="#">Insurance Intelligence</a></li>
+                        <li><a href="#">Research and<br>Development</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="aser-footer-col aser-footer-contact-col">
+                    <h3>Contact</h3>
+
+                    <ul class="aser-footer-contact-list">
+
+                        <li>
+                            <a href="tel:+60122299584" class="aser-footer-contact-link">
+                                <span class="aser-footer-contact-icon">⌕</span>
+                                <span class="aser-footer-contact-text">+60 12 229 9584</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="mailto:info@aser.ai" class="aser-footer-contact-link">
+                                <span class="aser-footer-contact-icon">✉</span>
+                                <span class="aser-footer-contact-text">info@aser.ai</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <div class="aser-footer-contact-link">
+                                <span class="aser-footer-contact-icon">⌖</span>
+                                <span class="aser-footer-address">
+                                    Suite 1–3, Level 1, Vertical<br>
+                                    Corporate B No. 8, Jalan<br>
+                                    Kerinchi, Bangsar South<br>
+                                    City 59200 Kuala Lumpur,<br>
+                                    Malaysia
+                                </span>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+
+            <div class="aser-footer-bottom">
+
+                <p class="aser-footer-bottom-copy">
+                    © 2026 <span>Aser AI</span>. All rights reserved.
+                </p>
+
+                <div class="aser-footer-legal">
+                    <a href="#">Privacy policy</a>
+                    <span class="aser-footer-legal-divider"></span>
+                    <a href="#">Terms of Service</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="./script/main.js" defer></script>
+    <script>
+        /* =====================================================
+   ASER AI — NAVIGATION INTERACTIONS
+===================================================== */
+
+        (() => {
+            "use strict";
+
+            const header = document.querySelector(".site-header");
+
+            if (!header) return;
+
+            const menuToggle = header.querySelector(".site-menu-toggle");
+            const dropdowns = [...header.querySelectorAll(".nav-dropdown")];
+            const dropdownButtons = dropdowns.map((item) =>
+                item.querySelector(".nav-dropdown-toggle")
+            );
+
+
+            /* ================================================
+               CLOSE ALL DROPDOWNS
+            ================================================ */
+
+            function closeDropdowns(except = null) {
+
+                dropdowns.forEach((dropdown) => {
+
+                    if (dropdown === except) return;
+
+                    dropdown.classList.remove("is-open");
+
+                    const button = dropdown.querySelector(
+                        ".nav-dropdown-toggle"
+                    );
+
+                    button?.setAttribute("aria-expanded", "false");
+
+                });
+
+            }
+
+
+            /* ================================================
+               CLOSE MOBILE MENU
+            ================================================ */
+
+            function closeMobileMenu() {
+
+                header.classList.remove("mobile-open");
+
+                menuToggle?.classList.remove("is-active");
+
+                menuToggle?.setAttribute("aria-expanded", "false");
+
+                menuToggle?.setAttribute("aria-label", "Open navigation");
+
+                closeDropdowns();
+
+            }
+
+
+            /* ================================================
+               MOBILE MENU TOGGLE
+            ================================================ */
+
+            if (menuToggle) {
+
+                menuToggle.addEventListener("click", () => {
+
+                    const isOpen = header.classList.toggle("mobile-open");
+
+                    menuToggle.classList.toggle("is-active", isOpen);
+
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        String(isOpen)
+                    );
+
+                    menuToggle.setAttribute(
+                        "aria-label",
+                        isOpen ? "Close navigation" : "Open navigation"
+                    );
+
+                    if (!isOpen) {
+                        closeDropdowns();
+                    }
+
+                });
+
+            }
+
+
+            /* ================================================
+               DROPDOWN TOGGLE
+            ================================================ */
+
+            dropdownButtons.forEach((button) => {
+
+                if (!button) return;
+
+                button.addEventListener("click", (event) => {
+
+                    event.stopPropagation();
+
+                    const currentDropdown = button.closest(".nav-dropdown");
+
+                    const shouldOpen = !currentDropdown.classList.contains(
+                        "is-open"
+                    );
+
+                    closeDropdowns(currentDropdown);
+
+                    currentDropdown.classList.toggle("is-open", shouldOpen);
+
+                    button.setAttribute(
+                        "aria-expanded",
+                        String(shouldOpen)
+                    );
+
+                });
+
+            });
+
+
+            /* ================================================
+               CLOSE AFTER NAVIGATION
+            ================================================ */
+
+            header.querySelectorAll(".main-nav a").forEach((link) => {
+
+                link.addEventListener("click", () => {
+                    closeMobileMenu();
+                });
+
+            });
+
+
+            /* ================================================
+               CLICK OUTSIDE
+            ================================================ */
+
+            document.addEventListener("pointerdown", (event) => {
+
+                if (!header.contains(event.target)) {
+
+                    closeDropdowns();
+
+                    closeMobileMenu();
+
+                }
+
+            });
+
+
+            /* ================================================
+               ESCAPE KEY
+            ================================================ */
+
+            document.addEventListener("keydown", (event) => {
+
+                if (event.key !== "Escape") return;
+
+                closeDropdowns();
+                closeMobileMenu();
+
+            });
+
+
+            /* ================================================
+               RESPONSIVE STATE RESET
+            ================================================ */
+
+            const mobileBreakpoint = window.matchMedia("(max-width: 760px)");
+
+            mobileBreakpoint.addEventListener("change", () => {
+                closeMobileMenu();
+            });
+
+
+            /* ================================================
+               KEYBOARD DROPDOWN NAVIGATION
+            ================================================ */
+
+            dropdownButtons.forEach((button) => {
+
+                button?.addEventListener("keydown", (event) => {
+
+                    if (event.key !== "ArrowDown") return;
+
+                    event.preventDefault();
+
+                    const dropdown = button.closest(".nav-dropdown");
+
+                    closeDropdowns(dropdown);
+
+                    dropdown.classList.add("is-open");
+
+                    button.setAttribute("aria-expanded", "true");
+
+                    dropdown.querySelector(".nav-dropdown-menu a")?.focus();
+
+                });
+
+            });
+
+        })();
+    </script>
+
+</body>
+
+</html>
