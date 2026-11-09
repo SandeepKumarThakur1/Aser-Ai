@@ -2925,7 +2925,7 @@ a {
     background:
         linear-gradient(90deg, rgba(1, 10, 19, .98) 0%, rgba(1, 10, 19, .9) 28%, rgba(1, 10, 19, .45) 58%, rgba(1, 10, 19, .18) 100%),
         linear-gradient(0deg, rgba(1, 10, 19, .2), rgba(1, 10, 19, .12)),
-        url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2200&q=88") center 52%/cover;
+        url("../assets/images/platform.jpg") center 52%/cover;
     transform: scale(1.04);
     animation: hero-image-in 1.4s ease both;
 }
@@ -3199,14 +3199,14 @@ a {
     background:
         linear-gradient(90deg, rgba(1, 12, 21, .05) 0%, rgba(1, 12, 21, .15) 40%, rgba(1, 12, 21, .92) 62%, #020d18 100%),
         linear-gradient(0deg, rgba(1, 12, 21, .25), rgba(1, 12, 21, .1)),
-        url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1800&q=85") center/cover;
+        url("../assets/images/platform-img1.jpg") center/cover;
 }
 
 .bess-image {
     background-image:
         linear-gradient(90deg, rgba(1, 12, 21, .05) 0%, rgba(1, 12, 21, .15) 40%, rgba(1, 12, 21, .92) 62%, #020d18 100%),
         linear-gradient(0deg, rgba(1, 12, 21, .25), rgba(1, 12, 21, .1)),
-        url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1800&q=85");
+        url("../assets/images/platform.jpg");
 }
 
 .bess-content {
@@ -4148,7 +4148,7 @@ h6,
             #020d18 0%,
             rgba(2, 13, 24, .12) 35%,
             #020d18 100%),
-        url("https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=2000&q=85") center 48% / cover no-repeat;
+        url("../assets/images/operational-intelligence-img1.jpg") center 48% / cover no-repeat;
     opacity: .75;
 }
 
@@ -4234,7 +4234,7 @@ h6,
             #020d18 0%,
             rgba(2, 13, 24, .3) 50%,
             rgba(2, 13, 24, .05) 100%),
-        url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=85") center / cover no-repeat;
+        url("../assets/images/operational-intelligence-img2.jpg") center / cover no-repeat;
     opacity: .45;
     mask-image: linear-gradient(90deg, transparent, #000 35%);
 }
