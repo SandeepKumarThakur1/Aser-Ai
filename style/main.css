@@ -9756,22 +9756,16 @@ main {
     isolation: isolate;
 
     background:
-        radial-gradient(
-            ellipse at 50% 65%,
+        radial-gradient(ellipse at 50% 65%,
             rgba(0, 185, 220, .16),
-            transparent 55%
-        ),
-        radial-gradient(
-            ellipse at 85% 20%,
+            transparent 55%),
+        radial-gradient(ellipse at 85% 20%,
             rgba(0, 217, 233, .08),
-            transparent 40%
-        ),
-        linear-gradient(
-            135deg,
+            transparent 40%),
+        linear-gradient(135deg,
             #061c2c 0%,
             #031321 65%,
-            #041827 100%
-        );
+            #041827 100%);
 
     color: #f3f7fa;
 }
@@ -10854,11 +10848,9 @@ main {
     isolation: isolate;
     padding-top: 76px;
     background:
-        radial-gradient(
-            ellipse at 78% 40%,
+        radial-gradient(ellipse at 78% 40%,
             rgba(0, 185, 220, .17),
-            transparent 48%
-        ),
+            transparent 48%),
         linear-gradient(135deg, #061c2c 0%, #031321 68%);
 }
 
@@ -11003,7 +10995,7 @@ main {
     line-height: 1.13;
 }
 
-.aser-team-page .team-section-heading > p {
+.aser-team-page .team-section-heading>p {
     max-width: 340px;
     margin-bottom: 4px;
     color: var(--team-muted);
@@ -11355,7 +11347,8 @@ main {
     .aser-team-page .team-intro-line {
         margin-top: 40px;
     }
-/* 
+
+    /* 
     .aser-team-page .team-intro::before {
         right: -10px;
         bottom: -15px;
@@ -11376,7 +11369,7 @@ main {
         font-size: 36px;
     }
 
-    .aser-team-page .team-section-heading > p {
+    .aser-team-page .team-section-heading>p {
         margin-top: 16px;
         font-size: 12px;
     }
@@ -11468,6 +11461,7 @@ main {
 /* REDUCED MOTION */
 
 @media (prefers-reduced-motion: reduce) {
+
     .aser-team-page *,
     .aser-team-page *::before,
     .aser-team-page *::after {
@@ -11567,11 +11561,9 @@ main {
     isolation: isolate;
     padding-top: 76px;
     background:
-        radial-gradient(
-            ellipse at 78% 40%,
+        radial-gradient(ellipse at 78% 40%,
             rgba(0, 185, 220, .17),
-            transparent 48%
-        ),
+            transparent 48%),
         linear-gradient(135deg, #061c2c 0%, #031321 68%);
 }
 
@@ -11642,12 +11634,10 @@ main {
     width: 100%;
     height: 1px;
     margin-top: 58px;
-    background: linear-gradient(
-        90deg,
-        var(--career-cyan),
-        rgba(0, 217, 233, .1),
-        transparent
-    );
+    background: linear-gradient(90deg,
+            var(--career-cyan),
+            rgba(0, 217, 233, .1),
+            transparent);
 }
 
 
@@ -11727,7 +11717,7 @@ main {
     line-height: 1.15;
 }
 
-.aser-careers-page .career-section-heading > p {
+.aser-careers-page .career-section-heading>p {
     max-width: 340px;
     margin-bottom: 4px;
 }
@@ -11788,11 +11778,9 @@ main {
 .aser-careers-page .career-approach {
     padding: clamp(75px, 9vw, 110px) 0;
     background:
-        radial-gradient(
-            ellipse at 10% 80%,
+        radial-gradient(ellipse at 10% 80%,
             rgba(0, 160, 210, .07),
-            transparent 40%
-        ),
+            transparent 40%),
         var(--career-bg);
 }
 
@@ -12036,6 +12024,7 @@ main {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     .aser-careers-page *,
     .aser-careers-page *::before,
     .aser-careers-page *::after {
