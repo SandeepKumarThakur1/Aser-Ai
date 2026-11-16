@@ -1285,3 +1285,119 @@ if (reduceMotion || !("IntersectionObserver" in window)) {
         });
     });
 })();
+
+
+/* =========================================================
+   LEGAL PAGES — active table-of-contents link + back to top
+========================================================= */
+
+(() => {
+    "use strict";
+
+    const tocLinks = [...document.querySelectorAll(".lg-toc a")];
+    const topButton = document.querySelector(".lg-top");
+    if (!tocLinks.length && !topButton) return;
+
+    const sections = tocLinks
+        .map((link) => document.querySelector(link.getAttribute("href")))
+        .filter(Boolean);
+
+    const update = () => {
+        const line = window.innerHeight * 0.3;
+        let current = sections[0];
+        sections.forEach((section) => {
+            if (section.getBoundingClientRect().top <= line) current = section;
+        });
+        tocLinks.forEach((link) => {
+            link.classList.toggle("is-active", link.getAttribute("href") === `#${current?.id}`);
+        });
+        topButton?.classList.toggle("is-shown", window.scrollY > 600);
+    };
+
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+
+    topButton?.addEventListener("click", () => {
+        const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+    });
+})();
+
+
+/* =========================================================
+   AI LOADER — progress, status text, exit
+========================================================= */
+
+(() => {
+    "use strict";
+
+    const loader = document.getElementById("aiLoader");
+    if (!loader) return;
+
+    const root = document.documentElement;
+    if (root.classList.contains("al-skip")) {
+        loader.remove();
+        return;
+    }
+
+    root.classList.add("al-lock");
+
+    const bar = loader.querySelector(".al-bar span");
+    const pct = loader.querySelector(".al-pct");
+    const text = loader.querySelector(".al-text");
+    const steps = (text?.dataset.steps || "").split("|").filter(Boolean);
+
+    const MIN_TIME = 1900;
+    const MAX_TIME = 6000;
+    const start = performance.now();
+    let progress = 0;
+    let loaded = document.readyState === "complete";
+    let finished = false;
+    let stepIndex = 0;
+
+    const setProgress = (value) => {
+        progress = Math.max(progress, Math.min(100, value));
+        bar?.style.setProperty("--p", (progress / 100).toFixed(3));
+        if (pct) pct.textContent = `${Math.round(progress)}%`;
+
+        const next = Math.min(steps.length - 1, Math.floor(progress / (100 / steps.length)));
+        if (text && next !== stepIndex) {
+            stepIndex = next;
+            text.textContent = steps[stepIndex];
+            text.classList.remove("is-swapping");
+            void text.offsetWidth;
+            text.classList.add("is-swapping");
+        }
+    };
+
+    const finish = () => {
+        if (finished) return;
+        finished = true;
+        setProgress(100);
+        try { sessionStorage.setItem("aserLoaded", "1"); } catch (e) { /* storage blocked */ }
+        setTimeout(() => {
+            loader.classList.add("is-done");
+            root.classList.remove("al-lock");
+            setTimeout(() => loader.remove(), 1100);
+        }, 280);
+    };
+
+    const tick = () => {
+        if (finished) return;
+        const elapsed = performance.now() - start;
+        /* Ease towards 90% while loading; run to 100% once the page is ready */
+        const target = loaded
+            ? Math.min(100, (elapsed / MIN_TIME) * 100)
+            : 90 * (1 - Math.exp(-elapsed / 1400));
+        setProgress(target);
+
+        if ((loaded && elapsed >= MIN_TIME) || elapsed >= MAX_TIME) {
+            finish();
+            return;
+        }
+        requestAnimationFrame(tick);
+    };
+
+    window.addEventListener("load", () => { loaded = true; });
+    requestAnimationFrame(tick);
+})();

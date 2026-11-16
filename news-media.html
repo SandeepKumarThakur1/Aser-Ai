@@ -17,9 +17,36 @@
 
 <body class="pg-news-page">
 
+    <!-- AI LOADER -->
+    <script>try{if(sessionStorage.getItem("aserLoaded"))document.documentElement.classList.add("al-skip")}catch(e){}</script>
+    <div class="ai-loader" id="aiLoader" role="status" aria-live="polite" aria-label="Loading ASER AI">
+        <div class="al-grid" aria-hidden="true"></div>
+        <div class="al-core">
+            <svg class="al-net" viewBox="0 0 400 400" aria-hidden="true" focusable="false">
+                <circle class="al-orbit al-orbit-1" cx="200" cy="200" r="150"/>
+                <circle class="al-orbit al-orbit-2" cx="200" cy="200" r="98"/>
+                <circle class="al-scan" cx="200" cy="200" r="178"/>
+                <g class="al-links"><line x1="350" y1="200" x2="285" y2="249" style="--i:0"/><line x1="350" y1="200" x2="285" y2="151" style="--i:1"/><line x1="306" y1="306" x2="285" y2="249" style="--i:2"/><line x1="306" y1="306" x2="200" y2="298" style="--i:3"/><line x1="200" y1="350" x2="200" y2="298" style="--i:4"/><line x1="200" y1="350" x2="285" y2="249" style="--i:5"/><line x1="94" y1="306" x2="115" y2="249" style="--i:6"/><line x1="94" y1="306" x2="200" y2="298" style="--i:7"/><line x1="50" y1="200" x2="115" y2="249" style="--i:8"/><line x1="50" y1="200" x2="115" y2="151" style="--i:9"/><line x1="94" y1="94" x2="115" y2="151" style="--i:10"/><line x1="94" y1="94" x2="200" y2="102" style="--i:11"/><line x1="200" y1="50" x2="200" y2="102" style="--i:12"/><line x1="200" y1="50" x2="285" y2="151" style="--i:13"/><line x1="306" y1="94" x2="285" y2="151" style="--i:14"/><line x1="306" y1="94" x2="200" y2="102" style="--i:15"/><line x1="285" y1="249" x2="200" y2="200" style="--i:16"/><line x1="200" y1="298" x2="200" y2="200" style="--i:17"/><line x1="115" y1="249" x2="200" y2="200" style="--i:18"/><line x1="115" y1="151" x2="200" y2="200" style="--i:19"/><line x1="200" y1="102" x2="200" y2="200" style="--i:20"/><line x1="285" y1="151" x2="200" y2="200" style="--i:21"/></g>
+                <g class="al-pulses"><circle r="2.4"><animateMotion dur="1.40s" begin="0.00s" repeatCount="indefinite" path="M350 200 L 285 249"/></circle><circle r="2.4"><animateMotion dur="1.65s" begin="0.17s" repeatCount="indefinite" path="M350 200 L 285 151"/></circle><circle r="2.4"><animateMotion dur="1.90s" begin="0.34s" repeatCount="indefinite" path="M306 306 L 285 249"/></circle><circle r="2.4"><animateMotion dur="2.15s" begin="0.51s" repeatCount="indefinite" path="M306 306 L 200 298"/></circle><circle r="2.4"><animateMotion dur="1.40s" begin="0.68s" repeatCount="indefinite" path="M200 350 L 200 298"/></circle><circle r="2.4"><animateMotion dur="1.65s" begin="0.85s" repeatCount="indefinite" path="M200 350 L 285 249"/></circle><circle r="2.4"><animateMotion dur="1.90s" begin="1.02s" repeatCount="indefinite" path="M94 306 L 115 249"/></circle><circle r="2.4"><animateMotion dur="2.15s" begin="1.19s" repeatCount="indefinite" path="M94 306 L 200 298"/></circle><circle r="2.4"><animateMotion dur="1.40s" begin="0.16s" repeatCount="indefinite" path="M50 200 L 115 249"/></circle><circle r="2.4"><animateMotion dur="1.65s" begin="0.33s" repeatCount="indefinite" path="M50 200 L 115 151"/></circle><circle r="2.4"><animateMotion dur="1.90s" begin="0.50s" repeatCount="indefinite" path="M94 94 L 115 151"/></circle><circle r="2.4"><animateMotion dur="2.15s" begin="0.67s" repeatCount="indefinite" path="M94 94 L 200 102"/></circle><circle r="2.4"><animateMotion dur="1.40s" begin="0.84s" repeatCount="indefinite" path="M200 50 L 200 102"/></circle><circle r="2.4"><animateMotion dur="1.65s" begin="1.01s" repeatCount="indefinite" path="M200 50 L 285 151"/></circle><circle r="2.4"><animateMotion dur="1.90s" begin="1.18s" repeatCount="indefinite" path="M306 94 L 285 151"/></circle><circle r="2.4"><animateMotion dur="2.15s" begin="0.15s" repeatCount="indefinite" path="M306 94 L 200 102"/></circle><circle r="2.4"><animateMotion dur="1.40s" begin="0.32s" repeatCount="indefinite" path="M285 249 L 200 200"/></circle><circle r="2.4"><animateMotion dur="1.65s" begin="0.49s" repeatCount="indefinite" path="M200 298 L 200 200"/></circle><circle r="2.4"><animateMotion dur="1.90s" begin="0.66s" repeatCount="indefinite" path="M115 249 L 200 200"/></circle><circle r="2.4"><animateMotion dur="2.15s" begin="0.83s" repeatCount="indefinite" path="M115 151 L 200 200"/></circle><circle r="2.4"><animateMotion dur="1.40s" begin="1.00s" repeatCount="indefinite" path="M200 102 L 200 200"/></circle><circle r="2.4"><animateMotion dur="1.65s" begin="1.17s" repeatCount="indefinite" path="M285 151 L 200 200"/></circle></g>
+                <g class="al-nodes"><circle class="al-n-out" cx="350" cy="200" r="4" style="--i:0"/><circle class="al-n-out" cx="306" cy="306" r="4" style="--i:1"/><circle class="al-n-out" cx="200" cy="350" r="4" style="--i:2"/><circle class="al-n-out" cx="94" cy="306" r="4" style="--i:3"/><circle class="al-n-out" cx="50" cy="200" r="4" style="--i:4"/><circle class="al-n-out" cx="94" cy="94" r="4" style="--i:5"/><circle class="al-n-out" cx="200" cy="50" r="4" style="--i:6"/><circle class="al-n-out" cx="306" cy="94" r="4" style="--i:7"/><circle class="al-n-in" cx="285" cy="249" r="5" style="--i:8"/><circle class="al-n-in" cx="200" cy="298" r="5" style="--i:9"/><circle class="al-n-in" cx="115" cy="249" r="5" style="--i:10"/><circle class="al-n-in" cx="115" cy="151" r="5" style="--i:11"/><circle class="al-n-in" cx="200" cy="102" r="5" style="--i:12"/><circle class="al-n-in" cx="285" cy="151" r="5" style="--i:13"/></g>
+            </svg>
+            <div class="al-logo">
+                <span class="al-logo-ring"></span>
+                <img src="./assets/images/aser-logo.png" alt="" width="64" height="61">
+            </div>
+        </div>
+        <div class="al-brand">ASER <span>AI</span></div>
+        <div class="al-status">
+            <span class="al-dot"></span>
+            <span class="al-text" data-steps="Connecting asset signals|Modelling risk pathways|Generating foresight">Connecting asset signals</span>
+        </div>
+        <div class="al-bar"><span></span></div>
+        <span class="al-pct" aria-hidden="true">0%</span>
+    </div>
+
     <header class="site-header">
 
-        <a href="./index.html" class="logo" aria-label="ASER AI home">ASER <span>AI</span></a>
+        <a href="./index.html" class="logo" aria-label="ASER AI home"><img class="logo-mark" src="./assets/images/aser-logo.png" alt="" width="40" height="38"><span class="logo-text">ASER <span>AI</span></span></a>
 
         <nav class="main-nav" id="mainNavigation" aria-label="Main">
 
@@ -68,7 +95,7 @@
     <main class="pg-page">
 
         <!-- PAGE HERO -->
-        <section class="pg-hero">
+        <section class="pg-hero has-art">
             <svg class="pg-hero-net" viewBox="0 0 1440 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
                 <g class="pg-net-waves"><path d="M0 420 C 360 330, 720 500, 1080 400 S 1440 350, 1440 350" style="--i:0"/><path d="M0 429 C 360 344, 720 494, 1080 408 S 1440 360, 1440 360" style="--i:1"/><path d="M0 438 C 360 358, 720 488, 1080 416 S 1440 370, 1440 370" style="--i:2"/><path d="M0 447 C 360 372, 720 482, 1080 424 S 1440 380, 1440 380" style="--i:3"/><path d="M0 456 C 360 386, 720 476, 1080 432 S 1440 390, 1440 390" style="--i:4"/><path d="M0 465 C 360 400, 720 470, 1080 440 S 1440 400, 1440 400" style="--i:5"/><path d="M0 474 C 360 414, 720 464, 1080 448 S 1440 410, 1440 410" style="--i:6"/><path d="M0 483 C 360 428, 720 458, 1080 456 S 1440 420, 1440 420" style="--i:7"/><path d="M0 492 C 360 442, 720 452, 1080 464 S 1440 430, 1440 430" style="--i:8"/></g>
                 <g class="pg-net-lines"><line x1="195" y1="297" x2="218" y2="310" style="--i:0"/><line x1="195" y1="297" x2="223" y2="335" style="--i:1"/><line x1="397" y1="254" x2="281" y2="323" style="--i:2"/><line x1="397" y1="254" x2="218" y2="310" style="--i:3"/><line x1="218" y1="310" x2="223" y2="335" style="--i:4"/><line x1="79" y1="275" x2="13" y2="253" style="--i:5"/><line x1="79" y1="275" x2="40" y2="180" style="--i:6"/><line x1="271" y1="405" x2="215" y2="345" style="--i:0"/><line x1="271" y1="405" x2="281" y2="323" style="--i:1"/><line x1="40" y1="180" x2="82" y2="151" style="--i:2"/><line x1="40" y1="180" x2="13" y2="253" style="--i:3"/><line x1="39" y1="412" x2="189" y2="428" style="--i:4"/><line x1="298" y1="59" x2="227" y2="67" style="--i:5"/><line x1="422" y1="484" x2="281" y2="323" style="--i:6"/><line x1="281" y1="323" x2="223" y2="335" style="--i:0"/><line x1="68" y1="47" x2="82" y2="151" style="--i:1"/><line x1="189" y1="428" x2="215" y2="345" style="--i:2"/><line x1="223" y1="335" x2="215" y2="345" style="--i:3"/><line x1="1207" y1="168" x2="1146" y2="146" style="--i:4"/><line x1="1207" y1="168" x2="1134" y2="72" style="--i:5"/><line x1="1439" y1="498" x2="1422" y2="430" style="--i:6"/><line x1="1439" y1="498" x2="1425" y2="389" style="--i:0"/><line x1="1371" y1="366" x2="1425" y2="389" style="--i:1"/><line x1="1371" y1="366" x2="1422" y2="430" style="--i:2"/><line x1="1146" y1="146" x2="1134" y2="72" style="--i:3"/><line x1="1134" y1="72" x2="1053" y2="68" style="--i:4"/><line x1="1340" y1="224" x2="1374" y2="218" style="--i:5"/><line x1="1340" y1="224" x2="1345" y2="164" style="--i:6"/><line x1="1374" y1="218" x2="1401" y2="256" style="--i:0"/><line x1="1422" y1="430" x2="1425" y2="389" style="--i:1"/><line x1="1010" y1="136" x2="1061" y2="153" style="--i:2"/><line x1="1010" y1="136" x2="1047" y2="193" style="--i:3"/><line x1="1401" y1="256" x2="1432" y2="223" style="--i:4"/><line x1="1041" y1="330" x2="1047" y2="193" style="--i:5"/><line x1="1041" y1="330" x2="1061" y2="153" style="--i:6"/><line x1="1047" y1="193" x2="1061" y2="153" style="--i:0"/></g>
@@ -83,6 +110,16 @@
                 <span class="pg-eyebrow reveal delay-1">NEWS &amp; MEDIA</span>
                 <h1 class="reveal delay-1">Updates from <span>ASER AI.</span></h1>
                 <p class="reveal delay-2">Partnerships, events, recognition and milestones as we build predictive risk intelligence for critical assets.</p>
+                <div class="pg-hero-art reveal delay-2">
+                <svg viewBox="0 0 520 380" class="ha-svg" aria-hidden="true" focusable="false">
+                    <circle class="ha-wave" cx="120" cy="190" r="30" style="--i:0"/><circle class="ha-wave" cx="120" cy="190" r="30" style="--i:1"/><circle class="ha-wave" cx="120" cy="190" r="30" style="--i:2"/><circle class="ha-wave" cx="120" cy="190" r="30" style="--i:3"/>
+                    <path class="ha-draw ha-faint" d="M150 190 C 200 190, 200 107, 250 107" style="--i:0"/><path class="ha-draw ha-faint" d="M150 190 C 200 190, 200 202, 250 202" style="--i:1"/><path class="ha-draw ha-faint" d="M150 190 C 200 190, 200 297, 250 297" style="--i:2"/><circle class="ha-dot" r="3"><animateMotion dur="2s" begin="0.0s" repeatCount="indefinite" path="M150 190 C 200 190, 200 107, 250 107"/></circle><circle class="ha-dot" r="3"><animateMotion dur="2s" begin="0.6s" repeatCount="indefinite" path="M150 190 C 200 190, 200 202, 250 202"/></circle><circle class="ha-dot" r="3"><animateMotion dur="2s" begin="1.2s" repeatCount="indefinite" path="M150 190 C 200 190, 200 297, 250 297"/></circle>
+                    <circle class="ha-core-glow" cx="120" cy="190" r="40"/>
+                    <circle class="ha-core" cx="120" cy="190" r="32"/>
+                    <path class="ha-icon" d="M106 202v-24l26-10v44l-26-10zM100 182h6v16h-6z"/>
+                    <g class="ha-card ha-slide" style="--i:0" transform="translate(250 70)"><rect width="240" height="74" rx="10"/><rect class="ha-tag" x="16" y="14" width="56" height="12" rx="6"/><rect class="ha-txt" x="16" y="36" width="180" height="7" rx="3.5"/><rect class="ha-txt ha-txt2" x="16" y="51" width="120" height="7" rx="3.5"/><circle class="ha-live" cx="220" cy="20" r="4"/></g><g class="ha-card ha-slide" style="--i:1" transform="translate(250 165)"><rect width="240" height="74" rx="10"/><rect class="ha-tag" x="16" y="14" width="56" height="12" rx="6"/><rect class="ha-txt" x="16" y="36" width="220" height="7" rx="3.5"/><rect class="ha-txt ha-txt2" x="16" y="51" width="160" height="7" rx="3.5"/><circle class="ha-live" cx="220" cy="20" r="4"/></g><g class="ha-card ha-slide" style="--i:2" transform="translate(250 260)"><rect width="240" height="74" rx="10"/><rect class="ha-tag" x="16" y="14" width="56" height="12" rx="6"/><rect class="ha-txt" x="16" y="36" width="160" height="7" rx="3.5"/><rect class="ha-txt ha-txt2" x="16" y="51" width="100" height="7" rx="3.5"/><circle class="ha-live" cx="220" cy="20" r="4"/></g>
+                </svg>
+                </div>
             </div>
         </section>
 
@@ -223,9 +260,7 @@
                 <!-- BRAND -->
                 <div class="aser-footer-brand">
                     <div class="aser-footer-logo-wrap">
-                        <div class="aser-footer-mark" aria-hidden="true">
-                            <span>A</span>
-                        </div>
+                        <img class="aser-footer-logo-img" src="./assets/images/aser-logo.png" alt="" width="48" height="46">
                         <div class="aser-footer-logo">
                             ASER <span>AI</span>
                         </div>
@@ -303,9 +338,9 @@
                 </p>
 
                 <div class="aser-footer-legal">
-                    <a href="#">Privacy policy</a>
+                    <a href="./privacy-policy.html">Privacy policy</a>
                     <span class="aser-footer-legal-divider"></span>
-                    <a href="#">Terms of Service</a>
+                    <a href="./terms.html">Terms of Service</a>
                 </div>
             </div>
 

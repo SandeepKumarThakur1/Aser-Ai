@@ -18,10 +18,37 @@
 
 <body class="solutions-page">
 
+    <!-- AI LOADER -->
+    <script>try{if(sessionStorage.getItem("aserLoaded"))document.documentElement.classList.add("al-skip")}catch(e){}</script>
+    <div class="ai-loader" id="aiLoader" role="status" aria-live="polite" aria-label="Loading ASER AI">
+        <div class="al-grid" aria-hidden="true"></div>
+        <div class="al-core">
+            <svg class="al-net" viewBox="0 0 400 400" aria-hidden="true" focusable="false">
+                <circle class="al-orbit al-orbit-1" cx="200" cy="200" r="150"/>
+                <circle class="al-orbit al-orbit-2" cx="200" cy="200" r="98"/>
+                <circle class="al-scan" cx="200" cy="200" r="178"/>
+                <g class="al-links"><line x1="350" y1="200" x2="285" y2="249" style="--i:0"/><line x1="350" y1="200" x2="285" y2="151" style="--i:1"/><line x1="306" y1="306" x2="285" y2="249" style="--i:2"/><line x1="306" y1="306" x2="200" y2="298" style="--i:3"/><line x1="200" y1="350" x2="200" y2="298" style="--i:4"/><line x1="200" y1="350" x2="285" y2="249" style="--i:5"/><line x1="94" y1="306" x2="115" y2="249" style="--i:6"/><line x1="94" y1="306" x2="200" y2="298" style="--i:7"/><line x1="50" y1="200" x2="115" y2="249" style="--i:8"/><line x1="50" y1="200" x2="115" y2="151" style="--i:9"/><line x1="94" y1="94" x2="115" y2="151" style="--i:10"/><line x1="94" y1="94" x2="200" y2="102" style="--i:11"/><line x1="200" y1="50" x2="200" y2="102" style="--i:12"/><line x1="200" y1="50" x2="285" y2="151" style="--i:13"/><line x1="306" y1="94" x2="285" y2="151" style="--i:14"/><line x1="306" y1="94" x2="200" y2="102" style="--i:15"/><line x1="285" y1="249" x2="200" y2="200" style="--i:16"/><line x1="200" y1="298" x2="200" y2="200" style="--i:17"/><line x1="115" y1="249" x2="200" y2="200" style="--i:18"/><line x1="115" y1="151" x2="200" y2="200" style="--i:19"/><line x1="200" y1="102" x2="200" y2="200" style="--i:20"/><line x1="285" y1="151" x2="200" y2="200" style="--i:21"/></g>
+                <g class="al-pulses"><circle r="2.4"><animateMotion dur="1.40s" begin="0.00s" repeatCount="indefinite" path="M350 200 L 285 249"/></circle><circle r="2.4"><animateMotion dur="1.65s" begin="0.17s" repeatCount="indefinite" path="M350 200 L 285 151"/></circle><circle r="2.4"><animateMotion dur="1.90s" begin="0.34s" repeatCount="indefinite" path="M306 306 L 285 249"/></circle><circle r="2.4"><animateMotion dur="2.15s" begin="0.51s" repeatCount="indefinite" path="M306 306 L 200 298"/></circle><circle r="2.4"><animateMotion dur="1.40s" begin="0.68s" repeatCount="indefinite" path="M200 350 L 200 298"/></circle><circle r="2.4"><animateMotion dur="1.65s" begin="0.85s" repeatCount="indefinite" path="M200 350 L 285 249"/></circle><circle r="2.4"><animateMotion dur="1.90s" begin="1.02s" repeatCount="indefinite" path="M94 306 L 115 249"/></circle><circle r="2.4"><animateMotion dur="2.15s" begin="1.19s" repeatCount="indefinite" path="M94 306 L 200 298"/></circle><circle r="2.4"><animateMotion dur="1.40s" begin="0.16s" repeatCount="indefinite" path="M50 200 L 115 249"/></circle><circle r="2.4"><animateMotion dur="1.65s" begin="0.33s" repeatCount="indefinite" path="M50 200 L 115 151"/></circle><circle r="2.4"><animateMotion dur="1.90s" begin="0.50s" repeatCount="indefinite" path="M94 94 L 115 151"/></circle><circle r="2.4"><animateMotion dur="2.15s" begin="0.67s" repeatCount="indefinite" path="M94 94 L 200 102"/></circle><circle r="2.4"><animateMotion dur="1.40s" begin="0.84s" repeatCount="indefinite" path="M200 50 L 200 102"/></circle><circle r="2.4"><animateMotion dur="1.65s" begin="1.01s" repeatCount="indefinite" path="M200 50 L 285 151"/></circle><circle r="2.4"><animateMotion dur="1.90s" begin="1.18s" repeatCount="indefinite" path="M306 94 L 285 151"/></circle><circle r="2.4"><animateMotion dur="2.15s" begin="0.15s" repeatCount="indefinite" path="M306 94 L 200 102"/></circle><circle r="2.4"><animateMotion dur="1.40s" begin="0.32s" repeatCount="indefinite" path="M285 249 L 200 200"/></circle><circle r="2.4"><animateMotion dur="1.65s" begin="0.49s" repeatCount="indefinite" path="M200 298 L 200 200"/></circle><circle r="2.4"><animateMotion dur="1.90s" begin="0.66s" repeatCount="indefinite" path="M115 249 L 200 200"/></circle><circle r="2.4"><animateMotion dur="2.15s" begin="0.83s" repeatCount="indefinite" path="M115 151 L 200 200"/></circle><circle r="2.4"><animateMotion dur="1.40s" begin="1.00s" repeatCount="indefinite" path="M200 102 L 200 200"/></circle><circle r="2.4"><animateMotion dur="1.65s" begin="1.17s" repeatCount="indefinite" path="M285 151 L 200 200"/></circle></g>
+                <g class="al-nodes"><circle class="al-n-out" cx="350" cy="200" r="4" style="--i:0"/><circle class="al-n-out" cx="306" cy="306" r="4" style="--i:1"/><circle class="al-n-out" cx="200" cy="350" r="4" style="--i:2"/><circle class="al-n-out" cx="94" cy="306" r="4" style="--i:3"/><circle class="al-n-out" cx="50" cy="200" r="4" style="--i:4"/><circle class="al-n-out" cx="94" cy="94" r="4" style="--i:5"/><circle class="al-n-out" cx="200" cy="50" r="4" style="--i:6"/><circle class="al-n-out" cx="306" cy="94" r="4" style="--i:7"/><circle class="al-n-in" cx="285" cy="249" r="5" style="--i:8"/><circle class="al-n-in" cx="200" cy="298" r="5" style="--i:9"/><circle class="al-n-in" cx="115" cy="249" r="5" style="--i:10"/><circle class="al-n-in" cx="115" cy="151" r="5" style="--i:11"/><circle class="al-n-in" cx="200" cy="102" r="5" style="--i:12"/><circle class="al-n-in" cx="285" cy="151" r="5" style="--i:13"/></g>
+            </svg>
+            <div class="al-logo">
+                <span class="al-logo-ring"></span>
+                <img src="./assets/images/aser-logo.png" alt="" width="64" height="61">
+            </div>
+        </div>
+        <div class="al-brand">ASER <span>AI</span></div>
+        <div class="al-status">
+            <span class="al-dot"></span>
+            <span class="al-text" data-steps="Connecting asset signals|Modelling risk pathways|Generating foresight">Connecting asset signals</span>
+        </div>
+        <div class="al-bar"><span></span></div>
+        <span class="al-pct" aria-hidden="true">0%</span>
+    </div>
+
     <!-- HEADER -->
     <header class="site-header">
 
-        <a href="./index.html" class="logo" aria-label="ASER AI home">ASER <span>AI</span></a>
+        <a href="./index.html" class="logo" aria-label="ASER AI home"><img class="logo-mark" src="./assets/images/aser-logo.png" alt="" width="40" height="38"><span class="logo-text">ASER <span>AI</span></span></a>
 
         <nav class="main-nav" id="mainNavigation" aria-label="Main">
 
@@ -649,9 +676,7 @@
                 <!-- BRAND -->
                 <div class="aser-footer-brand">
                     <div class="aser-footer-logo-wrap">
-                        <div class="aser-footer-mark" aria-hidden="true">
-                            <span>A</span>
-                        </div>
+                        <img class="aser-footer-logo-img" src="./assets/images/aser-logo.png" alt="" width="48" height="46">
                         <div class="aser-footer-logo">
                             ASER <span>AI</span>
                         </div>
@@ -729,9 +754,9 @@
                 </p>
 
                 <div class="aser-footer-legal">
-                    <a href="#">Privacy policy</a>
+                    <a href="./privacy-policy.html">Privacy policy</a>
                     <span class="aser-footer-legal-divider"></span>
-                    <a href="#">Terms of Service</a>
+                    <a href="./terms.html">Terms of Service</a>
                 </div>
             </div>
 
