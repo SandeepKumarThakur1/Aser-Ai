@@ -574,7 +574,7 @@ nav a:hover {
 .problem-section {
     position: relative;
     min-height: 950px;
-    padding: 110px 4.2% 100px;
+    /* padding: 110px 4.2% 100px; */
     overflow: hidden;
     isolation: isolate;
 
@@ -5495,13 +5495,13 @@ h6,
 .insurance-hero-grid {
     position: relative;
     width: min(1320px, 92%);
-    min-height: 660px;
+    /* min-height: 660px; */
     margin: 0 auto;
     display: grid;
     grid-template-columns: .94fr 1.06fr;
     align-items: center;
     gap: 25px;
-    padding-top: 70px;
+    /* padding-top: 70px; */
 }
 
 .insurance-hero-content {

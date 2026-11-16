@@ -398,7 +398,7 @@ main h2 .cyan {
 ========================================================= */
 
 /* Standard sections: consistent vertical rhythm and a hairline divider */
-.problem-section,
+/* .problem-section, */
 .aser3-section,
 .aser4-section,
 .aser5-section,
@@ -1369,7 +1369,7 @@ body.pantheon-insurance-page .insurance-hero h1 {
     }
 
     body .problem-section .problem-visual {
-        min-height: 330px;
+        min-height: 370px;
     }
 
     body .pantheon-hero .hero-copy {
