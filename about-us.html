@@ -5,526 +5,220 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#031321">
-    <meta name="description"
-        content="Discover the ASER AI approach to predictive risk intelligence, our people, partnerships and purpose.">
+    <meta name="description" content="Built on experience. Driven by risk foresight. Why ASER AI exists, who we are and how we work.">
     <title>The ASER AI Way | ASER AI</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/responsive.css">
+    <link rel="stylesheet" href="./style/design-system.css">
 </head>
 
-<body>
+<body class="pw-way-page">
 
     <header class="site-header">
 
-        <a href="./index.html" class="logo" aria-label="ASER AI Home">
-            ASER <span>AI</span>
-        </a>
+        <a href="./index.html" class="logo" aria-label="ASER AI home">ASER <span>AI</span></a>
 
-        <nav class="main-nav" id="mainNavigation">
+        <nav class="main-nav" id="mainNavigation" aria-label="Main">
 
             <a href="./index.html" class="nav-link">Home</a>
 
             <a href="./platform.html" class="nav-link">Our Platform</a>
 
-
-            <!-- SOLUTIONS DROPDOWN -->
             <div class="nav-dropdown">
-
                 <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="solutionsMenu">
-                    Solutions
-                    <span class="nav-chevron"></span>
+                    Solutions <span class="nav-chevron" aria-hidden="true"></span>
                 </button>
-
                 <div class="nav-dropdown-menu" id="solutionsMenu">
-
-                    <a href="./operational-intelligence.html">
-                        Battery Energy Storage System
-                    </a>
-
-                    <a href="./insurance-intelligence.html">
-                        Insurance Intelligence
-                    </a>
-
-                    <a href="./research-development.html">
-                        Research &amp; Development
-                    </a>
-
+                    <a href="./operational-intelligence.html">Battery Energy Storage Systems</a>
+                    <a href="./insurance-intelligence.html">Insurance Intelligence</a>
+                    <a href="./research-development.html">Research &amp; Development</a>
                 </div>
-
             </div>
 
-
-            <!-- COMPANY DROPDOWN -->
-            <div class="nav-dropdown">
-
+            <div class="nav-dropdown is-current">
                 <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="companyMenu">
-                    Company
-                    <span class="nav-chevron"></span>
+                    Company <span class="nav-chevron" aria-hidden="true"></span>
                 </button>
-
                 <div class="nav-dropdown-menu" id="companyMenu">
-
-                    <a href="./about-us.html">
-                        The Aser AI Way
-                    </a>
-
-                    <a href="./team.html">
-                        Our Leadership
-                    </a>
-
-                    <a href="./careers.html">
-                        Careers
-                    </a>
-
-                    <a href="./investors.html">
-                        Investors
-                    </a>
-
+                    <a href="./about-us.html" aria-current="page">The ASER AI Way</a>
+                    <a href="./team.html">Our Leadership</a>
+                    <a href="./careers.html">Careers</a>
+                    <a href="./investors.html">Investors</a>
                 </div>
-
             </div>
-
 
             <a href="./news-media.html" class="nav-link">News &amp; Media</a>
 
+            <a href="./contact.html" class="nav-contact-mobile">Contact us</a>
+
         </nav>
 
+        <a href="./contact.html" class="nav-contact">Contact us</a>
 
-        <a href="mailto:info@aser.ai" class="nav-contact">
-
-            <span>Contact Us</span>
-
-            <span class="contact-arrow">
-                ↗
-            </span>
-
-        </a>
-
-
-        <!-- MOBILE TOGGLE -->
-        <button class="site-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"
-            aria-controls="mainNavigation">
+        <button class="site-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mainNavigation">
             <span></span>
             <span></span>
         </button>
 
     </header>
 
-    <main class="company-way-page aser-team-page">
-        
-        <!-- TEAM HERO -->
-        <section class="team-intro">
+    <main class="pw-page">
 
-            <div class="team-intro-glow"></div>
-
-            <div class="team-container">
-
-                <div class="team-hero-content">
-
-                    <div class="team-breadcrumb">
-                        <a href="./index.html">
-                            <span>⌂</span> Home
-                        </a>
-                        <span class="breadcrumb-arrow">›</span>
-                        <span class="current-page">The Aser AI Way</span>
-                    </div>
-
-                    <span class="team-eyebrow">
-                        THE ASER AI WAY
-                    </span>
-
-                    <h1>
-                        The Aser AI Way
-                    </h1>
-
-                    <p class="team-intro-description">
-                        Our identity, approach, and values guide everything we do — from transforming risk intelligence
-                        to creating meaningful business outcomes.
-                    </p>
-
+        <!-- HERO -->
+        <section class="pw-hero">
+            <div class="pw-hero-inner pg-container">
+                <div class="pw-hero-copy">
+                    <span class="pg-eyebrow reveal">THE ASER AI WAY</span>
+                    <h1 class="reveal delay-1">Built on experience.<br><span>Driven by risk foresight.</span></h1>
+                    <p class="reveal delay-2">We believe organisations should have more time to act before risk becomes loss. ASER AI brings together asset expertise, insurance insight and advanced analytics to make that possible.</p>
+                    <div class="pw-actions reveal delay-3"><a href="./platform.html" class="ds-button">Explore Pantheon <span>→</span></a></div>
                 </div>
-
-                <div class="team-intro-line"></div>
-
-            </div>
-
-        </section>
-
-        <!-- EXPERIENCE INTRO -->
-        <section class="way-introduction">
-            <div class="way-container">
-
-                <div class="way-experience-grid">
-
-                    <div class="way-main-image way-reveal">
-                        <img src="./assets/images/aboutAser/aserAbout4.png"
-                            alt="Aser AI team collaborating in a meeting">
-                        <span class="way-image-caption">PEOPLE. PERSPECTIVE. PROGRESS.</span>
-                    </div>
-
-                    <div class="way-experience-stat way-reveal">
-                        <div>
-                            <span class="way-stat-number" data-count="20">0</span>
-                            <span class="way-stat-plus">+</span>
-                        </div>
-
-                        <p>
-                            Years of experience delivering technology,
-                            leadership and industry solutions shaped around
-                            real operational needs.
-                        </p>
-
-                        <span class="way-stat-label">EXPERIENCE THAT MOVES IDEAS FORWARD</span>
-                    </div>
-
+                <div class="pw-hero-visual reveal delay-2">
+                    <svg class="pw-graphic pw-converge" viewBox="0 0 640 380" aria-hidden="true" focusable="false">
+                    <defs>
+                        <linearGradient id="pwGridFadew" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+                            <stop offset=".55" stop-color="#fff" stop-opacity=".9"/>
+                            <stop offset="1" stop-color="#fff" stop-opacity=".2"/>
+                        </linearGradient>
+                        <mask id="pwGridMaskw"><rect width="640" height="380" fill="url(#pwGridFadew)"/></mask>
+                    </defs>
+                    <g class="pw-grid" mask="url(#pwGridMaskw)"><line x1="600" y1="150" x2="-210" y2="380"/><line x1="600" y1="150" x2="-150" y2="380"/><line x1="600" y1="150" x2="-90" y2="380"/><line x1="600" y1="150" x2="-30" y2="380"/><line x1="600" y1="150" x2="30" y2="380"/><line x1="600" y1="150" x2="90" y2="380"/><line x1="600" y1="150" x2="150" y2="380"/><line x1="600" y1="150" x2="210" y2="380"/><line x1="600" y1="150" x2="270" y2="380"/><line x1="600" y1="150" x2="330" y2="380"/><line x1="600" y1="150" x2="390" y2="380"/><line x1="600" y1="150" x2="450" y2="380"/><line x1="600" y1="150" x2="510" y2="380"/><line x1="600" y1="150" x2="570" y2="380"/><line x1="600" y1="150" x2="630" y2="380"/><line x1="600" y1="150" x2="690" y2="380"/><line x1="600" y1="150" x2="750" y2="380"/><line x1="600" y1="150" x2="810" y2="380"/><line x1="600" y1="150" x2="870" y2="380"/><line x1="600" y1="150" x2="930" y2="380"/><line x1="150" y1="200" x2="620" y2="200"/><line x1="150" y1="208" x2="620" y2="208"/><line x1="150" y1="218" x2="620" y2="218"/><line x1="150" y1="232" x2="620" y2="232"/><line x1="150" y1="250" x2="620" y2="250"/><line x1="150" y1="274" x2="620" y2="274"/><line x1="150" y1="306" x2="620" y2="306"/><line x1="150" y1="348" x2="620" y2="348"/></g>
+                    <g class="pw-labels"><text x="128" y="66" text-anchor="end"><tspan x="128" dy="0">Asset</tspan><tspan x="128" dy="15">expertise</tspan></text><text x="128" y="176" text-anchor="end"><tspan x="128" dy="0">Risk</tspan><tspan x="128" dy="15">insight</tspan></text><text x="128" y="286" text-anchor="end"><tspan x="128" dy="0">Advanced</tspan><tspan x="128" dy="15">AI</tspan></text></g>
+                    <g class="pw-lines"><path class="pw-line" d="M150 70 C 290 70, 300 180, 420 180" style="--i:0"/><path class="pw-line" d="M150 180 C 290 180, 300 180, 420 180" style="--i:1"/><path class="pw-line" d="M150 290 C 290 290, 300 180, 420 180" style="--i:2"/><path class="pw-line pw-line-main" d="M420 180 L 600 180" style="--i:3"/><path class="pw-arrow" d="M586 170 L 602 180 L 586 190"/></g>
+                    <g><circle class="pw-node" cx="150" cy="70" r="5"/><circle class="pw-node" cx="150" cy="180" r="5"/><circle class="pw-node" cx="150" cy="290" r="5"/><circle class="pw-traveller" r="3"><animateMotion dur="2.6s" begin="1.2s" repeatCount="indefinite" path="M150 70 C 290 70, 300 180, 420 180 L 600 180"/></circle><circle class="pw-traveller" r="3"><animateMotion dur="3.0s" begin="1.7s" repeatCount="indefinite" path="M150 180 C 290 180, 300 180, 420 180 L 600 180"/></circle><circle class="pw-traveller" r="3"><animateMotion dur="3.4000000000000004s" begin="2.2s" repeatCount="indefinite" path="M150 290 C 290 290, 300 180, 420 180 L 600 180"/></circle></g>
+                </svg>
                 </div>
-
-
-                <!-- WHO WE ARE -->
-                <article class="way-story-card way-who-card way-reveal">
-
-                    <div class="way-story-content">
-                        <span class="way-eyebrow">01 / WHO WE ARE</span>
-
-                        <h2>Who We Are</h2>
-
-                        <p>
-                            A startup based in Kuala Lumpur, Malaysia, we bridge
-                            the gap between emerging risk-management needs and
-                            available solutions. Our commitment is to bring
-                            forward-thinking management needs and actionable
-                            product offerings for organisations in today's
-                            rapidly evolving business landscape.
-                        </p>
-                    </div>
-
-                    <div class="way-story-image">
-                        <img src="./assets/images/aboutAser/aserAbout1.jpg" alt="Kuala Lumpur city skyline">
-                    </div>
-
-                </article>
-
-
-                <!-- WHAT WE DO -->
-                <article class="way-story-card way-what-card way-reveal">
-
-                    <div class="way-story-image">
-                        <img src="./assets/images/aboutAser/aserAbout2.png" alt="Professionals working together">
-                    </div>
-
-                    <div class="way-story-content">
-                        <span class="way-eyebrow">02 / WHAT WE DO</span>
-
-                        <h2>What We Do</h2>
-
-                        <p>
-                            For Corporates: Help corporations address specific
-                            issues and promote measurable assets through
-                            innovative risk-management solutions and AI-powered
-                            data platforms.
-                        </p>
-
-                        <p>
-                            For Brokers & Insurers: Provide deeper acquisition
-                            insights, opportunities to develop new businesses,
-                            and access to high-quality underwriting data through
-                            our advanced analytics platform.
-                        </p>
-
-                        <div class="way-tag-cloud">
-                            <span>Risk Management</span>
-                            <span>Insurance Intelligence</span>
-                            <span>Risk Modelling</span>
-                            <span>Renewable Assets</span>
-                            <span>Advanced Analytics</span>
-                            <span>AI Intelligence</span>
-                            <span>Innovation</span>
-                            <span>Future Ready</span>
-                            <span>Predictive Intelligence</span>
-                        </div>
-                    </div>
-
-                </article>
-
             </div>
         </section>
 
-        <!-- HOW WE DO IT -->
-        <section class="way-approach">
-            <div class="way-container">
-
-                <div class="way-approach-grid">
-
-                    <div class="way-approach-image way-reveal">
-                        <img src="./assets/images/aboutAser/aserAbout3.jpg" alt="Team discussing business strategy">
-                        <div class="way-image-overlay">
-                            <span>OUR APPROACH</span>
-                        </div>
-                    </div>
-
-                    <div class="way-approach-content">
-
-                        <div class="way-section-heading way-reveal">
-                            <span class="way-eyebrow">03 / HOW WE DO IT</span>
-                            <h2>
-                                A connected approach.
-                                <span>From insight to action.</span>
-                            </h2>
-                        </div>
-
-                        <div class="way-approach-list">
-
-                            <article class="way-approach-item way-reveal">
-                                <span class="way-approach-icon">01</span>
-                                <div>
-                                    <h3>Market Access</h3>
-                                    <p>
-                                        We combine global expertise with
-                                        regional perspectives.
-                                    </p>
-                                </div>
-                                <span class="way-item-arrow">↗</span>
-                            </article>
-
-                            <article class="way-approach-item way-reveal">
-                                <span class="way-approach-icon">02</span>
-                                <div>
-                                    <h3>Strategic Partnerships</h3>
-                                    <p>
-                                        Select, high-value partnerships that
-                                        amplify our capabilities and extend
-                                        our reach.
-                                    </p>
-                                </div>
-                                <span class="way-item-arrow">↗</span>
-                            </article>
-
-                            <article class="way-approach-item way-reveal">
-                                <span class="way-approach-icon">03</span>
-                                <div>
-                                    <h3>AI-Powered Platform</h3>
-                                    <p>
-                                        An advanced AI-powered, data-driven
-                                        platform that transforms complex
-                                        risk data into actionable insights.
-                                    </p>
-                                </div>
-                                <span class="way-item-arrow">↗</span>
-                            </article>
-
-                        </div>
-
-                    </div>
-
+        <!-- WHY WE EXIST -->
+        <section class="pg-section">
+            <div class="pg-container pw-two">
+                <div class="pw-copy">
+                    <span class="pg-eyebrow reveal">WHY WE EXIST</span>
+                    <h2 class="reveal">Better visibility is only<br>the beginning.</h2>
+                    <p class="reveal">Organisations collect more data than ever. Yet early signs of risk often remain disconnected from the decisions that could change the outcome.</p>
+                    <p class="reveal">We founded ASER AI to help close that gap—connecting what assets reveal today with what organisations need to anticipate tomorrow.</p>
+                    <p class="pw-callout reveal">Our purpose: turn earlier understanding into better-informed action.</p>
                 </div>
-
+                <div class="pw-visual reveal delay-1">
+                    <svg class="pw-graphic pw-particles" viewBox="0 0 620 380" aria-hidden="true" focusable="false">
+                    <g class="pw-dots"><circle cx="239" cy="188" r="2.6" style="--d:0.15s"/><circle cx="197" cy="130" r="1.3" style="--d:3.24s"/><circle cx="307" cy="197" r="1.3" style="--d:1.90s"/><circle cx="87" cy="234" r="1.3" style="--d:0.07s"/><circle cx="125" cy="169" r="2" style="--d:0.80s"/><circle cx="282" cy="221" r="1.3" style="--d:3.09s"/><circle cx="192" cy="254" r="1" style="--d:1.05s"/><circle cx="125" cy="291" r="1.3" style="--d:4.36s"/><circle cx="148" cy="245" r="1.3" style="--d:0.91s"/><circle cx="323" cy="189" r="1.3" style="--d:4.83s"/><circle cx="305" cy="188" r="1.3" style="--d:4.68s"/><circle cx="140" cy="233" r="1.6" style="--d:1.51s"/><circle cx="234" cy="228" r="1.6" style="--d:0.33s"/><circle cx="167" cy="191" r="1.6" style="--d:2.40s"/><circle cx="155" cy="122" r="1" style="--d:1.28s"/><circle cx="316" cy="191" r="1.6" style="--d:4.22s"/><circle cx="52" cy="205" r="2.6" style="--d:4.21s"/><circle cx="194" cy="158" r="1.3" style="--d:3.12s"/><circle cx="319" cy="193" r="2" style="--d:1.72s"/><circle cx="167" cy="211" r="2.6" style="--d:1.25s"/><circle cx="197" cy="140" r="1.6" style="--d:4.30s"/><circle cx="61" cy="128" r="1" style="--d:1.04s"/><circle cx="210" cy="179" r="1.6" style="--d:4.62s"/><circle cx="218" cy="202" r="1.6" style="--d:3.43s"/><circle cx="153" cy="209" r="1.6" style="--d:4.98s"/><circle cx="107" cy="116" r="1" style="--d:0.40s"/><circle cx="233" cy="196" r="2.6" style="--d:1.72s"/><circle cx="136" cy="184" r="2" style="--d:0.73s"/><circle cx="325" cy="186" r="1.6" style="--d:4.19s"/><circle cx="97" cy="111" r="2.6" style="--d:4.75s"/><circle cx="240" cy="193" r="2" style="--d:1.86s"/><circle cx="70" cy="161" r="2" style="--d:1.47s"/><circle cx="194" cy="258" r="2.6" style="--d:2.27s"/><circle cx="203" cy="190" r="1.6" style="--d:2.40s"/><circle cx="148" cy="169" r="2" style="--d:4.11s"/><circle cx="215" cy="200" r="1.3" style="--d:3.13s"/><circle cx="206" cy="183" r="1.6" style="--d:2.58s"/><circle cx="219" cy="201" r="2.6" style="--d:1.81s"/><circle cx="279" cy="194" r="1" style="--d:3.80s"/><circle cx="169" cy="128" r="1.6" style="--d:4.18s"/><circle cx="140" cy="265" r="1.6" style="--d:3.25s"/><circle cx="228" cy="185" r="1" style="--d:2.37s"/><circle cx="276" cy="184" r="1.6" style="--d:4.08s"/><circle cx="245" cy="206" r="1.6" style="--d:1.74s"/><circle cx="244" cy="187" r="1.6" style="--d:4.61s"/><circle cx="111" cy="89" r="2" style="--d:4.88s"/><circle cx="320" cy="184" r="1.3" style="--d:0.99s"/><circle cx="169" cy="184" r="2" style="--d:1.41s"/><circle cx="78" cy="159" r="2.6" style="--d:3.90s"/><circle cx="228" cy="166" r="2" style="--d:1.51s"/><circle cx="221" cy="205" r="1" style="--d:0.98s"/><circle cx="229" cy="174" r="2.6" style="--d:3.25s"/><circle cx="126" cy="162" r="1" style="--d:4.93s"/><circle cx="325" cy="185" r="1.3" style="--d:0.27s"/><circle cx="98" cy="175" r="1.3" style="--d:2.74s"/><circle cx="184" cy="211" r="1.6" style="--d:1.90s"/><circle cx="236" cy="175" r="1.6" style="--d:0.00s"/><circle cx="181" cy="175" r="1.6" style="--d:4.28s"/><circle cx="299" cy="185" r="1" style="--d:2.75s"/><circle cx="151" cy="138" r="1.6" style="--d:2.73s"/><circle cx="162" cy="97" r="1.3" style="--d:2.10s"/><circle cx="286" cy="174" r="2.6" style="--d:1.85s"/><circle cx="101" cy="130" r="1.3" style="--d:4.84s"/><circle cx="235" cy="172" r="1.6" style="--d:4.11s"/><circle cx="248" cy="176" r="2.6" style="--d:2.70s"/><circle cx="158" cy="216" r="2.6" style="--d:1.88s"/><circle cx="188" cy="194" r="2" style="--d:1.92s"/><circle cx="296" cy="199" r="1.3" style="--d:2.98s"/><circle cx="139" cy="245" r="2" style="--d:0.10s"/><circle cx="317" cy="189" r="1.6" style="--d:2.46s"/><circle cx="147" cy="167" r="2.6" style="--d:4.80s"/><circle cx="134" cy="194" r="1" style="--d:3.91s"/><circle cx="289" cy="205" r="1.6" style="--d:1.22s"/><circle cx="200" cy="193" r="1" style="--d:1.23s"/><circle cx="141" cy="270" r="1.6" style="--d:2.46s"/><circle cx="328" cy="198" r="2.6" style="--d:3.22s"/><circle cx="234" cy="189" r="1.3" style="--d:1.50s"/><circle cx="215" cy="175" r="1.6" style="--d:3.07s"/><circle cx="266" cy="206" r="2.6" style="--d:0.66s"/><circle cx="43" cy="201" r="2.6" style="--d:2.28s"/><circle cx="310" cy="197" r="1" style="--d:2.15s"/><circle cx="284" cy="179" r="2.6" style="--d:2.88s"/><circle cx="260" cy="175" r="2" style="--d:2.38s"/><circle cx="254" cy="172" r="1.3" style="--d:4.49s"/><circle cx="197" cy="191" r="1" style="--d:3.47s"/><circle cx="188" cy="159" r="1.6" style="--d:3.24s"/><circle cx="199" cy="182" r="2.6" style="--d:4.44s"/><circle cx="324" cy="192" r="2.6" style="--d:0.77s"/><circle cx="229" cy="194" r="1.3" style="--d:1.34s"/><circle cx="80" cy="169" r="1" style="--d:3.32s"/><circle cx="55" cy="158" r="2" style="--d:3.51s"/><circle cx="66" cy="13" r="1" style="--d:1.10s"/><circle cx="244" cy="224" r="1.3" style="--d:4.97s"/><circle cx="259" cy="181" r="2" style="--d:0.75s"/><circle cx="235" cy="177" r="2.6" style="--d:1.07s"/><circle cx="221" cy="199" r="2" style="--d:3.73s"/><circle cx="145" cy="169" r="2" style="--d:4.39s"/><circle cx="98" cy="178" r="2" style="--d:0.46s"/><circle cx="254" cy="171" r="1.6" style="--d:4.57s"/><circle cx="100" cy="194" r="1.6" style="--d:0.76s"/><circle cx="241" cy="138" r="2.6" style="--d:2.75s"/><circle cx="127" cy="186" r="1" style="--d:2.76s"/><circle cx="137" cy="190" r="1.3" style="--d:4.04s"/><circle cx="298" cy="178" r="2" style="--d:3.68s"/><circle cx="113" cy="172" r="1" style="--d:2.87s"/><circle cx="60" cy="96" r="1" style="--d:2.53s"/><circle cx="194" cy="160" r="1.6" style="--d:0.54s"/><circle cx="215" cy="211" r="2.6" style="--d:3.63s"/><circle cx="68" cy="283" r="1.3" style="--d:3.75s"/><circle cx="80" cy="313" r="2" style="--d:4.10s"/><circle cx="100" cy="152" r="1.3" style="--d:1.45s"/><circle cx="314" cy="186" r="1.6" style="--d:3.98s"/><circle cx="173" cy="184" r="1.6" style="--d:4.02s"/><circle cx="189" cy="157" r="1.6" style="--d:2.59s"/><circle cx="231" cy="152" r="2" style="--d:0.32s"/><circle cx="61" cy="142" r="1.3" style="--d:1.01s"/><circle cx="62" cy="248" r="1.6" style="--d:0.00s"/><circle cx="199" cy="165" r="2.6" style="--d:4.61s"/><circle cx="158" cy="163" r="1.3" style="--d:0.36s"/><circle cx="299" cy="192" r="2" style="--d:0.76s"/><circle cx="137" cy="185" r="1.6" style="--d:3.36s"/><circle cx="59" cy="229" r="1" style="--d:1.72s"/><circle cx="271" cy="188" r="1" style="--d:3.37s"/><circle cx="199" cy="201" r="1.3" style="--d:0.59s"/><circle cx="250" cy="182" r="1.3" style="--d:0.17s"/><circle cx="262" cy="217" r="2.6" style="--d:1.15s"/><circle cx="78" cy="54" r="1.6" style="--d:3.40s"/><circle cx="115" cy="274" r="1.6" style="--d:1.42s"/><circle cx="266" cy="188" r="1.3" style="--d:0.88s"/><circle cx="123" cy="160" r="1" style="--d:3.23s"/><circle cx="188" cy="194" r="1" style="--d:2.27s"/><circle cx="253" cy="190" r="1.3" style="--d:0.22s"/><circle cx="219" cy="225" r="1.6" style="--d:4.70s"/><circle cx="262" cy="189" r="1.3" style="--d:4.49s"/><circle cx="204" cy="200" r="1.3" style="--d:3.22s"/><circle cx="206" cy="186" r="1" style="--d:0.24s"/><circle cx="291" cy="174" r="1" style="--d:4.75s"/><circle cx="118" cy="215" r="2.6" style="--d:3.20s"/><circle cx="116" cy="202" r="1" style="--d:0.43s"/><circle cx="327" cy="198" r="1.3" style="--d:2.99s"/><circle cx="296" cy="190" r="2.6" style="--d:1.79s"/><circle cx="186" cy="197" r="2" style="--d:2.61s"/><circle cx="98" cy="286" r="2" style="--d:4.46s"/><circle cx="330" cy="190" r="2.6" style="--d:0.58s"/><circle cx="154" cy="255" r="2" style="--d:1.56s"/><circle cx="97" cy="242" r="1" style="--d:2.36s"/><circle cx="257" cy="206" r="1.3" style="--d:1.38s"/><circle cx="205" cy="110" r="1.3" style="--d:0.24s"/><circle cx="120" cy="179" r="1" style="--d:0.36s"/><circle cx="275" cy="205" r="2" style="--d:3.76s"/><circle cx="221" cy="223" r="1.3" style="--d:2.87s"/><circle cx="191" cy="159" r="1" style="--d:3.64s"/><circle cx="258" cy="186" r="2" style="--d:2.81s"/><circle cx="157" cy="269" r="1.6" style="--d:0.85s"/><circle cx="140" cy="173" r="1" style="--d:2.71s"/><circle cx="268" cy="177" r="1" style="--d:0.14s"/><circle cx="67" cy="232" r="1.6" style="--d:4.75s"/><circle cx="236" cy="207" r="1.3" style="--d:2.64s"/><circle cx="95" cy="206" r="1.3" style="--d:2.92s"/><circle cx="289" cy="201" r="1" style="--d:1.34s"/><circle cx="234" cy="180" r="2" style="--d:3.97s"/><circle cx="93" cy="166" r="1.6" style="--d:2.23s"/><circle cx="129" cy="165" r="1" style="--d:3.84s"/><circle cx="315" cy="188" r="2.6" style="--d:2.37s"/><circle cx="204" cy="207" r="2" style="--d:3.43s"/><circle cx="122" cy="190" r="1" style="--d:0.16s"/><circle cx="227" cy="135" r="2" style="--d:2.32s"/><circle cx="120" cy="202" r="1.3" style="--d:1.52s"/><circle cx="211" cy="195" r="1.6" style="--d:1.76s"/><circle cx="135" cy="105" r="1" style="--d:3.09s"/></g>
+                    <g class="pw-lines"><path class="pw-line" d="M330 190 C 430 190, 450 60, 590 60" style="--i:0"/><path class="pw-line" d="M330 190 C 430 190, 450 150, 590 150" style="--i:1"/><path class="pw-line" d="M330 190 C 430 190, 450 230, 590 230" style="--i:2"/><path class="pw-line" d="M330 190 C 430 190, 450 320, 590 320" style="--i:3"/></g>
+                    <g><circle class="pw-node pw-node-end" cx="590" cy="60" r="5"/><circle class="pw-node pw-node-end" cx="590" cy="150" r="5"/><circle class="pw-node pw-node-end" cx="590" cy="230" r="5"/><circle class="pw-node pw-node-end" cx="590" cy="320" r="5"/><circle class="pw-traveller" r="2.6"><animateMotion dur="2.2s" begin="0.8s" repeatCount="indefinite" path="M330 190 C 430 190, 450 60, 590 60"/></circle><circle class="pw-traveller" r="2.6"><animateMotion dur="2.5s" begin="1.2000000000000002s" repeatCount="indefinite" path="M330 190 C 430 190, 450 150, 590 150"/></circle><circle class="pw-traveller" r="2.6"><animateMotion dur="2.8000000000000003s" begin="1.6s" repeatCount="indefinite" path="M330 190 C 430 190, 450 230, 590 230"/></circle><circle class="pw-traveller" r="2.6"><animateMotion dur="3.1s" begin="2.0s" repeatCount="indefinite" path="M330 190 C 430 190, 450 320, 590 320"/></circle></g>
+                </svg>
+                </div>
             </div>
         </section>
 
-        <!-- PARTNERS -->
-        <section class="way-partners">
-
-            <div class="way-container">
-
-                <div class="way-partners-heading way-reveal">
-                    <span class="way-eyebrow">OUR ECOSYSTEM</span>
-                    <h2>
-                        Better outcomes through <span>collaboration.</span>
-                    </h2>
-                </div>
-
+        <!-- WHO WE ARE -->
+        <section class="pw-bleed pw-bleed-left">
+            <div class="pw-bleed-media reveal">
+                <img src="./assets/images/aboutAser/aserAbout4.png" alt="ASER AI team meeting with a risk dashboard on screen" loading="lazy">
             </div>
-
-            <div class="way-marquee">
-                <div class="way-marquee-track">
-
-                    <!-- Original logos -->
-                    <div class="way-marquee-group">
-                        <div class="way-partner">
-                            <img src="./assets/images/logos/1.png" alt="AWS">
-                        </div>
-
-                        <div class="way-partner">
-                            <img src="./assets/images/logos/2.png" alt="General">
-                        </div>
-
-                        <div class="way-partner">
-                            <img src="./assets/images/logos/3.png" alt="The Hive">
-                        </div>
-
-                        <div class="way-partner">
-                            <img src="./assets/images/logos/4.png" alt="Synvista">
-                        </div>
-                        <div class="way-partner">
-                            <img src="./assets/images/logos/5.png" alt="Synvista">
-                        </div>
-                        <div class="way-partner">
-                            <img src="./assets/images/logos/6.png" alt="Synvista">
-                        </div>
-                        <div class="way-partner">
-                            <img src="./assets/images/logos/7.png" alt="Synvista">
-                        </div>
-                        <div class="way-partner">
-                            <img src="./assets/images/logos/8.png" alt="Synvista">
-                        </div>
-                        <div class="way-partner">
-                            <img src="./assets/images/logos/9.png" alt="Synvista">
-                        </div>
-                        <div class="way-partner">
-                            <img src="./assets/images/logos/10.png" alt="Synvista">
-                        </div>
-                        <div class="way-partner">
-                            <img src="./assets/images/logos/11.png" alt="Synvista">
-                        </div>
-                        <div class="way-partner">
-                            <img src="./assets/images/logos/12.png" alt="Synvista">
-                        </div>
-                    </div>
-
-                    <!-- Duplicate for seamless loop -->
-                    <div class="way-marquee-group" aria-hidden="true">
-                        <div class="way-partner">
-                            <img src="./assets/images/logos/1.png" alt="AWS">
-                        </div>
-
-                        <div class="way-partner">
-                            <img src="./assets/images/logos/2.png" alt="General">
-                        </div>
-
-                        <div class="way-partner">
-                            <img src="./assets/images/logos/3.png" alt="The Hive">
-                        </div>
-
-                        <div class="way-partner">
-                            <img src="./assets/images/logos/4.png" alt="Synvista">
-                        </div>
-                        <div class="way-partner">
-                            <img src="./assets/images/logos/5.png" alt="Synvista">
-                        </div>
-                        <div class="way-partner">
-                            <img src="./assets/images/logos/6.png" alt="Synvista">
-                        </div>
-                        <div class="way-partner">
-                            <img src="./assets/images/logos/7.png" alt="Synvista">
-                        </div>
-                        <div class="way-partner">
-                            <img src="./assets/images/logos/8.png" alt="Synvista">
-                        </div>
-                        <div class="way-partner">
-                            <img src="./assets/images/logos/9.png" alt="Synvista">
-                        </div>
-                        <div class="way-partner">
-                            <img src="./assets/images/logos/10.png" alt="Synvista">
-                        </div>
-                        <div class="way-partner">
-                            <img src="./assets/images/logos/11.png" alt="Synvista">
-                        </div>
-                        <div class="way-partner">
-                            <img src="./assets/images/logos/12.png" alt="Synvista">
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- VALUES -->
-        <section class="way-values">
-            <div class="way-container">
-
-                <div class="way-values-heading way-reveal">
-                    <span class="way-eyebrow">WHAT DEFINES US</span>
-                    <h2>Why work at <span>ASER AI?</span></h2>
-                    <p>
-                        We are building more than technology. We are building
-                        a culture of curiosity, accountability and meaningful
-                        innovation.
-                    </p>
-                </div>
-
-                <div class="way-values-grid">
-
-                    <article class="way-value-card way-reveal">
-                        <span class="way-value-icon">◎</span>
-                        <span class="way-value-number">01</span>
-                        <h3>Purpose</h3>
-                        <p>
-                            We are purpose-driven, focused on creating
-                            meaningful solutions that address real-world
-                            challenges and opportunities.
-                        </p>
-                    </article>
-
-                    <article class="way-value-card way-reveal">
-                        <span class="way-value-icon">◈</span>
-                        <span class="way-value-number">02</span>
-                        <h3>Vision</h3>
-                        <p>
-                            We see opportunities in challenges and work
-                            towards building a better future through
-                            technology.
-                        </p>
-                    </article>
-
-                    <article class="way-value-card way-reveal">
-                        <span class="way-value-icon">⌘</span>
-                        <span class="way-value-number">03</span>
-                        <h3>Mission</h3>
-                        <p>
-                            We empower organisations with intelligence,
-                            insights and the confidence to make better
-                            decisions.
-                        </p>
-                    </article>
-
-                    <article class="way-value-card way-reveal">
-                        <span class="way-value-icon">✳</span>
-                        <span class="way-value-number">04</span>
-                        <h3>Values</h3>
-                        <p>
-                            Integrity, transparency, collaboration and
-                            continuous innovation guide everything we do.
-                        </p>
-                    </article>
-
-                </div>
-
+            <div class="pw-bleed-copy">
+                <span class="pg-eyebrow reveal">WHO WE ARE</span>
+                <h2 class="reveal">Different disciplines.<br><span>One shared direction.</span></h2>
+                <p class="reveal">ASER AI is a Kuala Lumpur-headquartered global company with offices in Singapore and Switzerland, bringing together experience across insurance, technology, asset engineering and business leadership.</p>
+                <p class="reveal">We are building Pantheon, our Predictive Risk Intelligence platform, to connect asset behaviour with operational and financial consequences—helping owners, operators and insurance partners understand where risk is heading.</p>
+                <a href="./team.html" class="pw-text-link reveal">Meet Our Leadership <span>→</span></a>
             </div>
         </section>
 
-        <!-- CTA -->
-        <section class="way-cta">
-            <div class="way-cta-visual">
-                <div class="way-cta-lines"></div>
-                <div class="way-cta-glow"></div>
+        <!-- WHERE WE FOCUS -->
+        <section class="pw-bleed pw-bleed-right pw-focus">
+            <div class="pw-bleed-copy">
+                <span class="pg-eyebrow reveal">WHERE WE FOCUS</span>
+                <h2 class="reveal">Starting with batteries.<br><span>Building towards broader applications.</span></h2>
+                <p class="reveal">Battery energy storage is our initial focus: critical infrastructure where safety, performance and financial exposure are closely connected.</p>
+                <p class="reveal">Pantheon complements existing BMS, EMS and SCADA systems, helping teams anticipate developing issues and protect performance throughout an asset's remaining useful life.</p>
+                <p class="reveal">Our research explores how the same disciplines could address emerging risks across mobility, the built environment and financial systems.</p>
             </div>
+            <div class="pw-bleed-media reveal">
+                <img src="./assets/images/solutionHero.jpg" alt="Battery energy storage containers at dusk" loading="lazy">
+            </div>
+            <nav class="pw-link-row pg-container reveal" aria-label="Solutions">
+                <a href="./operational-intelligence.html">Operational Intelligence <span>→</span></a>
+                <a href="./insurance-intelligence.html">Insurance Risk Intelligence <span>→</span></a>
+                <a href="./research-development.html">Research &amp; Emerging Applications <span>→</span></a>
+            </nav>
+        </section>
 
-            <div class="way-container">
-                <div class="way-cta-content way-reveal">
+        <!-- HOW WE WORK -->
+        <section class="pg-section">
+            <div class="pg-container">
+                <span class="pg-eyebrow reveal">HOW WE WORK</span>
+                <h2 class="pw-h2-single reveal">Start with the decision. <span>Build around the evidence.</span></h2>
+                <ol class="pw-steps">
+                    <li class="pw-step reveal">
+                        <div class="pw-step-top"><span class="pw-step-num">01</span><span class="pw-step-line" aria-hidden="true"></span></div>
+                        <h3>Understand the challenge</h3>
+                        <p>Define the risk, the decision and what useful progress would look like.</p>
+                    </li>
+                    <li class="pw-step reveal">
+                        <div class="pw-step-top"><span class="pw-step-num">02</span><span class="pw-step-line" aria-hidden="true"></span></div>
+                        <h3>Connect the perspectives</h3>
+                        <p>Bring asset knowledge, risk modelling and AI together with operational and insurance expertise.</p>
+                    </li>
+                    <li class="pw-step reveal">
+                        <div class="pw-step-top"><span class="pw-step-num">03</span><span class="pw-step-line" aria-hidden="true"></span></div>
+                        <h3>Validate in practice</h3>
+                        <p>Test against relevant data and operating conditions, with agreed objectives.</p>
+                    </li>
+                    <li class="pw-step reveal">
+                        <div class="pw-step-top"><span class="pw-step-num">04</span><span class="pw-step-line" aria-hidden="true"></span></div>
+                        <h3>Learn and refine</h3>
+                        <p>Use feedback and observed outcomes to improve practical value.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
 
-                    <span class="way-eyebrow">LET'S BUILD WHAT'S NEXT</span>
+        <!-- WHAT GUIDES US -->
+        <section class="pg-section">
+            <div class="pg-container">
+                <span class="pg-eyebrow reveal">WHAT GUIDES US</span>
+                <h2 class="pw-h2-single reveal">Principles behind the intelligence.</h2>
+                <div class="pw-principles">
+                    <article class="pw-principle reveal"><div class="pg-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6z"/></svg></div><h3>Integrity in our claims</h3><p>Be clear about the evidence, uncertainty and limitations behind our insights.</p></article>
+                    <article class="pw-principle reveal"><div class="pg-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/><path d="m3 17.5 9 5 9-5" opacity=".6"/></svg></div><h3>Accountability for usefulness</h3><p>Focus on intelligence that helps people investigate, prioritise and act.</p></article>
+                    <article class="pw-principle reveal"><div class="pg-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 14.5c3 0 6 1.8 6 5.5"/></svg></div><h3>Collaboration across disciplines</h3><p>Bring different perspectives together to understand risks more completely.</p></article>
+                    <article class="pw-principle reveal"><div class="pg-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.8-4.8"/></svg></div><h3>Curiosity with purpose</h3><p>Explore new approaches and test them against real-world needs.</p></article>
+                </div>
+            </div>
+        </section>
 
-                    <h2>
-                        Turn complexity into
-                        <span>clarity and confidence.</span>
-                    </h2>
+        <!-- OUR ECOSYSTEM -->
+        <section class="pg-section pw-ecosystem">
+            <div class="pg-container">
+                <span class="pg-eyebrow reveal">OUR ECOSYSTEM</span>
+                <h2 class="pw-h2-single reveal">Better outcomes through <span>collaboration.</span></h2>
+                <div class="pw-eco-copy">
+                    <p class="reveal">We work with asset owners, operators, technology specialists and insurance partners to connect operational realities with risk expertise.</p>
+                    <p class="reveal">Together, we aim to develop intelligence that is useful in practice and grounded in evidence.</p>
+                </div>
+                <ul class="pw-label-row reveal">
+                    <li>Asset owners &amp; operators</li>
+                    <li>Technology specialists</li>
+                    <li>Insurance partners</li>
+                    <li>Research collaborators</li>
+                </ul>
+            </div>
+        </section>
 
-                    <p>
-                        Let's explore how risk intelligence can support
-                        your next decision.
-                    </p>
-
-                    <a href="mailto:info@aser.ai" class="way-button">
-                        Explore With Us <span>↗</span>
-                    </a>
-
+        <!-- CALL TO ACTION -->
+        <section class="pw-cta">
+            <img class="ds-flow" src="./assets/images/flow-wave.svg" alt="" aria-hidden="true">
+            <div class="pg-container">
+                <div class="pw-cta-copy">
+                    <h2 class="reveal">Bring a risk challenge.<br><span>Let's explore the way forward.</span></h2>
+                    <p class="reveal">Whether you operate critical assets, assess insurance risk or bring specialist expertise, let's discuss where earlier insight could make a difference.</p>
+                    <a href="./contact.html" class="ds-button reveal">Start a Conversation <span>→</span></a>
+                    <p class="pw-callout pw-callout-plain reveal">Anticipate risk. Prioritise action. Protect value.</p>
                 </div>
             </div>
         </section>
@@ -562,10 +256,10 @@
                 <div class="aser-footer-col">
                     <h3>Company</h3>
                     <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Investors</a></li>
-                        <li><a href="#">Careers</a></li>
+                        <li><a href="./about-us.html">About Us</a></li>
+                        <li><a href="./contact.html">Contact Us</a></li>
+                        <li><a href="./investors.html">Investors</a></li>
+                        <li><a href="./careers.html">Careers</a></li>
                     </ul>
                 </div>
 
@@ -573,9 +267,9 @@
                 <div class="aser-footer-col aser-footer-solutions">
                     <h3>Solutions</h3>
                     <ul>
-                        <li><a href="#">Battery Energy Storage<br>System</a></li>
-                        <li><a href="#">Insurance Intelligence</a></li>
-                        <li><a href="#">Research and<br>Development</a></li>
+                        <li><a href="./operational-intelligence.html">Battery Energy Storage<br>System</a></li>
+                        <li><a href="./insurance-intelligence.html">Insurance Intelligence</a></li>
+                        <li><a href="./research-development.html">Research and<br>Development</a></li>
                     </ul>
                 </div>
 
@@ -589,16 +283,12 @@
                                 <span class="aser-footer-contact-text">+60 12 229 9584</span>
                             </a>
                         </li>
-
                         <li>
-                            <a href="mailto:info@slategrey-porpoise-194817.hostingersite.com"
-                                class="aser-footer-contact-link">
+                            <a href="mailto:info@aser.ai" class="aser-footer-contact-link">
                                 <span class="aser-footer-contact-icon">✉</span>
-                                <span
-                                    class="aser-footer-contact-text">info@slategrey-porpoise-194817.hostingersite.com</span>
+                                <span class="aser-footer-contact-text">info@aser.ai</span>
                             </a>
                         </li>
-
                         <li>
                             <div class="aser-footer-contact-link">
                                 <span class="aser-footer-contact-icon">⌖</span>
@@ -633,209 +323,6 @@
     </footer>
 
     <script src="./script/main.js" defer></script>
-    <script>
-        (() => {
-            "use strict";
-
-            const header = document.querySelector(".site-header");
-
-            if (!header) return;
-
-            const menuToggle = header.querySelector(".site-menu-toggle");
-            const dropdowns = [...header.querySelectorAll(".nav-dropdown")];
-            const dropdownButtons = dropdowns.map((item) =>
-                item.querySelector(".nav-dropdown-toggle")
-            );
-
-
-            /* ================================================
-               CLOSE ALL DROPDOWNS
-            ================================================ */
-
-            function closeDropdowns(except = null) {
-
-                dropdowns.forEach((dropdown) => {
-
-                    if (dropdown === except) return;
-
-                    dropdown.classList.remove("is-open");
-
-                    const button = dropdown.querySelector(
-                        ".nav-dropdown-toggle"
-                    );
-
-                    button?.setAttribute("aria-expanded", "false");
-
-                });
-
-            }
-
-
-            /* ================================================
-               CLOSE MOBILE MENU
-            ================================================ */
-
-            function closeMobileMenu() {
-
-                header.classList.remove("mobile-open");
-
-                menuToggle?.classList.remove("is-active");
-
-                menuToggle?.setAttribute("aria-expanded", "false");
-
-                menuToggle?.setAttribute("aria-label", "Open navigation");
-
-                closeDropdowns();
-
-            }
-
-
-            /* ================================================
-               MOBILE MENU TOGGLE
-            ================================================ */
-
-            if (menuToggle) {
-
-                menuToggle.addEventListener("click", () => {
-
-                    const isOpen = header.classList.toggle("mobile-open");
-
-                    menuToggle.classList.toggle("is-active", isOpen);
-
-                    menuToggle.setAttribute(
-                        "aria-expanded",
-                        String(isOpen)
-                    );
-
-                    menuToggle.setAttribute(
-                        "aria-label",
-                        isOpen ? "Close navigation" : "Open navigation"
-                    );
-
-                    if (!isOpen) {
-                        closeDropdowns();
-                    }
-
-                });
-
-            }
-
-
-            /* ================================================
-               DROPDOWN TOGGLE
-            ================================================ */
-
-            dropdownButtons.forEach((button) => {
-
-                if (!button) return;
-
-                button.addEventListener("click", (event) => {
-
-                    event.stopPropagation();
-
-                    const currentDropdown = button.closest(".nav-dropdown");
-
-                    const shouldOpen = !currentDropdown.classList.contains(
-                        "is-open"
-                    );
-
-                    closeDropdowns(currentDropdown);
-
-                    currentDropdown.classList.toggle("is-open", shouldOpen);
-
-                    button.setAttribute(
-                        "aria-expanded",
-                        String(shouldOpen)
-                    );
-
-                });
-
-            });
-
-
-            /* ================================================
-               CLOSE AFTER NAVIGATION
-            ================================================ */
-
-            header.querySelectorAll(".main-nav a").forEach((link) => {
-
-                link.addEventListener("click", () => {
-                    closeMobileMenu();
-                });
-
-            });
-
-
-            /* ================================================
-               CLICK OUTSIDE
-            ================================================ */
-
-            document.addEventListener("pointerdown", (event) => {
-
-                if (!header.contains(event.target)) {
-
-                    closeDropdowns();
-
-                    closeMobileMenu();
-
-                }
-
-            });
-
-
-            /* ================================================
-               ESCAPE KEY
-            ================================================ */
-
-            document.addEventListener("keydown", (event) => {
-
-                if (event.key !== "Escape") return;
-
-                closeDropdowns();
-                closeMobileMenu();
-
-            });
-
-
-            /* ================================================
-               RESPONSIVE STATE RESET
-            ================================================ */
-
-            const mobileBreakpoint = window.matchMedia("(max-width: 760px)");
-
-            mobileBreakpoint.addEventListener("change", () => {
-                closeMobileMenu();
-            });
-
-
-            /* ================================================
-               KEYBOARD DROPDOWN NAVIGATION
-            ================================================ */
-
-            dropdownButtons.forEach((button) => {
-
-                button?.addEventListener("keydown", (event) => {
-
-                    if (event.key !== "ArrowDown") return;
-
-                    event.preventDefault();
-
-                    const dropdown = button.closest(".nav-dropdown");
-
-                    closeDropdowns(dropdown);
-
-                    dropdown.classList.add("is-open");
-
-                    button.setAttribute("aria-expanded", "true");
-
-                    dropdown.querySelector(".nav-dropdown-menu a")?.focus();
-
-                });
-
-            });
-
-        })();
-    </script>
 </body>
 
 </html>

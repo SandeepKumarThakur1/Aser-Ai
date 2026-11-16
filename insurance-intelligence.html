@@ -9,12 +9,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="style/main.css">
-    <link rel="stylesheet" href="style/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/responsive.css">
+    <link rel="stylesheet" href="./style/design-system.css">
 </head>
 
 <body class="pantheon-insurance-page">
@@ -22,94 +20,46 @@
     <!-- HEADER -->
     <header class="site-header">
 
-        <a href="./index.html" class="logo" aria-label="ASER AI Home">
-            ASER <span>AI</span>
-        </a>
+        <a href="./index.html" class="logo" aria-label="ASER AI home">ASER <span>AI</span></a>
 
-        <nav class="main-nav" id="mainNavigation">
+        <nav class="main-nav" id="mainNavigation" aria-label="Main">
 
             <a href="./index.html" class="nav-link">Home</a>
 
             <a href="./platform.html" class="nav-link">Our Platform</a>
 
-
-            <!-- SOLUTIONS DROPDOWN -->
-            <div class="nav-dropdown">
-
+            <div class="nav-dropdown is-current">
                 <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="solutionsMenu">
-                    Solutions
-                    <span class="nav-chevron"></span>
+                    Solutions <span class="nav-chevron" aria-hidden="true"></span>
                 </button>
-
                 <div class="nav-dropdown-menu" id="solutionsMenu">
-
-                    <a href="./operational-intelligence.html">
-                        Battery Energy Storage System
-                    </a>
-
-                    <a href="./insurance-intelligence.html">
-                        Insurance Intelligence
-                    </a>
-
-                    <a href="./research-development.html">
-                        Research &amp; Development
-                    </a>
-
+                    <a href="./operational-intelligence.html">Battery Energy Storage Systems</a>
+                    <a href="./insurance-intelligence.html" aria-current="page">Insurance Intelligence</a>
+                    <a href="./research-development.html">Research &amp; Development</a>
                 </div>
-
             </div>
 
-
-            <!-- COMPANY DROPDOWN -->
             <div class="nav-dropdown">
-
                 <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="companyMenu">
-                    Company
-                    <span class="nav-chevron"></span>
+                    Company <span class="nav-chevron" aria-hidden="true"></span>
                 </button>
-
                 <div class="nav-dropdown-menu" id="companyMenu">
-
-                    <a href="./about-us.html">
-                        The Aser AI Way
-                    </a>
-
-                    <a href="./team.html">
-                        Our Leadership
-                    </a>
-
-                    <a href="./careers.html">
-                        Careers
-                    </a>
-
-                    <a href="./investors.html">
-                        Investors
-                    </a>
-
+                    <a href="./about-us.html">The ASER AI Way</a>
+                    <a href="./team.html">Our Leadership</a>
+                    <a href="./careers.html">Careers</a>
+                    <a href="./investors.html">Investors</a>
                 </div>
-
             </div>
-
 
             <a href="./news-media.html" class="nav-link">News &amp; Media</a>
 
+            <a href="./contact.html" class="nav-contact-mobile">Contact us</a>
+
         </nav>
 
+        <a href="./contact.html" class="nav-contact">Contact us</a>
 
-        <a href="mailto:info@aser.ai" class="nav-contact">
-
-            <span>Contact Us</span>
-
-            <span class="contact-arrow">
-                ↗
-            </span>
-
-        </a>
-
-
-        <!-- MOBILE TOGGLE -->
-        <button class="site-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"
-            aria-controls="mainNavigation">
+        <button class="site-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mainNavigation">
             <span></span>
             <span></span>
         </button>
@@ -703,18 +653,15 @@
 
             <div class="aser-footer-main">
 
+                <!-- BRAND -->
                 <div class="aser-footer-brand">
-
                     <div class="aser-footer-logo-wrap">
-
                         <div class="aser-footer-mark" aria-hidden="true">
                             <span>A</span>
                         </div>
-
                         <div class="aser-footer-logo">
                             ASER <span>AI</span>
                         </div>
-
                     </div>
 
                     <p>
@@ -726,50 +673,45 @@
                     <a href="#" class="aser-footer-social" aria-label="LinkedIn">
                         in
                     </a>
-
                 </div>
 
-
+                <!-- COMPANY -->
                 <div class="aser-footer-col">
                     <h3>Company</h3>
                     <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Investors</a></li>
-                        <li><a href="#">Careers</a></li>
+                        <li><a href="./about-us.html">About Us</a></li>
+                        <li><a href="./contact.html">Contact Us</a></li>
+                        <li><a href="./investors.html">Investors</a></li>
+                        <li><a href="./careers.html">Careers</a></li>
                     </ul>
                 </div>
 
-
+                <!-- SOLUTIONS -->
                 <div class="aser-footer-col aser-footer-solutions">
                     <h3>Solutions</h3>
                     <ul>
                         <li><a href="./operational-intelligence.html">Battery Energy Storage<br>System</a></li>
-                        <li><a href="#">Insurance Intelligence</a></li>
-                        <li><a href="#">Research and<br>Development</a></li>
+                        <li><a href="./insurance-intelligence.html">Insurance Intelligence</a></li>
+                        <li><a href="./research-development.html">Research and<br>Development</a></li>
                     </ul>
                 </div>
 
-
+                <!-- CONTACT -->
                 <div class="aser-footer-col aser-footer-contact-col">
                     <h3>Contact</h3>
-
                     <ul class="aser-footer-contact-list">
-
                         <li>
                             <a href="tel:+60122299584" class="aser-footer-contact-link">
                                 <span class="aser-footer-contact-icon">⌕</span>
                                 <span class="aser-footer-contact-text">+60 12 229 9584</span>
                             </a>
                         </li>
-
                         <li>
                             <a href="mailto:info@aser.ai" class="aser-footer-contact-link">
                                 <span class="aser-footer-contact-icon">✉</span>
                                 <span class="aser-footer-contact-text">info@aser.ai</span>
                             </a>
                         </li>
-
                         <li>
                             <div class="aser-footer-contact-link">
                                 <span class="aser-footer-contact-icon">⌖</span>
@@ -782,15 +724,13 @@
                                 </span>
                             </div>
                         </li>
-
                     </ul>
                 </div>
 
             </div>
 
-
+            <!-- BOTTOM BAR -->
             <div class="aser-footer-bottom">
-
                 <p class="aser-footer-bottom-copy">
                     © 2026 <span>Aser AI</span>. All rights reserved.
                 </p>
@@ -800,216 +740,12 @@
                     <span class="aser-footer-legal-divider"></span>
                     <a href="#">Terms of Service</a>
                 </div>
-
             </div>
 
         </div>
     </footer>
 
     <script src="script/main.js"></script>
-    <script>
-        (() => {
-            "use strict";
-
-            const header = document.querySelector(".site-header");
-
-            if (!header) return;
-
-            const menuToggle = header.querySelector(".site-menu-toggle");
-            const dropdowns = [...header.querySelectorAll(".nav-dropdown")];
-            const dropdownButtons = dropdowns.map((item) =>
-                item.querySelector(".nav-dropdown-toggle")
-            );
-
-
-            /* ================================================
-               CLOSE ALL DROPDOWNS
-            ================================================ */
-
-            function closeDropdowns(except = null) {
-
-                dropdowns.forEach((dropdown) => {
-
-                    if (dropdown === except) return;
-
-                    dropdown.classList.remove("is-open");
-
-                    const button = dropdown.querySelector(
-                        ".nav-dropdown-toggle"
-                    );
-
-                    button?.setAttribute("aria-expanded", "false");
-
-                });
-
-            }
-
-
-            /* ================================================
-               CLOSE MOBILE MENU
-            ================================================ */
-
-            function closeMobileMenu() {
-
-                header.classList.remove("mobile-open");
-
-                menuToggle?.classList.remove("is-active");
-
-                menuToggle?.setAttribute("aria-expanded", "false");
-
-                menuToggle?.setAttribute("aria-label", "Open navigation");
-
-                closeDropdowns();
-
-            }
-
-
-            /* ================================================
-               MOBILE MENU TOGGLE
-            ================================================ */
-
-            if (menuToggle) {
-
-                menuToggle.addEventListener("click", () => {
-
-                    const isOpen = header.classList.toggle("mobile-open");
-
-                    menuToggle.classList.toggle("is-active", isOpen);
-
-                    menuToggle.setAttribute(
-                        "aria-expanded",
-                        String(isOpen)
-                    );
-
-                    menuToggle.setAttribute(
-                        "aria-label",
-                        isOpen ? "Close navigation" : "Open navigation"
-                    );
-
-                    if (!isOpen) {
-                        closeDropdowns();
-                    }
-
-                });
-
-            }
-
-
-            /* ================================================
-               DROPDOWN TOGGLE
-            ================================================ */
-
-            dropdownButtons.forEach((button) => {
-
-                if (!button) return;
-
-                button.addEventListener("click", (event) => {
-
-                    event.stopPropagation();
-
-                    const currentDropdown = button.closest(".nav-dropdown");
-
-                    const shouldOpen = !currentDropdown.classList.contains(
-                        "is-open"
-                    );
-
-                    closeDropdowns(currentDropdown);
-
-                    currentDropdown.classList.toggle("is-open", shouldOpen);
-
-                    button.setAttribute(
-                        "aria-expanded",
-                        String(shouldOpen)
-                    );
-
-                });
-
-            });
-
-
-            /* ================================================
-               CLOSE AFTER NAVIGATION
-            ================================================ */
-
-            header.querySelectorAll(".main-nav a").forEach((link) => {
-
-                link.addEventListener("click", () => {
-                    closeMobileMenu();
-                });
-
-            });
-
-
-            /* ================================================
-               CLICK OUTSIDE
-            ================================================ */
-
-            document.addEventListener("pointerdown", (event) => {
-
-                if (!header.contains(event.target)) {
-
-                    closeDropdowns();
-
-                    closeMobileMenu();
-
-                }
-
-            });
-
-
-            /* ================================================
-               ESCAPE KEY
-            ================================================ */
-
-            document.addEventListener("keydown", (event) => {
-
-                if (event.key !== "Escape") return;
-
-                closeDropdowns();
-                closeMobileMenu();
-
-            });
-
-
-            /* ================================================
-               RESPONSIVE STATE RESET
-            ================================================ */
-
-            const mobileBreakpoint = window.matchMedia("(max-width: 760px)");
-
-            mobileBreakpoint.addEventListener("change", () => {
-                closeMobileMenu();
-            });
-
-
-            /* ================================================
-               KEYBOARD DROPDOWN NAVIGATION
-            ================================================ */
-
-            dropdownButtons.forEach((button) => {
-
-                button?.addEventListener("keydown", (event) => {
-
-                    if (event.key !== "ArrowDown") return;
-
-                    event.preventDefault();
-
-                    const dropdown = button.closest(".nav-dropdown");
-
-                    closeDropdowns(dropdown);
-
-                    dropdown.classList.add("is-open");
-
-                    button.setAttribute("aria-expanded", "true");
-
-                    dropdown.querySelector(".nav-dropdown-menu a")?.focus();
-
-                });
-
-            });
-
-        })();
-    </script>
 </body>
 
 </html>

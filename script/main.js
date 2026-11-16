@@ -173,6 +173,84 @@
 
 
   /* =========================================================
+     4b. HOMEPAGE DELIVERY DIAGRAM — connectors drawn from the
+         real element positions so they line up at every width
+  ========================================================= */
+
+  const deliveryDiagram = document.querySelector(".aser3-diagram");
+  const deliverySvg = deliveryDiagram?.querySelector(".aser3-lines");
+
+  if (deliveryDiagram && deliverySvg) {
+    const inputs = [...deliveryDiagram.querySelectorAll(".aser3-input")];
+    const core = deliveryDiagram.querySelector(".aser3-core");
+    const cards = [...deliveryDiagram.querySelectorAll(".aser3-card")];
+    const inputPaths = [...deliverySvg.querySelectorAll(".aser3-l1, .aser3-l2, .aser3-l3")];
+    const cardPaths = [...deliverySvg.querySelectorAll(".aser3-c1, .aser3-c2, .aser3-c3, .aser3-c4")];
+
+    const f = (n) => Math.round(n * 10) / 10;
+
+    const drawConnectors = () => {
+      if (!core || getComputedStyle(deliverySvg).display === "none") return;
+
+      const box = deliveryDiagram.getBoundingClientRect();
+      const c = core.getBoundingClientRect();
+      const coreLeft = c.left - box.left;
+      const coreTop = c.top - box.top;
+      const coreBottom = coreTop + c.height;
+      const coreMidY = coreTop + c.height / 2;
+
+      deliverySvg.setAttribute("viewBox", `0 0 ${f(box.width)} ${f(box.height)}`);
+      deliverySvg.setAttribute("preserveAspectRatio", "none");
+      deliverySvg.style.height = `${box.height}px`;
+
+      inputs.forEach((input, i) => {
+        const path = inputPaths[i];
+        if (!path) return;
+        const r = input.getBoundingClientRect();
+        const x1 = r.right - box.left;
+        const y1 = r.top - box.top + r.height / 2;
+        const y2 = coreMidY + (i - 1) * 10;
+        const mid = x1 + (coreLeft - x1) * 0.55;
+        path.setAttribute("d", `M${f(x1)} ${f(y1)} C${f(mid)} ${f(y1)} ${f(mid)} ${f(y2)} ${f(coreLeft)} ${f(y2)}`);
+      });
+
+      cards.forEach((card, i) => {
+        const path = cardPaths[i];
+        if (!path) return;
+        const r = card.getBoundingClientRect();
+        const x1 = coreLeft + c.width * (0.2 + i * 0.2);
+        const x2 = r.left - box.left + r.width / 2;
+        const y2 = r.top - box.top;
+        const bend = coreBottom + (y2 - coreBottom) * 0.5;
+        path.setAttribute("d", `M${f(x1)} ${f(coreBottom)} C${f(x1)} ${f(bend)} ${f(x2)} ${f(bend)} ${f(x2)} ${f(y2)}`);
+      });
+
+      [...inputPaths, ...cardPaths].forEach((path) => {
+        const length = Math.ceil(path.getTotalLength());
+        path.style.strokeDasharray = length;
+        if (!path.closest(".is-visible")) path.style.strokeDashoffset = length;
+      });
+    };
+
+    drawConnectors();
+    window.addEventListener("load", drawConnectors);
+    /* Core and cards slide into place; measure again once settled */
+    [core, ...cards, ...inputs].forEach((el) => {
+      el?.addEventListener("transitionend", (event) => {
+        if (event.target === el && event.propertyName === "transform") drawConnectors();
+      });
+    });
+    document.fonts?.ready.then(drawConnectors);
+
+    if ("ResizeObserver" in window) {
+      new ResizeObserver(() => drawConnectors()).observe(deliveryDiagram);
+    } else {
+      window.addEventListener("resize", drawConnectors, { passive: true });
+    }
+  }
+
+
+  /* =========================================================
      5. IN-PAGE NAVIGATION STATE
   ========================================================= */
 
@@ -373,8 +451,16 @@
 
 /* =========================================================
    PANTHEON INSURANCE PAGE — INTERACTIONS
-   Add inside the existing shared IIFE, before its closing })();
+   Wrapped in its own scope: this block previously sat outside
+   any function and referenced undefined variables, which threw
+   a ReferenceError and stopped every script below it.
 ========================================================= */
+
+(() => {
+"use strict";
+
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const finePointer = window.matchMedia("(pointer: fine)").matches;
 
 
 /* 1. HERO PARALLAX */
@@ -518,6 +604,8 @@ if (reduceMotion || !("IntersectionObserver" in window)) {
   });
 
 }
+
+})();
 
 /* =========================================================
    ASER AI — RESEARCH PAGE INTERACTIONS
@@ -764,45 +852,85 @@ if (reduceMotion || !("IntersectionObserver" in window)) {
 (() => {
     "use strict";
 
-    const headers = document.querySelectorAll(".site-header");
-
-    headers.forEach((header) => {
+    /* Site header: dropdowns, mobile panel, keyboard, outside click.
+       Sets both "menu-open" and "mobile-open" because older CSS
+       rules use each name. */
+    document.querySelectorAll(".site-header").forEach((header) => {
         const toggle = header.querySelector(".site-menu-toggle");
-        const nav = header.querySelector("nav");
+        const dropdowns = [...header.querySelectorAll(".nav-dropdown")];
 
-        if (!toggle || !nav) return;
-
-        const closeMenu = () => {
-            header.classList.remove("menu-open");
-            toggle.setAttribute("aria-expanded", "false");
-            toggle.setAttribute("aria-label", "Open navigation");
+        const setDropdown = (dropdown, open) => {
+            dropdown.classList.toggle("is-open", open);
+            dropdown.querySelector(".nav-dropdown-toggle")
+                ?.setAttribute("aria-expanded", String(open));
         };
 
-        toggle.addEventListener("click", () => {
-            const open = header.classList.toggle("menu-open");
+        const closeDropdowns = (except = null) => {
+            dropdowns.forEach((d) => { if (d !== except) setDropdown(d, false); });
+        };
 
+        const setMenu = (open) => {
+            header.classList.toggle("menu-open", open);
+            header.classList.toggle("mobile-open", open);
+            document.documentElement.classList.toggle("nav-locked", open);
+            if (!toggle) return;
+            toggle.classList.toggle("is-active", open);
             toggle.setAttribute("aria-expanded", String(open));
-            toggle.setAttribute(
-                "aria-label",
-                open ? "Close navigation" : "Open navigation"
-            );
+            toggle.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+        };
+
+        const closeAll = () => { closeDropdowns(); setMenu(false); };
+
+        toggle?.addEventListener("click", () => {
+            const open = !header.classList.contains("menu-open");
+            setMenu(open);
+            if (!open) closeDropdowns();
         });
 
-        nav.querySelectorAll("a").forEach((link) => {
-            link.addEventListener("click", closeMenu);
+        dropdowns.forEach((dropdown) => {
+            const button = dropdown.querySelector(".nav-dropdown-toggle");
+            if (!button) return;
+
+            button.addEventListener("click", (event) => {
+                event.stopPropagation();
+                const open = !dropdown.classList.contains("is-open");
+                closeDropdowns(dropdown);
+                setDropdown(dropdown, open);
+            });
+
+            button.addEventListener("keydown", (event) => {
+                if (event.key !== "ArrowDown") return;
+                event.preventDefault();
+                closeDropdowns(dropdown);
+                setDropdown(dropdown, true);
+                dropdown.querySelector(".nav-dropdown-menu a")?.focus();
+            });
+
+            /* Close when keyboard focus leaves the dropdown */
+            dropdown.addEventListener("focusout", (event) => {
+                if (!dropdown.contains(event.relatedTarget)) setDropdown(dropdown, false);
+            });
+        });
+
+        header.querySelectorAll("nav a").forEach((link) => {
+            link.addEventListener("click", closeAll);
         });
 
         document.addEventListener("pointerdown", (event) => {
-            if (!header.contains(event.target)) closeMenu();
+            if (!header.contains(event.target)) closeAll();
         });
 
         document.addEventListener("keydown", (event) => {
-            if (event.key === "Escape") closeMenu();
+            if (event.key === "Escape") closeAll();
         });
 
-        window.addEventListener("resize", () => {
-            if (window.innerWidth > 640) closeMenu();
-        }, { passive: true });
+        window.matchMedia("(max-width: 1100px)")
+            .addEventListener("change", closeAll);
+
+        /* Elevate header once the page scrolls */
+        const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 8);
+        onScroll();
+        window.addEventListener("scroll", onScroll, { passive: true });
     });
 
 
@@ -999,3 +1127,161 @@ if (reduceMotion || !("IntersectionObserver" in window)) {
 
 
 
+
+
+/* =========================================================
+   ASER AI — INVESTORS / NEWS / CONTACT / CAREERS PAGES
+========================================================= */
+
+(() => {
+    "use strict";
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    /* 1. Split statements into words for a word-by-word reveal */
+    document.querySelectorAll(".pg-statement[data-words]").forEach((statement) => {
+        let index = 0;
+        const wrap = (node) => {
+            [...node.childNodes].forEach((child) => {
+                if (child.nodeType === Node.TEXT_NODE) {
+                    const frag = document.createDocumentFragment();
+                    child.textContent.split(/(\s+)/).forEach((part) => {
+                        if (!part) return;
+                        if (/^\s+$/.test(part)) {
+                            frag.appendChild(document.createTextNode(" "));
+                            return;
+                        }
+                        const span = document.createElement("span");
+                        span.className = "pg-word";
+                        span.style.setProperty("--w", index++);
+                        span.textContent = part;
+                        frag.appendChild(span);
+                    });
+                    child.replaceWith(frag);
+                } else if (child.nodeType === Node.ELEMENT_NODE) {
+                    wrap(child);
+                }
+            });
+        };
+        wrap(statement);
+    });
+
+    /* 2. Reveal statements and CTA lines when scrolled into view */
+    const revealTargets = document.querySelectorAll(".pg-statement, .pg-cta-lines");
+
+    if (reduceMotion || !("IntersectionObserver" in window)) {
+        revealTargets.forEach((el) => el.classList.add("is-visible"));
+    } else {
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add("is-visible");
+                obs.unobserve(entry.target);
+            });
+        }, { threshold: 0.3 });
+        revealTargets.forEach((el) => observer.observe(el));
+    }
+
+    /* 3. News category filter */
+    const filterButtons = document.querySelectorAll(".pg-filter");
+    const newsCards = document.querySelectorAll(".pg-news-card");
+    const emptyState = document.querySelector(".pg-news-empty");
+
+    filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            const filter = button.dataset.filter;
+            let shown = 0;
+
+            filterButtons.forEach((b) => {
+                const active = b === button;
+                b.classList.toggle("is-active", active);
+                b.setAttribute("aria-pressed", String(active));
+            });
+
+            newsCards.forEach((card) => {
+                const match = filter === "all" || card.dataset.category === filter;
+                card.classList.toggle("is-hidden", !match);
+                card.classList.remove("is-entering");
+                if (match) {
+                    shown++;
+                    card.classList.add("is-visible");
+                    if (!reduceMotion) {
+                        void card.offsetWidth;
+                        card.classList.add("is-entering");
+                    }
+                }
+            });
+
+            if (emptyState) emptyState.hidden = shown > 0;
+        });
+    });
+
+    /* 4. Live local time for each office */
+    const clocks = document.querySelectorAll(".pg-clock[data-tz]");
+
+    if (clocks.length) {
+        const tick = () => {
+            clocks.forEach((clock) => {
+                const out = clock.querySelector(".pg-clock-time");
+                try {
+                    out.textContent = new Intl.DateTimeFormat("en-GB", {
+                        hour: "2-digit",
+                        minute: "2-digit",
+                        timeZone: clock.dataset.tz
+                    }).format(new Date());
+                } catch (e) {
+                    clock.hidden = true;
+                }
+            });
+        };
+        tick();
+        setInterval(tick, 30000);
+    }
+
+    /* 5. Contact form: validate, then open the visitor's email app */
+    document.querySelectorAll(".pg-form[data-mailto]").forEach((form) => {
+        const status = form.querySelector(".pg-form-status");
+
+        const validate = (field) => {
+            const input = field.querySelector("input, textarea");
+            if (!input || !input.required) return true;
+            const ok = input.value.trim() !== "" &&
+                (input.type !== "email" || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim()));
+            field.classList.toggle("has-error", !ok);
+            return ok;
+        };
+
+        form.querySelectorAll(".pg-field").forEach((field) => {
+            field.addEventListener("input", () => {
+                if (field.classList.contains("has-error")) validate(field);
+            });
+        });
+
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            const fields = [...form.querySelectorAll(".pg-field")];
+            const valid = fields.map(validate).every(Boolean);
+
+            if (!valid) {
+                status.textContent = "Please complete the highlighted fields.";
+                form.querySelector(".has-error input, .has-error textarea")?.focus();
+                return;
+            }
+
+            const data = new FormData(form);
+            const subject = `${data.get("topic")} — ${data.get("name")}`;
+            const body = [
+                `Name: ${data.get("name")}`,
+                `Email: ${data.get("email")}`,
+                data.get("company") ? `Company: ${data.get("company")}` : "",
+                "",
+                data.get("message")
+            ].filter((line) => line !== null).join("\n");
+
+            window.location.href =
+                `mailto:${form.dataset.mailto}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+            status.textContent = "Thanks! Your email app should open with your message ready to send.";
+        });
+    });
+})();

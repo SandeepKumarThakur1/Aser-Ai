@@ -8,105 +8,56 @@
     <title>ASER AI | Predictive Risk Intelligence</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/responsive.css">
+    <link rel="stylesheet" href="./style/design-system.css">
 </head>
 
 <body>
 
     <header class="site-header">
 
-        <a href="./index.html" class="logo" aria-label="ASER AI Home">
-            ASER <span>AI</span>
-        </a>
+        <a href="./index.html" class="logo" aria-label="ASER AI home">ASER <span>AI</span></a>
 
-        <nav class="main-nav" id="mainNavigation">
+        <nav class="main-nav" id="mainNavigation" aria-label="Main">
 
-            <a href="./index.html" class="nav-link">Home</a>
+            <a href="./index.html" class="nav-link active" aria-current="page">Home</a>
 
             <a href="./platform.html" class="nav-link">Our Platform</a>
 
-
-            <!-- SOLUTIONS DROPDOWN -->
             <div class="nav-dropdown">
-
                 <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="solutionsMenu">
-                    Solutions
-                    <span class="nav-chevron"></span>
+                    Solutions <span class="nav-chevron" aria-hidden="true"></span>
                 </button>
-
                 <div class="nav-dropdown-menu" id="solutionsMenu">
-
-                    <a href="./operational-intelligence.html">
-                        Battery Energy Storage System
-                    </a>
-
-                    <a href="./insurance-intelligence.html">
-                        Insurance Intelligence
-                    </a>
-
-                    <a href="./research-development.html">
-                        Research &amp; Development
-                    </a>
-
+                    <a href="./operational-intelligence.html">Battery Energy Storage Systems</a>
+                    <a href="./insurance-intelligence.html">Insurance Intelligence</a>
+                    <a href="./research-development.html">Research &amp; Development</a>
                 </div>
-
             </div>
 
-
-            <!-- COMPANY DROPDOWN -->
             <div class="nav-dropdown">
-
                 <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="companyMenu">
-                    Company
-                    <span class="nav-chevron"></span>
+                    Company <span class="nav-chevron" aria-hidden="true"></span>
                 </button>
-
                 <div class="nav-dropdown-menu" id="companyMenu">
-
-                    <a href="./about-us.html">
-                        The Aser AI Way
-                    </a>
-
-                    <a href="./team.html">
-                        Our Leadership
-                    </a>
-
-                    <a href="./careers.html">
-                        Careers
-                    </a>
-
-                    <a href="./investors.html">
-                        Investors
-                    </a>
-
+                    <a href="./about-us.html">The ASER AI Way</a>
+                    <a href="./team.html">Our Leadership</a>
+                    <a href="./careers.html">Careers</a>
+                    <a href="./investors.html">Investors</a>
                 </div>
-
             </div>
-
 
             <a href="./news-media.html" class="nav-link">News &amp; Media</a>
 
+            <a href="./contact.html" class="nav-contact-mobile">Contact us</a>
+
         </nav>
 
+        <a href="./contact.html" class="nav-contact">Contact us</a>
 
-        <a href="mailto:info@aser.ai" class="nav-contact">
-
-            <span>Contact Us</span>
-
-            <span class="contact-arrow">
-                ↗
-            </span>
-
-        </a>
-
-
-        <!-- MOBILE TOGGLE -->
-        <button class="site-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"
-            aria-controls="mainNavigation">
+        <button class="site-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mainNavigation">
             <span></span>
             <span></span>
         </button>
@@ -148,7 +99,7 @@
                     before risk becomes loss.
                 </p>
 
-                <a href="#" class="hero-button">
+                <a href="./platform.html" class="hero-button">
                     See Pantheon in Action
                     <span>→</span>
                 </a>
@@ -654,11 +605,6 @@
                 <div class="aser4-divider"></div>
                 <div class="aser4-bottom">
                     <h3>Asset data. <span>Risk foresight.</span> Better decisions.</h3>
-                    <div class="aser4-sectors">
-                        <span>Operational</span>
-                        <span>Financial</span>
-                        <span>Insurance</span>
-                    </div>
                 </div>
             </div>
         </section>
@@ -672,26 +618,9 @@
                 </h2>
 
                 <div class="aser5-main">
-                    <div class="aser5-visual" aria-label="Battery energy storage site visual">
-                        <div class="aser5-sky"></div>
-                        <div class="aser5-cloud"></div>
-                        <div class="aser5-grid">
-                            <div class="aser5-unit"></div>
-                            <div class="aser5-unit"></div>
-                            <div class="aser5-unit"></div>
-                            <div class="aser5-unit"></div>
-                            <div class="aser5-unit"></div>
-                            <div class="aser5-unit"></div>
-                            <div class="aser5-unit"></div>
-                            <div class="aser5-unit"></div>
-                            <div class="aser5-unit"></div>
-                            <div class="aser5-unit"></div>
-                            <div class="aser5-unit"></div>
-                            <div class="aser5-unit"></div>
-                            <div class="aser5-unit"></div>
-                            <div class="aser5-unit"></div>
-                        </div>
-                        <div class="aser5-lines">
+                    <div class="aser5-visual has-photo">
+                        <img src="./assets/images/solutionHero.jpg" alt="Battery energy storage containers beside transmission lines at dusk" loading="lazy">
+                        <div class="aser5-lines" aria-hidden="true">
                             <svg viewBox="0 0 800 410" preserveAspectRatio="none">
                                 <path d="M40 290 C180 230 190 240 315 285 S510 330 585 245 S690 220 770 275" fill="none"
                                     stroke="#08e9ef" stroke-width="2" opacity=".8" />
@@ -705,7 +634,7 @@
                     </div>
 
                     <div class="aser5-copy">
-                        <p>Pan theon complements existing BMS, EMS and SCADA systems, connecting asset signals with
+                        <p>Pantheon complements existing BMS, EMS and SCADA systems, connecting asset signals with
                             forward-looking insight into degradation, abnormal behaviour and developing risk.</p>
 
                         <div class="aser5-benefits">
@@ -722,7 +651,7 @@
                             </div>
                         </div>
 
-                        <a href="#contact" class="aser5-button">Explore Battery Intelligence <span>→</span></a>
+                        <a href="./operational-intelligence.html" class="aser5-button">Explore Battery Intelligence <span>→</span></a>
                     </div>
                 </div>
 
@@ -775,39 +704,39 @@
                         </div>
 
                         <div class="way-partner">
-                            <img src="./assets/images/logos/2.png" alt="General">
+                            <img src="./assets/images/logos/2.png" alt="Qnovo">
                         </div>
 
                         <div class="way-partner">
-                            <img src="./assets/images/logos/3.png" alt="The Hive">
+                            <img src="./assets/images/logos/3.png" alt="Synvista">
                         </div>
 
                         <div class="way-partner">
-                            <img src="./assets/images/logos/4.png" alt="Synvista">
+                            <img src="./assets/images/logos/4.png" alt="Hasilwan">
                         </div>
                         <div class="way-partner">
-                            <img src="./assets/images/logos/5.png" alt="Synvista">
+                            <img src="./assets/images/logos/5.png" alt="Sembcorp">
                         </div>
                         <div class="way-partner">
-                            <img src="./assets/images/logos/6.png" alt="Synvista">
+                            <img src="./assets/images/logos/6.png" alt="Green Tenaga">
                         </div>
                         <div class="way-partner">
-                            <img src="./assets/images/logos/7.png" alt="Synvista">
+                            <img src="./assets/images/logos/7.png" alt="Marsh">
                         </div>
                         <div class="way-partner">
-                            <img src="./assets/images/logos/8.png" alt="Synvista">
+                            <img src="./assets/images/logos/8.png" alt="MSIG">
                         </div>
                         <div class="way-partner">
-                            <img src="./assets/images/logos/9.png" alt="Synvista">
+                            <img src="./assets/images/logos/9.png" alt="Swiss Re">
                         </div>
                         <div class="way-partner">
-                            <img src="./assets/images/logos/10.png" alt="Synvista">
+                            <img src="./assets/images/logos/10.png" alt="Generali">
                         </div>
                         <div class="way-partner">
-                            <img src="./assets/images/logos/11.png" alt="Synvista">
+                            <img src="./assets/images/logos/11.png" alt="The Hive Southeast Asia">
                         </div>
                         <div class="way-partner">
-                            <img src="./assets/images/logos/12.png" alt="Synvista">
+                            <img src="./assets/images/logos/12.png" alt="Jelawang Capital">
                         </div>
                     </div>
 
@@ -818,39 +747,39 @@
                         </div>
 
                         <div class="way-partner">
-                            <img src="./assets/images/logos/2.png" alt="General">
+                            <img src="./assets/images/logos/2.png" alt="Qnovo">
                         </div>
 
                         <div class="way-partner">
-                            <img src="./assets/images/logos/3.png" alt="The Hive">
+                            <img src="./assets/images/logos/3.png" alt="Synvista">
                         </div>
 
                         <div class="way-partner">
-                            <img src="./assets/images/logos/4.png" alt="Synvista">
+                            <img src="./assets/images/logos/4.png" alt="Hasilwan">
                         </div>
                         <div class="way-partner">
-                            <img src="./assets/images/logos/5.png" alt="Synvista">
+                            <img src="./assets/images/logos/5.png" alt="Sembcorp">
                         </div>
                         <div class="way-partner">
-                            <img src="./assets/images/logos/6.png" alt="Synvista">
+                            <img src="./assets/images/logos/6.png" alt="Green Tenaga">
                         </div>
                         <div class="way-partner">
-                            <img src="./assets/images/logos/7.png" alt="Synvista">
+                            <img src="./assets/images/logos/7.png" alt="Marsh">
                         </div>
                         <div class="way-partner">
-                            <img src="./assets/images/logos/8.png" alt="Synvista">
+                            <img src="./assets/images/logos/8.png" alt="MSIG">
                         </div>
                         <div class="way-partner">
-                            <img src="./assets/images/logos/9.png" alt="Synvista">
+                            <img src="./assets/images/logos/9.png" alt="Swiss Re">
                         </div>
                         <div class="way-partner">
-                            <img src="./assets/images/logos/10.png" alt="Synvista">
+                            <img src="./assets/images/logos/10.png" alt="Generali">
                         </div>
                         <div class="way-partner">
-                            <img src="./assets/images/logos/11.png" alt="Synvista">
+                            <img src="./assets/images/logos/11.png" alt="The Hive Southeast Asia">
                         </div>
                         <div class="way-partner">
-                            <img src="./assets/images/logos/12.png" alt="Synvista">
+                            <img src="./assets/images/logos/12.png" alt="Jelawang Capital">
                         </div>
                     </div>
 
@@ -859,6 +788,15 @@
             </div>
 
         </section>
+        <!-- CLOSING CTA -->
+        <section class="ds-cta-band" aria-labelledby="homeCtaTitle">
+            <div class="ds-cta-band-bg" aria-hidden="true"><img class="ds-flow" src="./assets/images/flow-wave.svg" alt="" aria-hidden="true"></div>
+            <div class="ds-cta-band-inner reveal">
+                <h2 id="homeCtaTitle">Anticipate risk. <em>Prioritise</em> action. Protect value.</h2>
+                <a href="mailto:info@aser.ai?subject=Pantheon%20demo" class="hero-button ds-button">Request a Demo <span>→</span></a>
+            </div>
+        </section>
+
     </main>
 
     <footer class="aser-footer">
@@ -892,10 +830,10 @@
                 <div class="aser-footer-col">
                     <h3>Company</h3>
                     <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Investors</a></li>
-                        <li><a href="#">Careers</a></li>
+                        <li><a href="./about-us.html">About Us</a></li>
+                        <li><a href="./contact.html">Contact Us</a></li>
+                        <li><a href="./investors.html">Investors</a></li>
+                        <li><a href="./careers.html">Careers</a></li>
                     </ul>
                 </div>
 
@@ -903,9 +841,9 @@
                 <div class="aser-footer-col aser-footer-solutions">
                     <h3>Solutions</h3>
                     <ul>
-                        <li><a href="#">Battery Energy Storage<br>System</a></li>
-                        <li><a href="#">Insurance Intelligence</a></li>
-                        <li><a href="#">Research and<br>Development</a></li>
+                        <li><a href="./operational-intelligence.html">Battery Energy Storage<br>System</a></li>
+                        <li><a href="./insurance-intelligence.html">Insurance Intelligence</a></li>
+                        <li><a href="./research-development.html">Research and<br>Development</a></li>
                     </ul>
                 </div>
 
@@ -919,16 +857,12 @@
                                 <span class="aser-footer-contact-text">+60 12 229 9584</span>
                             </a>
                         </li>
-
                         <li>
-                            <a href="mailto:info@slategrey-porpoise-194817.hostingersite.com"
-                                class="aser-footer-contact-link">
+                            <a href="mailto:info@aser.ai" class="aser-footer-contact-link">
                                 <span class="aser-footer-contact-icon">✉</span>
-                                <span
-                                    class="aser-footer-contact-text">info@slategrey-porpoise-194817.hostingersite.com</span>
+                                <span class="aser-footer-contact-text">info@aser.ai</span>
                             </a>
                         </li>
-
                         <li>
                             <div class="aser-footer-contact-link">
                                 <span class="aser-footer-contact-icon">⌖</span>
@@ -963,209 +897,6 @@
     </footer>
 
     <script src="./script/main.js" defer></script>
-    <script>
-        (() => {
-            "use strict";
-
-            const header = document.querySelector(".site-header");
-
-            if (!header) return;
-
-            const menuToggle = header.querySelector(".site-menu-toggle");
-            const dropdowns = [...header.querySelectorAll(".nav-dropdown")];
-            const dropdownButtons = dropdowns.map((item) =>
-                item.querySelector(".nav-dropdown-toggle")
-            );
-
-
-            /* ================================================
-               CLOSE ALL DROPDOWNS
-            ================================================ */
-
-            function closeDropdowns(except = null) {
-
-                dropdowns.forEach((dropdown) => {
-
-                    if (dropdown === except) return;
-
-                    dropdown.classList.remove("is-open");
-
-                    const button = dropdown.querySelector(
-                        ".nav-dropdown-toggle"
-                    );
-
-                    button?.setAttribute("aria-expanded", "false");
-
-                });
-
-            }
-
-
-            /* ================================================
-               CLOSE MOBILE MENU
-            ================================================ */
-
-            function closeMobileMenu() {
-
-                header.classList.remove("mobile-open");
-
-                menuToggle?.classList.remove("is-active");
-
-                menuToggle?.setAttribute("aria-expanded", "false");
-
-                menuToggle?.setAttribute("aria-label", "Open navigation");
-
-                closeDropdowns();
-
-            }
-
-
-            /* ================================================
-               MOBILE MENU TOGGLE
-            ================================================ */
-
-            if (menuToggle) {
-
-                menuToggle.addEventListener("click", () => {
-
-                    const isOpen = header.classList.toggle("mobile-open");
-
-                    menuToggle.classList.toggle("is-active", isOpen);
-
-                    menuToggle.setAttribute(
-                        "aria-expanded",
-                        String(isOpen)
-                    );
-
-                    menuToggle.setAttribute(
-                        "aria-label",
-                        isOpen ? "Close navigation" : "Open navigation"
-                    );
-
-                    if (!isOpen) {
-                        closeDropdowns();
-                    }
-
-                });
-
-            }
-
-
-            /* ================================================
-               DROPDOWN TOGGLE
-            ================================================ */
-
-            dropdownButtons.forEach((button) => {
-
-                if (!button) return;
-
-                button.addEventListener("click", (event) => {
-
-                    event.stopPropagation();
-
-                    const currentDropdown = button.closest(".nav-dropdown");
-
-                    const shouldOpen = !currentDropdown.classList.contains(
-                        "is-open"
-                    );
-
-                    closeDropdowns(currentDropdown);
-
-                    currentDropdown.classList.toggle("is-open", shouldOpen);
-
-                    button.setAttribute(
-                        "aria-expanded",
-                        String(shouldOpen)
-                    );
-
-                });
-
-            });
-
-
-            /* ================================================
-               CLOSE AFTER NAVIGATION
-            ================================================ */
-
-            header.querySelectorAll(".main-nav a").forEach((link) => {
-
-                link.addEventListener("click", () => {
-                    closeMobileMenu();
-                });
-
-            });
-
-
-            /* ================================================
-               CLICK OUTSIDE
-            ================================================ */
-
-            document.addEventListener("pointerdown", (event) => {
-
-                if (!header.contains(event.target)) {
-
-                    closeDropdowns();
-
-                    closeMobileMenu();
-
-                }
-
-            });
-
-
-            /* ================================================
-               ESCAPE KEY
-            ================================================ */
-
-            document.addEventListener("keydown", (event) => {
-
-                if (event.key !== "Escape") return;
-
-                closeDropdowns();
-                closeMobileMenu();
-
-            });
-
-
-            /* ================================================
-               RESPONSIVE STATE RESET
-            ================================================ */
-
-            const mobileBreakpoint = window.matchMedia("(max-width: 760px)");
-
-            mobileBreakpoint.addEventListener("change", () => {
-                closeMobileMenu();
-            });
-
-
-            /* ================================================
-               KEYBOARD DROPDOWN NAVIGATION
-            ================================================ */
-
-            dropdownButtons.forEach((button) => {
-
-                button?.addEventListener("keydown", (event) => {
-
-                    if (event.key !== "ArrowDown") return;
-
-                    event.preventDefault();
-
-                    const dropdown = button.closest(".nav-dropdown");
-
-                    closeDropdowns(dropdown);
-
-                    dropdown.classList.add("is-open");
-
-                    button.setAttribute("aria-expanded", "true");
-
-                    dropdown.querySelector(".nav-dropdown-menu a")?.focus();
-
-                });
-
-            });
-
-        })();
-    </script>
 </body>
 
 </html>
