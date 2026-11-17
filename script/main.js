@@ -1238,9 +1238,18 @@ if (reduceMotion || !("IntersectionObserver" in window)) {
         setInterval(tick, 30000);
     }
 
-    /* 5. Contact form: validate, then open the visitor's email app */
+    /* 5. Contact form: validate, then send via FormSubmit (email to data-endpoint address). */
     document.querySelectorAll(".pg-form[data-mailto]").forEach((form) => {
         const status = form.querySelector(".pg-form-status");
+        const button = form.querySelector(".pg-form-submit");
+        const endpoint = (form.dataset.endpoint || "").trim();
+        const hasEndpoint = /^https:\/\/formsubmit\.co\/ajax\/.+/.test(endpoint);
+
+        const setStatus = (text, type = "") => {
+            status.textContent = text;
+            status.classList.toggle("is-error", type === "error");
+            status.classList.toggle("is-success", type === "success");
+        };
 
         const validate = (field) => {
             const input = field.querySelector("input, textarea");
@@ -1257,31 +1266,69 @@ if (reduceMotion || !("IntersectionObserver" in window)) {
             });
         });
 
-        form.addEventListener("submit", (event) => {
+        form.addEventListener("submit", async (event) => {
             event.preventDefault();
             const fields = [...form.querySelectorAll(".pg-field")];
             const valid = fields.map(validate).every(Boolean);
 
             if (!valid) {
-                status.textContent = "Please complete the highlighted fields.";
+                setStatus("Please complete the highlighted fields.", "error");
                 form.querySelector(".has-error input, .has-error textarea")?.focus();
                 return;
             }
 
             const data = new FormData(form);
-            const subject = `${data.get("topic")} — ${data.get("name")}`;
-            const body = [
-                `Name: ${data.get("name")}`,
-                `Email: ${data.get("email")}`,
-                data.get("company") ? `Company: ${data.get("company")}` : "",
-                "",
-                data.get("message")
-            ].filter((line) => line !== null).join("\n");
 
-            window.location.href =
-                `mailto:${form.dataset.mailto}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            if (!hasEndpoint) {
+                console.error("[Contact form] data-endpoint in contact.html must look like https://formsubmit.co/ajax/you@example.com");
+                setStatus(`The form isn't connected yet. Please email us at ${form.dataset.mailto}.`, "error");
+                return;
+            }
 
-            status.textContent = "Thanks! Your email app should open with your message ready to send.";
+            // Honeypot filled = bot: pretend success, send nothing
+            if ((data.get("website") || "").toString().trim()) {
+                form.reset();
+                setStatus("Thanks! Your message has been sent. We'll get back to you shortly.", "success");
+                return;
+            }
+
+            const get = (key) => (data.get(key) || "").toString().trim();
+            const payload = {
+                "Full name": get("name"),
+                "Email": get("email"),
+                "Company": get("company") || "-",
+                "Topic": get("topic"),
+                "Message": get("message"),
+                "Page": window.location.href,
+                _subject: `New website enquiry: ${get("topic")} — ${get("name")}`,
+                _replyto: get("email"),
+                _template: "table",
+                _captcha: "false"
+            };
+
+            const originalLabel = button.innerHTML;
+            button.disabled = true;
+            button.innerHTML = "Sending…";
+            setStatus("");
+
+            try {
+                const response = await fetch(endpoint, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json", "Accept": "application/json" },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json().catch(() => ({}));
+                if (!response.ok || String(result.success) !== "true") throw new Error(result.message || "Request failed");
+
+                form.reset();
+                setStatus("Thanks! Your message has been sent. We'll get back to you shortly.", "success");
+            } catch (error) {
+                console.error("[Contact form]", error.message);
+                setStatus(`Sorry, something went wrong. Please try again or email us at ${form.dataset.mailto}.`, "error");
+            } finally {
+                button.disabled = false;
+                button.innerHTML = originalLabel;
+            }
         });
     });
 })();

@@ -35,3 +35,17 @@ Open the project folder in VS Code and run `index.html` with Live Server. `platf
 
 ## Source coverage
 The provided ZIP included `index.html`, `platform.html`, the original main stylesheet, the original script, and `homeHerosection.png`. Links to other pages are retained, but their HTML files were not included in the supplied ZIP.
+
+## Contact form (FormSubmit)
+`contact.html` sends submissions through FormSubmit (https://formsubmit.co), which emails them
+to the address at the end of the form's `data-endpoint`:
+
+```html
+data-endpoint="https://formsubmit.co/ajax/info@aser.ai"
+```
+
+- To send to a different inbox, change only the email in that URL.
+- The **first** submission to a new email triggers an "Activate Form" email from FormSubmit.
+  Click it once; that first test message is not delivered, every message after it is.
+- Emails arrive as a table (name, email, company, topic, message, page). Hit Reply to answer the visitor.
+- A hidden honeypot field drops bot submissions.

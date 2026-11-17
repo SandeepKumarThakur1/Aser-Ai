@@ -213,7 +213,11 @@
                     </div>
                 </div>
 
-                <form class="pg-form reveal" novalidate data-mailto="info@aser.ai">
+                <!-- Contact form: sent by FormSubmit (formsubmit.co) as an email to the address below.
+                     To change where emails go, change the email at the end of data-endpoint.
+                     First submission sends an activation email to that address; click "Activate Form" once. -->
+                <form class="pg-form reveal" novalidate data-mailto="info@aser.ai"
+                      data-endpoint="https://formsubmit.co/ajax/info@aser.ai">
                     <h3>Need support? Contact us</h3>
 
                     <div class="pg-form-row">
@@ -253,6 +257,11 @@
                         <textarea name="message" rows="5" required></textarea>
                         <small>Please add a short message.</small>
                     </label>
+
+                    <!-- Honeypot: hidden from people, bots fill it in and get ignored -->
+                    <div class="pg-hp" aria-hidden="true">
+                        <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+                    </div>
 
                     <button type="submit" class="ds-button pg-form-submit">Submit now <span>→</span></button>
                     <p class="pg-form-status" role="status" aria-live="polite"></p>
@@ -372,7 +381,7 @@
         </div>
     </footer>
 
-    <script src="./script/main.js" defer></script>
+    <script src="./script/main.js?v=20261117b" defer></script>
 </body>
 
 </html>
