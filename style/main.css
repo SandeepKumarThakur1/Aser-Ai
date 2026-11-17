@@ -10846,7 +10846,7 @@ main {
     align-items: center;
     overflow: hidden;
     isolation: isolate;
-    padding-top: 76px;
+    /* padding-top: 76px; */
     background:
         radial-gradient(ellipse at 78% 40%,
             rgba(0, 185, 220, .17),
@@ -10890,7 +10890,7 @@ main {
 
 .aser-team-page .team-intro .team-container {
     padding-top: 45px;
-    padding-bottom: 65px;
+    /* padding-bottom: 65px; */
     text-align: center;
 }
 
