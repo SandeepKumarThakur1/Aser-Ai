@@ -35,3 +35,9 @@ Open the project folder in VS Code and run `index.html` with Live Server. `platf
 
 ## Source coverage
 The provided ZIP included `index.html`, `platform.html`, the original main stylesheet, the original script, and `homeHerosection.png`. Links to other pages are retained, but their HTML files were not included in the supplied ZIP.
+
+## Contact form → Google Sheets
+`contact.html` posts submissions to a Google Apps Script Web App that writes them to the
+company Google Sheet and emails info@aser.ai. Script and step-by-step setup are in
+`google-apps-script/` (`Code.gs`, `SETUP.md`). Paste the deployed Web App URL into the
+form's `data-endpoint` attribute in `contact.html`.

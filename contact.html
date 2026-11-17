@@ -213,7 +213,11 @@
                     </div>
                 </div>
 
-                <form class="pg-form reveal" novalidate data-mailto="info@aser.ai">
+                <!-- Contact form: submissions are saved to Google Sheets via Google Apps Script.
+                     Paste your Web App URL into data-endpoint (see google-apps-script/SETUP.md).
+                     If data-endpoint is empty, the form falls back to opening the visitor's email app. -->
+                <form class="pg-form reveal" novalidate data-mailto="info@aser.ai"
+                      data-endpoint="PASTE_YOUR_WEB_APP_URL_HERE">
                     <h3>Need support? Contact us</h3>
 
                     <div class="pg-form-row">
@@ -253,6 +257,11 @@
                         <textarea name="message" rows="5" required></textarea>
                         <small>Please add a short message.</small>
                     </label>
+
+                    <!-- Honeypot: hidden from people, bots fill it in and get ignored -->
+                    <div class="pg-hp" aria-hidden="true">
+                        <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+                    </div>
 
                     <button type="submit" class="ds-button pg-form-submit">Submit now <span>→</span></button>
                     <p class="pg-form-status" role="status" aria-live="polite"></p>

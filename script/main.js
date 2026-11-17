@@ -1238,9 +1238,19 @@ if (reduceMotion || !("IntersectionObserver" in window)) {
         setInterval(tick, 30000);
     }
 
-    /* 5. Contact form: validate, then open the visitor's email app */
+    /* 5. Contact form: validate, then send to Google Sheets (Apps Script).
+          Falls back to the visitor's email app if no endpoint is configured. */
     document.querySelectorAll(".pg-form[data-mailto]").forEach((form) => {
         const status = form.querySelector(".pg-form-status");
+        const button = form.querySelector(".pg-form-submit");
+        const endpoint = (form.dataset.endpoint || "").trim();
+        const hasEndpoint = /^https:\/\/script\.google\.com\//.test(endpoint);
+
+        const setStatus = (text, type = "") => {
+            status.textContent = text;
+            status.classList.toggle("is-error", type === "error");
+            status.classList.toggle("is-success", type === "success");
+        };
 
         const validate = (field) => {
             const input = field.querySelector("input, textarea");
@@ -1257,18 +1267,7 @@ if (reduceMotion || !("IntersectionObserver" in window)) {
             });
         });
 
-        form.addEventListener("submit", (event) => {
-            event.preventDefault();
-            const fields = [...form.querySelectorAll(".pg-field")];
-            const valid = fields.map(validate).every(Boolean);
-
-            if (!valid) {
-                status.textContent = "Please complete the highlighted fields.";
-                form.querySelector(".has-error input, .has-error textarea")?.focus();
-                return;
-            }
-
-            const data = new FormData(form);
+        const openMailApp = (data) => {
             const subject = `${data.get("topic")} — ${data.get("name")}`;
             const body = [
                 `Name: ${data.get("name")}`,
@@ -1280,8 +1279,51 @@ if (reduceMotion || !("IntersectionObserver" in window)) {
 
             window.location.href =
                 `mailto:${form.dataset.mailto}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        };
 
-            status.textContent = "Thanks! Your email app should open with your message ready to send.";
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            const fields = [...form.querySelectorAll(".pg-field")];
+            const valid = fields.map(validate).every(Boolean);
+
+            if (!valid) {
+                setStatus("Please complete the highlighted fields.", "error");
+                form.querySelector(".has-error input, .has-error textarea")?.focus();
+                return;
+            }
+
+            const data = new FormData(form);
+
+            if (!hasEndpoint) {
+                openMailApp(data);
+                setStatus("Thanks! Your email app should open with your message ready to send.", "success");
+                return;
+            }
+
+            const payload = new URLSearchParams();
+            ["name", "email", "company", "topic", "message", "website"].forEach((key) => {
+                payload.append(key, (data.get(key) || "").toString().trim());
+            });
+            payload.append("page", window.location.href);
+
+            const originalLabel = button.innerHTML;
+            button.disabled = true;
+            button.innerHTML = "Sending…";
+            setStatus("");
+
+            try {
+                const response = await fetch(endpoint, { method: "POST", body: payload });
+                const result = await response.json().catch(() => ({}));
+                if (!response.ok || result.result !== "success") throw new Error(result.error || "Request failed");
+
+                form.reset();
+                setStatus("Thanks! Your message has been sent. We'll get back to you shortly.", "success");
+            } catch (error) {
+                setStatus(`Sorry, something went wrong. Please try again or email us at ${form.dataset.mailto}.`, "error");
+            } finally {
+                button.disabled = false;
+                button.innerHTML = originalLabel;
+            }
         });
     });
 })();

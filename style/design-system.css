@@ -2642,6 +2642,24 @@ body.pantheon-insurance-page .insurance-hero h1 {
     min-height: 1em;
 }
 
+.pg-form-status.is-error {
+    color: #ff8a8a;
+}
+
+.pg-form-submit:disabled {
+    opacity: .65;
+    cursor: wait;
+}
+
+/* Honeypot field: kept off-screen for people, still visible to bots */
+.pg-hp {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
 /* ---------- Careers note ---------- */
 
 .pg-note {
