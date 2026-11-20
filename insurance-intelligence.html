@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/responsive.css">
-    <link rel="stylesheet" href="./style/design-system.css">
+    <link rel="stylesheet" href="./style/design-system.css?v=20261120">
 </head>
 
 <body class="pantheon-insurance-page">
@@ -47,7 +47,7 @@
     <!-- HEADER -->
     <header class="site-header">
 
-        <a href="./index.html" class="logo" aria-label="ASER AI home"><img class="logo-mark" src="./assets/images/aser-logo.png" alt="" width="40" height="38"><span class="logo-text">ASER <span>AI</span></span></a>
+        <a href="./index.html" class="logo" aria-label="ASER AI home"><img class="logo-mark" src="./assets/images/aser-logo.png" alt="ASER AI" width="40" height="38"></a>
 
         <nav class="main-nav" id="mainNavigation" aria-label="Main">
 
@@ -166,45 +166,141 @@
 
 
                     <!-- DATA CONNECTIONS -->
-                    <svg class="hero-connections" viewBox="0 0 620 420" preserveAspectRatio="none">
-                        <defs>
-                            <linearGradient id="heroLineGradient">
-                                <stop offset="0%" stop-color="#00dce9" stop-opacity="0" />
-                                <stop offset="45%" stop-color="#00dce9" />
-                                <stop offset="100%" stop-color="#00a6ff" stop-opacity=".1" />
-                            </linearGradient>
-                        </defs>
-
-                        <path class="hero-flow-line" d="M0 125 C100 125 100 205 220 205 S300 160 390 115" />
-                        <path class="hero-flow-line delay-one" d="M0 190 C100 190 110 225 220 225 S310 180 390 135" />
-                        <path class="hero-flow-line delay-two" d="M0 255 C100 255 110 245 220 245 S320 195 390 155" />
-                        <path class="hero-flow-line delay-three" d="M0 320 C100 320 130 265 220 265 S320 220 390 175" />
+                    <svg class="hero-connections hero-links" aria-hidden="true" focusable="false">
+                        <!-- Static links: 4 signals → BESS. Animated dotted link: BESS → risk profile. Drawn in main.js -->
+                        <g class="hero-link-static"><path /><path /><path /><path /></g>
+                        <path class="hero-link-risk" />
+                        <g class="hero-link-nodes"><circle r="2.6" /><circle r="2.6" /><circle r="2.6" /><circle r="2.6" /><circle class="risk-node" r="3.2" /></g>
                     </svg>
 
 
                     <!-- BESS CONTAINER -->
                     <div class="bess-container-art">
-
-                        <div class="container-top"></div>
-
-                        <div class="container-body">
-
-                            <div class="container-side">
-                                <div class="container-ridges"></div>
-                                <div class="container-brand">BESS</div>
-                            </div>
-
-                            <div class="container-front">
-                                <div class="container-door"></div>
-                                <div class="container-door-lines"></div>
-                                <div class="container-lock"></div>
-                            </div>
-
-                        </div>
-
-                        <div class="container-base"></div>
-                        <div class="container-ground-glow"></div>
-
+<svg class="bess-svg" viewBox="0 0 530 268" preserveAspectRatio="xMidYMax meet" aria-hidden="true" focusable="false">
+<defs>
+  <linearGradient id="bessFront" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#174a63"/><stop offset=".55" stop-color="#0a2e44"/><stop offset="1" stop-color="#051f31"/></linearGradient>
+  <linearGradient id="bessSide" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0d3850"/><stop offset="1" stop-color="#04192a"/></linearGradient>
+  <linearGradient id="bessRoof" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1e5a76"/><stop offset="1" stop-color="#2a7090"/></linearGradient>
+  <radialGradient id="bessGlow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#00d9f0" stop-opacity=".35"/><stop offset="1" stop-color="#00d9f0" stop-opacity="0"/></radialGradient>
+</defs>
+<ellipse cx="275" cy="248" rx="270" ry="22" fill="url(#bessGlow)"/>
+<polygon class="bess-plinth" points="18,236 384,257 512,205 146,184"/>
+<polygon class="bess-roof" points="26,68 146,18 504,38 384,88"/>
+<polyline class="bess-edge" points="26,68 384,88 504,38"/>
+<g transform="matrix(1 0.0571 0 1 30 70)">
+<rect class="bess-face-front" x="0" y="0" width="350" height="160"/>
+<rect class="bess-band" x="0" y="0" width="350" height="18"/>
+<text class="bess-label" x="12" y="13">BESS · 3.7 MWh</text>
+<rect class="bess-hazard" x="300" y="4" width="10" height="10" rx="1"/><path class="bess-hazard-mark" d="M305 6.5v4M305 12.2v.4"/>
+<rect class="bess-door" x="8.0" y="24" width="50.7" height="124" rx="1.5"/>
+<path class="bess-louvre" d="M15.0 32h36.7"/>
+<path class="bess-louvre" d="M15.0 37h36.7"/>
+<path class="bess-louvre" d="M15.0 42h36.7"/>
+<path class="bess-louvre" d="M15.0 47h36.7"/>
+<path class="bess-louvre" d="M15.0 52h36.7"/>
+<path class="bess-louvre" d="M15.0 118h36.7"/>
+<path class="bess-louvre" d="M15.0 123h36.7"/>
+<path class="bess-louvre" d="M15.0 128h36.7"/>
+<path class="bess-louvre" d="M15.0 133h36.7"/>
+<path class="bess-louvre" d="M15.0 138h36.7"/>
+<rect class="bess-handle" x="51.7" y="78" width="2.5" height="16" rx="1"/>
+<circle class="bess-led" style="animation-delay:0.00s" cx="16.0" cy="66" r="2"/>
+<path class="bess-panel-line" d="M13.0 60h40.7M13.0 104h40.7"/>
+<rect class="bess-door" x="64.7" y="24" width="50.7" height="124" rx="1.5"/>
+<path class="bess-louvre" d="M71.7 32h36.7"/>
+<path class="bess-louvre" d="M71.7 37h36.7"/>
+<path class="bess-louvre" d="M71.7 42h36.7"/>
+<path class="bess-louvre" d="M71.7 47h36.7"/>
+<path class="bess-louvre" d="M71.7 52h36.7"/>
+<path class="bess-louvre" d="M71.7 118h36.7"/>
+<path class="bess-louvre" d="M71.7 123h36.7"/>
+<path class="bess-louvre" d="M71.7 128h36.7"/>
+<path class="bess-louvre" d="M71.7 133h36.7"/>
+<path class="bess-louvre" d="M71.7 138h36.7"/>
+<rect class="bess-handle" x="108.3" y="78" width="2.5" height="16" rx="1"/>
+<circle class="bess-led" style="animation-delay:0.35s" cx="72.7" cy="66" r="2"/>
+<path class="bess-panel-line" d="M69.7 60h40.7M69.7 104h40.7"/>
+<rect class="bess-door" x="121.3" y="24" width="50.7" height="124" rx="1.5"/>
+<path class="bess-louvre" d="M128.3 32h36.7"/>
+<path class="bess-louvre" d="M128.3 37h36.7"/>
+<path class="bess-louvre" d="M128.3 42h36.7"/>
+<path class="bess-louvre" d="M128.3 47h36.7"/>
+<path class="bess-louvre" d="M128.3 52h36.7"/>
+<path class="bess-louvre" d="M128.3 118h36.7"/>
+<path class="bess-louvre" d="M128.3 123h36.7"/>
+<path class="bess-louvre" d="M128.3 128h36.7"/>
+<path class="bess-louvre" d="M128.3 133h36.7"/>
+<path class="bess-louvre" d="M128.3 138h36.7"/>
+<rect class="bess-handle" x="165.0" y="78" width="2.5" height="16" rx="1"/>
+<circle class="bess-led" style="animation-delay:0.70s" cx="129.3" cy="66" r="2"/>
+<path class="bess-panel-line" d="M126.3 60h40.7M126.3 104h40.7"/>
+<rect class="bess-door" x="178.0" y="24" width="50.7" height="124" rx="1.5"/>
+<path class="bess-louvre" d="M185.0 32h36.7"/>
+<path class="bess-louvre" d="M185.0 37h36.7"/>
+<path class="bess-louvre" d="M185.0 42h36.7"/>
+<path class="bess-louvre" d="M185.0 47h36.7"/>
+<path class="bess-louvre" d="M185.0 52h36.7"/>
+<path class="bess-louvre" d="M185.0 118h36.7"/>
+<path class="bess-louvre" d="M185.0 123h36.7"/>
+<path class="bess-louvre" d="M185.0 128h36.7"/>
+<path class="bess-louvre" d="M185.0 133h36.7"/>
+<path class="bess-louvre" d="M185.0 138h36.7"/>
+<rect class="bess-handle" x="221.7" y="78" width="2.5" height="16" rx="1"/>
+<circle class="bess-led warn" style="animation-delay:1.05s" cx="186.0" cy="66" r="2"/>
+<path class="bess-panel-line" d="M183.0 60h40.7M183.0 104h40.7"/>
+<rect class="bess-door" x="234.7" y="24" width="50.7" height="124" rx="1.5"/>
+<path class="bess-louvre" d="M241.7 32h36.7"/>
+<path class="bess-louvre" d="M241.7 37h36.7"/>
+<path class="bess-louvre" d="M241.7 42h36.7"/>
+<path class="bess-louvre" d="M241.7 47h36.7"/>
+<path class="bess-louvre" d="M241.7 52h36.7"/>
+<path class="bess-louvre" d="M241.7 118h36.7"/>
+<path class="bess-louvre" d="M241.7 123h36.7"/>
+<path class="bess-louvre" d="M241.7 128h36.7"/>
+<path class="bess-louvre" d="M241.7 133h36.7"/>
+<path class="bess-louvre" d="M241.7 138h36.7"/>
+<rect class="bess-handle" x="278.3" y="78" width="2.5" height="16" rx="1"/>
+<circle class="bess-led" style="animation-delay:1.40s" cx="242.7" cy="66" r="2"/>
+<path class="bess-panel-line" d="M239.7 60h40.7M239.7 104h40.7"/>
+<rect class="bess-door" x="291.3" y="24" width="50.7" height="124" rx="1.5"/>
+<path class="bess-louvre" d="M298.3 32h36.7"/>
+<path class="bess-louvre" d="M298.3 37h36.7"/>
+<path class="bess-louvre" d="M298.3 42h36.7"/>
+<path class="bess-louvre" d="M298.3 47h36.7"/>
+<path class="bess-louvre" d="M298.3 52h36.7"/>
+<path class="bess-louvre" d="M298.3 118h36.7"/>
+<path class="bess-louvre" d="M298.3 123h36.7"/>
+<path class="bess-louvre" d="M298.3 128h36.7"/>
+<path class="bess-louvre" d="M298.3 133h36.7"/>
+<path class="bess-louvre" d="M298.3 138h36.7"/>
+<rect class="bess-handle" x="335.0" y="78" width="2.5" height="16" rx="1"/>
+<circle class="bess-led" style="animation-delay:1.75s" cx="299.3" cy="66" r="2"/>
+<path class="bess-panel-line" d="M296.3 60h40.7M296.3 104h40.7"/>
+<rect class="bess-skid" x="0" y="150" width="350" height="10"/>
+<circle class="bess-anchor" data-anchor="in0" cx="3" cy="36" r=".5"/>
+<circle class="bess-anchor" data-anchor="in1" cx="3" cy="68" r=".5"/>
+<circle class="bess-anchor" data-anchor="in2" cx="3" cy="100" r=".5"/>
+<circle class="bess-anchor" data-anchor="in3" cx="3" cy="132" r=".5"/>
+</g>
+<g transform="matrix(1 -0.4167 0 1 380 90)">
+<rect class="bess-face-side" x="0" y="0" width="120" height="160"/>
+<rect class="bess-band" x="0" y="0" width="120" height="18"/>
+<rect class="bess-hvac" x="10" y="26" width="100" height="66" rx="3"/>
+<circle class="bess-fan" cx="36" cy="59" r="19"/><circle class="bess-fan-hub" cx="36" cy="59" r="4"/>
+<g class="bess-fan-blades" style="transform-origin:36px 59px"><path d="M36 44v30M21 59h30M25.4 48.4l21.2 21.2M46.6 48.4l-21.2 21.2"/></g>
+<circle class="bess-fan" cx="84" cy="59" r="19"/><circle class="bess-fan-hub" cx="84" cy="59" r="4"/>
+<g class="bess-fan-blades" style="transform-origin:84px 59px"><path d="M84 44v30M69 59h30M73.4 48.4l21.2 21.2M94.6 48.4l-21.2 21.2"/></g>
+<rect class="bess-door" x="14" y="100" width="44" height="48" rx="1.5"/><rect class="bess-door" x="62" y="100" width="44" height="48" rx="1.5"/>
+<path class="bess-louvre" d="M20 110h32M68 110h32"/>
+<path class="bess-louvre" d="M20 116h32M68 116h32"/>
+<path class="bess-louvre" d="M20 122h32M68 122h32"/>
+<path class="bess-louvre" d="M20 128h32M68 128h32"/>
+<rect class="bess-skid" x="0" y="150" width="120" height="10"/>
+</g>
+<polyline class="bess-edge" points="380,90 380,250"/>
+<circle class="bess-anchor" data-anchor="out" cx="215" cy="50" r=".5"/>
+<circle class="bess-roof-node" cx="215" cy="50" r="3.5"/>
+</svg>
                     </div>
 
 
@@ -664,10 +760,8 @@
                     <span>→</span>
                 </a>
 
-            </div>
+                <p class="aser-closing-line">Anticipate risk. Prioritise action. Protect value.</p>
 
-            <div class="cta-footer-line">
-                Anticipate risk. Prioritise action. Protect value.
             </div>
 
         </section>
@@ -683,21 +777,12 @@
                 <!-- BRAND -->
                 <div class="aser-footer-brand">
                     <div class="aser-footer-logo-wrap">
-                        <img class="aser-footer-logo-img" src="./assets/images/aser-logo.png" alt="" width="48" height="46">
-                        <div class="aser-footer-logo">
-                            ASER <span>AI</span>
-                        </div>
+                        <img class="aser-footer-logo-img" src="./assets/images/aser-logo.png" alt="ASER AI" width="48" height="46">
                     </div>
 
-                    <p>
-                        Turn fragmented operational<br>
-                        data into predictive risk<br>
-                        intelligence.
-                    </p>
+                    <p class="aser-footer-tagline">From Risk Visibility to Risk Foresight</p>
 
-                    <a href="#" class="aser-footer-social" aria-label="LinkedIn">
-                        in
-                    </a>
+                    <a href="https://www.linkedin.com/company/aser-ai/" class="aser-footer-social" aria-label="ASER AI on LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
                 </div>
 
                 <!-- COMPANY -->
@@ -727,19 +812,19 @@
                     <ul class="aser-footer-contact-list">
                         <li>
                             <a href="tel:+60122299584" class="aser-footer-contact-link">
-                                <span class="aser-footer-contact-icon">⌕</span>
+                                <span class="aser-footer-contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span>
                                 <span class="aser-footer-contact-text">+60 12 229 9584</span>
                             </a>
                         </li>
                         <li>
                             <a href="mailto:info@aser.ai" class="aser-footer-contact-link">
-                                <span class="aser-footer-contact-icon">✉</span>
+                                <span class="aser-footer-contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
                                 <span class="aser-footer-contact-text">info@aser.ai</span>
                             </a>
                         </li>
                         <li>
                             <div class="aser-footer-contact-link">
-                                <span class="aser-footer-contact-icon">⌖</span>
+                                <span class="aser-footer-contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
                                 <span class="aser-footer-address">
                                     Suite 1–3, Level 1, Vertical<br>
                                     Corporate B No. 8, Jalan<br>
@@ -770,7 +855,7 @@
         </div>
     </footer>
 
-    <script src="script/main.js?v=20261117b"></script>
+    <script src="script/main.js?v=20261120"></script>
 </body>
 
 </html>

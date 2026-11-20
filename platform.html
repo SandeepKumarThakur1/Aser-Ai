@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/responsive.css">
-    <link rel="stylesheet" href="./style/design-system.css">
+    <link rel="stylesheet" href="./style/design-system.css?v=20261120">
 </head>
 
 <body>
@@ -45,7 +45,7 @@
 
     <header class="site-header">
 
-        <a href="./index.html" class="logo" aria-label="ASER AI home"><img class="logo-mark" src="./assets/images/aser-logo.png" alt="" width="40" height="38"><span class="logo-text">ASER <span>AI</span></span></a>
+        <a href="./index.html" class="logo" aria-label="ASER AI home"><img class="logo-mark" src="./assets/images/aser-logo.png" alt="ASER AI" width="40" height="38"></a>
 
         <nav class="main-nav" id="mainNavigation" aria-label="Main">
 
@@ -101,7 +101,7 @@
                 <h1 class="reveal delay-1">From asset data<br><span>to risk foresight.</span></h1>
                 <p class="hero-intro reveal delay-2">Connect your existing systems to anticipate emerging risks, assess
                     potential consequences and prioritise action across critical assets.</p>
-                <a class="pill-button reveal delay-3" href="#architecture">See Pantheon in Action <span
+                <a class="pill-button reveal delay-3" href="#pantheon-in-action">See Pantheon in Action <span
                         aria-hidden="true">→</span></a>
             </div>
             <div class="hero-visual" aria-hidden="true">
@@ -134,11 +134,11 @@
                     <path d="M430 220H900" stroke="#08e9ef" stroke-width="1.5" opacity=".65" />
                     <circle cx="430" cy="220" r="10" fill="#08e9ef" filter="url(#glow)" />
                     <circle cx="430" cy="220" r="3.5" fill="#fff" />
-                    <circle cx="700" cy="120" r="5" fill="#08e9ef" filter="url(#glow)" />
-                    <circle cx="700" cy="120" r="2" fill="#fff" />
+                    <circle cx="760" cy="162" r="6" fill="#08e9ef" filter="url(#glow)" />
+                    <circle cx="760" cy="162" r="2.4" fill="#fff" />
                     <g fill="#eafcff" font-family="DM Sans" font-size="16">
                         <text x="450" y="252">NOW</text>
-                        <text x="575" y="102">Time to act</text>
+                        <text x="746" y="148" text-anchor="end">Time to act</text>
                     </g>
                     <g fill="#08e9ef">
                         <circle cx="110" cy="112" r="2" />
@@ -160,53 +160,155 @@
             </div>
             <div class="architecture-layout">
                 <div class="data-inputs">
-                    <article class="flow-card reveal"><span class="line-icon">▤</span>
+                    <article class="flow-card reveal"><span class="line-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg></span>
                         <p>Operational &amp;<br>sensor data</p>
                     </article>
-                    <article class="flow-card reveal"><span class="line-icon">▧</span>
+                    <article class="flow-card reveal"><span class="line-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 11h6M9 15h6M9 19h3"/></svg></span>
                         <p>Asset &amp;<br>maintenance records</p>
                     </article>
-                    <article class="flow-card reveal"><span class="line-icon">☁</span>
+                    <article class="flow-card reveal"><span class="line-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M17.5 19H8a5 5 0 1 1 1-9.9A6 6 0 0 1 20.5 12a3.5 3.5 0 0 1-3 7z"/></svg></span>
                         <p>Environmental &amp;<br>external data</p>
                     </article>
                 </div>
-                <svg class="architecture-lines" viewBox="0 0 1200 420" preserveAspectRatio="none" aria-hidden="true">
+                <svg class="architecture-lines" aria-hidden="true" focusable="false">
                     <defs>
-                        <marker id="arrow" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
-                            <path d="M0 0L6 3L0 6" fill="none" stroke="#08e9ef" />
+                        <marker id="archArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+                            <path d="M0 0L7 4L0 8" fill="none" stroke="#08e9ef" stroke-width="1.5" />
                         </marker>
                     </defs>
-                    <g fill="none" stroke="#08e9ef" stroke-width="2" opacity=".85" marker-end="url(#arrow)">
-                        <path d="M205 65H280Q320 65 320 105V170Q320 205 365 205H410" />
-                        <path d="M205 210H410" />
-                        <path d="M205 355H280Q320 355 320 315V250Q320 215 365 215H410" />
-                        <path d="M790 210H850Q890 210 890 165V70H950" />
-                        <path d="M790 210H950" />
-                        <path d="M790 210H850Q890 210 890 255V350H950" />
-                    </g>
+                    <g class="arch-paths" fill="none" stroke="#08e9ef" stroke-width="1.8" opacity=".85"></g>
                 </svg>
                 <div class="pantheon-core reveal">
                     <div class="core-brand">ASER <span>PANTHEON</span></div>
-                    <div class="core-module"><span>◇</span>Asset Intelligence</div>
-                    <div class="core-module"><span>⌘</span>Quantitative Risk Modelling</div>
-                    <div class="core-module"><span>◎</span>Advanced AI &amp;<br>Predictive Analytics</div>
+                    <div class="core-module"><span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="7" width="17" height="10" rx="2"/><path d="M22 11v2"/><path d="m11 9-2 3h3l-2 3"/></svg></span>Asset Intelligence</div>
+                    <div class="core-module"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 16v-3M11 16V9M15 16v-5M19 16V6"/></svg></span>Quantitative Risk Modelling</div>
+                    <div class="core-module"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15l.8 2.2 2.2.8-2.2.8L19 21l-.8-2.2-2.2-.8 2.2-.8z"/></svg></span>Advanced AI &amp;<br>Predictive Analytics</div>
                 </div>
                 <div class="outcomes">
-                    <article class="flow-card reveal"><span class="line-icon">▥</span>
+                    <article class="flow-card reveal"><span class="line-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.3 19a10 10 0 1 1 17.4 0"/><path d="m12 14 4-4"/><circle cx="12" cy="14" r="1"/></svg></span>
                         <p>Risk outlooks</p>
                     </article>
-                    <article class="flow-card reveal"><span class="line-icon">△</span>
+                    <article class="flow-card reveal"><span class="line-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg></span>
                         <p>Early warnings</p>
                     </article>
-                    <article class="flow-card reveal"><span class="line-icon">◎</span>
+                    <article class="flow-card reveal"><span class="line-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 6h11M10 12h11M10 18h11"/><path d="M4 6h1v4M4 10h2"/><path d="M6 18H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></span>
                         <p>Prioritised<br>interventions</p>
                     </article>
-                    <article class="flow-card reveal"><span class="line-icon">▤</span>
+                    <article class="flow-card reveal"><span class="line-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 13v8M12 3v3"/><path d="M4 6h13l3 3.5-3 3.5H4z"/></svg></span>
                         <p>Decision support</p>
                     </article>
                 </div>
             </div>
             <p class="architecture-note reveal">Complements BMS, EMS, SCADA and other operational systems.</p>
+        </section>
+
+        <!-- PANTHEON IN ACTION (platform screens) -->
+        <section class="pia-section section-pad" id="pantheon-in-action" aria-labelledby="piaTitle">
+            <div class="pia-inner">
+                <div class="section-heading centered reveal">
+                    <p class="eyebrow">PANTHEON IN ACTION</p>
+                    <h2 id="piaTitle">Aser Pantheon <span>in action.</span></h2>
+                </div>
+                <div class="pia-viewer reveal" data-interval="6000">
+                    <div class="pia-tabs" role="tablist" aria-label="Pantheon screens">
+                        <button class="pia-tab is-active" type="button" role="tab" id="pia-tab-01" aria-controls="pia-slide-01" aria-selected="true" tabindex="0"><span class="pia-num">01</span><span class="pia-name">Portfolio Overview</span><i class="pia-progress" aria-hidden="true"></i></button>
+                        <button class="pia-tab" type="button" role="tab" id="pia-tab-02" aria-controls="pia-slide-02" aria-selected="false" tabindex="-1"><span class="pia-num">02</span><span class="pia-name">Asset Details</span><i class="pia-progress" aria-hidden="true"></i></button>
+                        <button class="pia-tab" type="button" role="tab" id="pia-tab-03" aria-controls="pia-slide-03" aria-selected="false" tabindex="-1"><span class="pia-num">03</span><span class="pia-name">12-Month SOH Projection</span><i class="pia-progress" aria-hidden="true"></i></button>
+                        <button class="pia-tab" type="button" role="tab" id="pia-tab-04" aria-controls="pia-slide-04" aria-selected="false" tabindex="-1"><span class="pia-num">04</span><span class="pia-name">Cell-Level Intelligence</span><i class="pia-progress" aria-hidden="true"></i></button>
+                        <button class="pia-tab" type="button" role="tab" id="pia-tab-05" aria-controls="pia-slide-05" aria-selected="false" tabindex="-1"><span class="pia-num">05</span><span class="pia-name">Performance Manager</span><i class="pia-progress" aria-hidden="true"></i></button>
+                        <button class="pia-tab" type="button" role="tab" id="pia-tab-06" aria-controls="pia-slide-06" aria-selected="false" tabindex="-1"><span class="pia-num">06</span><span class="pia-name">Demand Response</span><i class="pia-progress" aria-hidden="true"></i></button>
+                        <button class="pia-tab" type="button" role="tab" id="pia-tab-07" aria-controls="pia-slide-07" aria-selected="false" tabindex="-1"><span class="pia-num">07</span><span class="pia-name">Peak Shaving</span><i class="pia-progress" aria-hidden="true"></i></button>
+                        <button class="pia-tab" type="button" role="tab" id="pia-tab-08" aria-controls="pia-slide-08" aria-selected="false" tabindex="-1"><span class="pia-num">08</span><span class="pia-name">Insurance Underwriting</span><i class="pia-progress" aria-hidden="true"></i></button>
+                        <button class="pia-tab" type="button" role="tab" id="pia-tab-09" aria-controls="pia-slide-09" aria-selected="false" tabindex="-1"><span class="pia-num">09</span><span class="pia-name">Compliance</span><i class="pia-progress" aria-hidden="true"></i></button>
+                        <button class="pia-tab" type="button" role="tab" id="pia-tab-10" aria-controls="pia-slide-10" aria-selected="false" tabindex="-1"><span class="pia-num">10</span><span class="pia-name">Observability</span><i class="pia-progress" aria-hidden="true"></i></button>
+                        <button class="pia-tab" type="button" role="tab" id="pia-tab-11" aria-controls="pia-slide-11" aria-selected="false" tabindex="-1"><span class="pia-num">11</span><span class="pia-name">State of Health</span><i class="pia-progress" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="pia-stage">
+                        <figure class="pia-slide is-active" role="tabpanel" id="pia-slide-01" aria-labelledby="pia-tab-01">
+                            <figcaption class="pia-caption">Monitor all battery energy storage assets in real time, with SOC, energy, safety and alerts at a glance.</figcaption>
+                            <div class="pia-screen">
+                                <div class="pia-chrome" aria-hidden="true"><i></i><i></i><i></i><span>app.aser.ai / pantheon</span></div>
+                                <div class="pia-image"><img src="./assets/images/platform-demo/01-portfolio-overview.webp" alt="Aser Pantheon Portfolio Overview dashboard" decoding="async"></div>
+                            </div>
+                        </figure>
+                        <figure class="pia-slide" role="tabpanel" id="pia-slide-02" aria-labelledby="pia-tab-02" hidden>
+                            <figcaption class="pia-caption">Track individual asset condition, performance and remaining useful life.</figcaption>
+                            <div class="pia-screen">
+                                <div class="pia-chrome" aria-hidden="true"><i></i><i></i><i></i><span>app.aser.ai / pantheon</span></div>
+                                <div class="pia-image"><img src="./assets/images/platform-demo/02-asset-details.webp" alt="Aser Pantheon Asset Details dashboard" loading="lazy" decoding="async"></div>
+                            </div>
+                        </figure>
+                        <figure class="pia-slide" role="tabpanel" id="pia-slide-03" aria-labelledby="pia-tab-03" hidden>
+                            <figcaption class="pia-caption">Project battery health and track degradation against end-of-life thresholds.</figcaption>
+                            <div class="pia-screen">
+                                <div class="pia-chrome" aria-hidden="true"><i></i><i></i><i></i><span>app.aser.ai / pantheon</span></div>
+                                <div class="pia-image"><img src="./assets/images/platform-demo/03-soh-projection.webp" alt="Aser Pantheon 12-Month SOH Projection dashboard" loading="lazy" decoding="async"></div>
+                            </div>
+                        </figure>
+                        <figure class="pia-slide" role="tabpanel" id="pia-slide-04" aria-labelledby="pia-tab-04" hidden>
+                            <figcaption class="pia-caption">Track cell ageing, voltage variations and defect indicators to identify developing issues.</figcaption>
+                            <div class="pia-screen">
+                                <div class="pia-chrome" aria-hidden="true"><i></i><i></i><i></i><span>app.aser.ai / pantheon</span></div>
+                                <div class="pia-image"><img src="./assets/images/platform-demo/04-cell-level-intelligence.webp" alt="Aser Pantheon Cell-Level Intelligence dashboard" loading="lazy" decoding="async"></div>
+                            </div>
+                        </figure>
+                        <figure class="pia-slide" role="tabpanel" id="pia-slide-05" aria-labelledby="pia-tab-05" hidden>
+                            <figcaption class="pia-caption">Compare expected and achieved throughput to identify performance gaps and energy losses.</figcaption>
+                            <div class="pia-screen">
+                                <div class="pia-chrome" aria-hidden="true"><i></i><i></i><i></i><span>app.aser.ai / pantheon</span></div>
+                                <div class="pia-image"><img src="./assets/images/platform-demo/05-performance-manager.webp" alt="Aser Pantheon Performance Manager dashboard" loading="lazy" decoding="async"></div>
+                            </div>
+                        </figure>
+                        <figure class="pia-slide" role="tabpanel" id="pia-slide-06" aria-labelledby="pia-tab-06" hidden>
+                            <figcaption class="pia-caption">Optimise BESS charging and discharging using energy price forecasts and operating conditions.</figcaption>
+                            <div class="pia-screen">
+                                <div class="pia-chrome" aria-hidden="true"><i></i><i></i><i></i><span>app.aser.ai / pantheon</span></div>
+                                <div class="pia-image"><img src="./assets/images/platform-demo/06-demand-response.webp" alt="Aser Pantheon Demand Response dashboard" loading="lazy" decoding="async"></div>
+                            </div>
+                        </figure>
+                        <figure class="pia-slide" role="tabpanel" id="pia-slide-07" aria-labelledby="pia-tab-07" hidden>
+                            <figcaption class="pia-caption">Help reduce maximum demand charges by optimising BESS dispatch against real-time demand profiles.</figcaption>
+                            <div class="pia-screen">
+                                <div class="pia-chrome" aria-hidden="true"><i></i><i></i><i></i><span>app.aser.ai / pantheon</span></div>
+                                <div class="pia-image"><img src="./assets/images/platform-demo/07-peak-shaving.webp" alt="Aser Pantheon Peak Shaving dashboard" loading="lazy" decoding="async"></div>
+                            </div>
+                        </figure>
+                        <figure class="pia-slide" role="tabpanel" id="pia-slide-08" aria-labelledby="pia-tab-08" hidden>
+                            <figcaption class="pia-caption">Translate battery behaviour and operating data into predictive risk scores for better-informed underwriting.</figcaption>
+                            <div class="pia-screen">
+                                <div class="pia-chrome" aria-hidden="true"><i></i><i></i><i></i><span>app.aser.ai / pantheon</span></div>
+                                <div class="pia-image"><img src="./assets/images/platform-demo/08-insurance-underwriting.webp" alt="Aser Pantheon Insurance Underwriting dashboard" loading="lazy" decoding="async"></div>
+                            </div>
+                        </figure>
+                        <figure class="pia-slide" role="tabpanel" id="pia-slide-09" aria-labelledby="pia-tab-09" hidden>
+                            <figcaption class="pia-caption">Monitor compliance status, operational risks and maintenance progress against relevant BESS standards.</figcaption>
+                            <div class="pia-screen">
+                                <div class="pia-chrome" aria-hidden="true"><i></i><i></i><i></i><span>app.aser.ai / pantheon</span></div>
+                                <div class="pia-image"><img src="./assets/images/platform-demo/09-compliance.webp" alt="Aser Pantheon Compliance dashboard" loading="lazy" decoding="async"></div>
+                            </div>
+                        </figure>
+                        <figure class="pia-slide" role="tabpanel" id="pia-slide-10" aria-labelledby="pia-tab-10" hidden>
+                            <figcaption class="pia-caption">Monitor system health, power flow and safety metrics across every BESS asset in your fleet.</figcaption>
+                            <div class="pia-screen">
+                                <div class="pia-chrome" aria-hidden="true"><i></i><i></i><i></i><span>app.aser.ai / pantheon</span></div>
+                                <div class="pia-image"><img src="./assets/images/platform-demo/10-observability.webp" alt="Aser Pantheon Observability dashboard" loading="lazy" decoding="async"></div>
+                            </div>
+                        </figure>
+                        <figure class="pia-slide" role="tabpanel" id="pia-slide-11" aria-labelledby="pia-tab-11" hidden>
+                            <figcaption class="pia-caption">Assess battery health, degradation drivers and emerging warranty risks.</figcaption>
+                            <div class="pia-screen">
+                                <div class="pia-chrome" aria-hidden="true"><i></i><i></i><i></i><span>app.aser.ai / pantheon</span></div>
+                                <div class="pia-image"><img src="./assets/images/platform-demo/11-state-of-health.webp" alt="Aser Pantheon State of Health dashboard" loading="lazy" decoding="async"></div>
+                            </div>
+                        </figure>
+                        <div class="pia-controls">
+                            <button class="pia-arrow pia-prev" type="button" aria-label="Previous screen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+                            <span class="pia-count" aria-live="polite"><b>01</b> / 11</span>
+                            <button class="pia-arrow pia-next" type="button" aria-label="Next screen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- CAPABILITIES -->
@@ -216,27 +318,27 @@
                 <h2>Built to turn insight into action.</h2>
             </div>
             <div class="capability-grid">
-                <article class="capability-card reveal"><span class="cap-icon">▤</span>
+                <article class="capability-card reveal"><span class="cap-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></span>
                     <h3>Connected Data</h3>
                     <p>Bring fragmented asset and contextual data together.</p>
                 </article>
-                <article class="capability-card reveal"><span class="cap-icon">▥</span>
+                <article class="capability-card reveal"><span class="cap-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 15 3-3 3 2 3-4"/><path d="m16 10 4-4" stroke-dasharray="2 2.5"/></svg></span>
                     <h3>Predictive Risk Models</h3>
                     <p>Identify developing patterns and assess potential consequences.</p>
                 </article>
-                <article class="capability-card reveal"><span class="cap-icon">◫</span>
+                <article class="capability-card reveal"><span class="cap-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg></span>
                     <h3>Portfolio Visibility</h3>
                     <p>See emerging changes across assets and sites.</p>
                 </article>
-                <article class="capability-card reveal"><span class="cap-icon">⚙</span>
+                <article class="capability-card reveal"><span class="cap-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg></span>
                     <h3>Decision Support</h3>
                     <p>Prioritise investigation, intervention and risk management.</p>
                 </article>
-                <article class="capability-card reveal"><span class="cap-icon">↗</span>
+                <article class="capability-card reveal"><span class="cap-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg></span>
                     <h3>Open Integration</h3>
                     <p>Connect through APIs and flexible integration options.</p>
                 </article>
-                <article class="capability-card reveal"><span class="cap-icon">⬡</span>
+                <article class="capability-card reveal"><span class="cap-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
                     <h3>Security &amp; Governance</h3>
                     <p>Align deployment with organisational data requirements.</p>
                 </article>
@@ -252,9 +354,9 @@
                 <p class="bess-description">Protect performance throughout remaining useful life, recognise developing
                     faults and thermal risk conditions, and support insurance and financing discussions.</p>
                 <div class="bess-tags">
-                    <span>⌁ <small>Performance &amp;<br>degradation</small></span>
-                    <span>△ <small>Safety &amp; early<br>warning</small></span>
-                    <span>◇ <small>Asset &amp; portfolio<br>oversight</small></span>
+                    <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 7 6 6 4-4 8 8"/><path d="M15 17h6v-6"/></svg> <small>Performance &amp;<br>degradation</small></span>
+                    <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4M12 16h.01"/></svg> <small>Safety &amp; early<br>warning</small></span>
+                    <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg> <small>Asset &amp; portfolio<br>oversight</small></span>
                 </div>
                 <a href="./operational-intelligence.html" class="pill-button">Explore BESS Solutions <span>→</span></a>
             </div>
@@ -278,21 +380,12 @@
                 <!-- BRAND -->
                 <div class="aser-footer-brand">
                     <div class="aser-footer-logo-wrap">
-                        <img class="aser-footer-logo-img" src="./assets/images/aser-logo.png" alt="" width="48" height="46">
-                        <div class="aser-footer-logo">
-                            ASER <span>AI</span>
-                        </div>
+                        <img class="aser-footer-logo-img" src="./assets/images/aser-logo.png" alt="ASER AI" width="48" height="46">
                     </div>
 
-                    <p>
-                        Turn fragmented operational<br>
-                        data into predictive risk<br>
-                        intelligence.
-                    </p>
+                    <p class="aser-footer-tagline">From Risk Visibility to Risk Foresight</p>
 
-                    <a href="#" class="aser-footer-social" aria-label="LinkedIn">
-                        in
-                    </a>
+                    <a href="https://www.linkedin.com/company/aser-ai/" class="aser-footer-social" aria-label="ASER AI on LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
                 </div>
 
                 <!-- COMPANY -->
@@ -322,19 +415,19 @@
                     <ul class="aser-footer-contact-list">
                         <li>
                             <a href="tel:+60122299584" class="aser-footer-contact-link">
-                                <span class="aser-footer-contact-icon">⌕</span>
+                                <span class="aser-footer-contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span>
                                 <span class="aser-footer-contact-text">+60 12 229 9584</span>
                             </a>
                         </li>
                         <li>
                             <a href="mailto:info@aser.ai" class="aser-footer-contact-link">
-                                <span class="aser-footer-contact-icon">✉</span>
+                                <span class="aser-footer-contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
                                 <span class="aser-footer-contact-text">info@aser.ai</span>
                             </a>
                         </li>
                         <li>
                             <div class="aser-footer-contact-link">
-                                <span class="aser-footer-contact-icon">⌖</span>
+                                <span class="aser-footer-contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
                                 <span class="aser-footer-address">
                                     Suite 1–3, Level 1, Vertical<br>
                                     Corporate B No. 8, Jalan<br>
@@ -365,7 +458,7 @@
         </div>
     </footer>
 
-    <script src="./script/main.js?v=20261117b" defer></script>
+    <script src="./script/main.js?v=20261120" defer></script>
 </body>
 
 </html>

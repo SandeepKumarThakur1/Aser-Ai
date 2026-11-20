@@ -1448,3 +1448,239 @@ if (reduceMotion || !("IntersectionObserver" in window)) {
     window.addEventListener("load", () => { loaded = true; });
     requestAnimationFrame(tick);
 })();
+
+
+/* =========================================================
+   PLATFORM — architecture connectors drawn from the real
+   card positions, so arrows never run into the cards.
+========================================================= */
+(() => {
+    const layout = document.querySelector(".architecture-layout");
+    if (!layout) return;
+    const svg = layout.querySelector(".architecture-lines");
+    const group = svg && svg.querySelector(".arch-paths");
+    const core = layout.querySelector(".pantheon-core");
+    if (!svg || !group || !core) return;
+    const NS = "http://www.w3.org/2000/svg";
+
+    const draw = () => {
+        const box = layout.getBoundingClientRect();
+        group.innerHTML = "";
+        if (getComputedStyle(svg).display === "none" || box.width < 700) return;
+        svg.setAttribute("viewBox", `0 0 ${box.width} ${box.height}`);
+        const c = core.getBoundingClientRect();
+        const cy = c.top + c.height / 2 - box.top;
+        const add = (d, arrow) => {
+            const p = document.createElementNS(NS, "path");
+            p.setAttribute("d", d);
+            if (arrow) p.setAttribute("marker-end", "url(#archArrow)");
+            group.appendChild(p);
+        };
+        const inputs = [...layout.querySelectorAll(".data-inputs .flow-card")];
+        inputs.forEach((card, i) => {
+            const r = card.getBoundingClientRect();
+            const x1 = r.right - box.left, y1 = r.top + r.height / 2 - box.top;
+            const x2 = c.left - box.left - 2, y2 = cy + (i - (inputs.length - 1) / 2) * 8;
+            const mx = (x1 + x2) / 2;
+            add(`M${x1 + 2} ${y1} C${mx} ${y1} ${mx} ${y2} ${x2} ${y2}`, false);
+        });
+        const outs = [...layout.querySelectorAll(".outcomes .flow-card")];
+        outs.forEach((card) => {
+            const r = card.getBoundingClientRect();
+            const x1 = c.right - box.left + 2;
+            const x2 = r.left - box.left - 4, y2 = r.top + r.height / 2 - box.top;
+            const mx = (x1 + x2) / 2;
+            add(`M${x1} ${cy} C${mx} ${cy} ${mx} ${y2} ${x2} ${y2}`, true);
+        });
+    };
+
+    draw();
+    window.addEventListener("load", draw);
+    window.addEventListener("resize", () => requestAnimationFrame(draw));
+    if ("ResizeObserver" in window) new ResizeObserver(() => draw()).observe(layout);
+})();
+
+
+/* =========================================================
+   PLATFORM — "Aser Pantheon in action" screen viewer
+   Tabs + arrows + keyboard; auto-advances, pauses on hover/focus.
+========================================================= */
+(() => {
+    const viewer = document.querySelector(".pia-viewer");
+    if (!viewer) return;
+    const tabs = [...viewer.querySelectorAll(".pia-tab")];
+    const slides = [...viewer.querySelectorAll(".pia-slide")];
+    const count = viewer.querySelector(".pia-count b");
+    const interval = parseInt(viewer.dataset.interval, 10) || 6000;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    viewer.style.setProperty("--pia-interval", interval + "ms");
+    let index = 0, timer = null, paused = false, visible = false;
+
+    const show = (i, focusTab) => {
+        index = (i + tabs.length) % tabs.length;
+        tabs.forEach((t, n) => {
+            const on = n === index;
+            t.classList.toggle("is-active", on);
+            t.setAttribute("aria-selected", on ? "true" : "false");
+            t.tabIndex = on ? 0 : -1;
+            /* restart the progress bar */
+            const bar = t.querySelector(".pia-progress");
+            if (on && bar) { bar.style.animation = "none"; void bar.offsetWidth; bar.style.animation = ""; }
+        });
+        slides.forEach((s, n) => { s.hidden = n !== index; });
+        if (count) count.textContent = String(index + 1).padStart(2, "0");
+        const active = tabs[index];
+        if (focusTab) active.focus();
+        const strip = active.parentElement;
+        if (strip.scrollWidth > strip.clientWidth) {
+            strip.scrollTo({ left: active.offsetLeft - strip.clientWidth / 2 + active.offsetWidth / 2, behavior: "smooth" });
+        }
+        /* warm the next image */
+        const next = slides[(index + 1) % slides.length].querySelector("img");
+        if (next && next.loading === "lazy") next.loading = "eager";
+        restart();
+    };
+
+    const restart = () => {
+        clearTimeout(timer);
+        if (reduce || paused || !visible) return;
+        timer = setTimeout(() => show(index + 1), interval);
+    };
+
+    tabs.forEach((t, n) => t.addEventListener("click", () => show(n)));
+    viewer.querySelector(".pia-prev")?.addEventListener("click", () => show(index - 1));
+    viewer.querySelector(".pia-next")?.addEventListener("click", () => show(index + 1));
+    viewer.querySelector(".pia-tabs").addEventListener("keydown", (e) => {
+        const k = e.key;
+        if (["ArrowDown", "ArrowRight"].includes(k)) { e.preventDefault(); show(index + 1, true); }
+        else if (["ArrowUp", "ArrowLeft"].includes(k)) { e.preventDefault(); show(index - 1, true); }
+        else if (k === "Home") { e.preventDefault(); show(0, true); }
+        else if (k === "End") { e.preventDefault(); show(tabs.length - 1, true); }
+    });
+
+    const setPaused = (p) => { paused = p; viewer.classList.toggle("is-paused", p); restart(); };
+    viewer.addEventListener("mouseenter", () => setPaused(true));
+    viewer.addEventListener("mouseleave", () => setPaused(false));
+    viewer.addEventListener("focusin", () => setPaused(true));
+    viewer.addEventListener("focusout", (e) => { if (!viewer.contains(e.relatedTarget)) setPaused(false); });
+
+    /* swipe on touch screens */
+    let x0 = null;
+    const stage = viewer.querySelector(".pia-stage");
+    stage.addEventListener("touchstart", (e) => { x0 = e.touches[0].clientX; }, { passive: true });
+    stage.addEventListener("touchend", (e) => {
+        if (x0 === null) return;
+        const dx = e.changedTouches[0].clientX - x0;
+        if (Math.abs(dx) > 45) show(index + (dx < 0 ? 1 : -1));
+        x0 = null;
+    });
+
+    if ("IntersectionObserver" in window) {
+        new IntersectionObserver(([entry]) => {
+            visible = entry.isIntersecting;
+            viewer.classList.toggle("is-paused", !visible || paused);
+            restart();
+        }, { threshold: .35 }).observe(viewer);
+    } else { visible = true; restart(); }
+})();
+
+
+/* =========================================================
+   BESS hero — connector lines start at the BESS unit and end
+   on each floating dashboard (re-measured every frame while
+   visible, so they stay attached as the panels float).
+========================================================= */
+(() => {
+    const visual = document.querySelector(".solution-hero-visual");
+    const svg = visual && visual.querySelector(".data-connections");
+    if (!svg || !svg.querySelector("[data-to]")) return;
+    const SRC = { x: .52, y: .76 }; /* BESS container, as a share of the visual box */
+    const paths = [...svg.querySelectorAll("path[data-to]")];
+    const src = svg.querySelector(".node-source");
+    let running = false;
+
+    const anchor = (panel, box, sx, sy) => {
+        const r = panel.getBoundingClientRect();
+        const left = r.left - box.left, top = r.top - box.top;
+        /* panels to the side connect on their left edge, panels above connect at the bottom */
+        if (left > sx + 20 && top + r.height > sy - 160) return { x: left, y: top + r.height / 2 };
+        return { x: left + r.width / 2, y: top + r.height };
+    };
+
+    const draw = () => {
+        const box = visual.getBoundingClientRect();
+        if (!box.width) return;
+        svg.setAttribute("viewBox", `0 0 ${box.width} ${box.height}`);
+        const sx = box.width * SRC.x, sy = box.height * SRC.y;
+        src.setAttribute("cx", sx); src.setAttribute("cy", sy);
+        paths.forEach((p) => {
+            const panel = visual.querySelector("." + p.dataset.to);
+            if (!panel) return;
+            const a = anchor(panel, box, sx, sy);
+            const side = a.x > sx + 20 && Math.abs(a.y - sy) < 200;
+            const d = side
+                ? `M${sx} ${sy} C${sx + (a.x - sx) * .5} ${sy} ${sx + (a.x - sx) * .5} ${a.y} ${a.x} ${a.y}`
+                : `M${sx} ${sy} C${sx} ${sy - (sy - a.y) * .55} ${a.x} ${a.y + (sy - a.y) * .45} ${a.x} ${a.y}`;
+            p.setAttribute("d", d);
+            const n = svg.querySelector(`[data-node="${p.dataset.to}"]`);
+            if (n) { n.setAttribute("cx", a.x); n.setAttribute("cy", a.y); }
+        });
+    };
+
+    const loop = () => { if (!running) return; draw(); requestAnimationFrame(loop); };
+    draw();
+    if ("IntersectionObserver" in window) {
+        new IntersectionObserver(([e]) => {
+            const was = running; running = e.isIntersecting;
+            if (running && !was) loop();
+        }).observe(visual);
+    } else { running = true; loop(); }
+    window.addEventListener("resize", draw);
+})();
+
+
+/* =========================================================
+   INSURANCE hero — static links from the four signals into the
+   BESS container, animated dotted link from BESS to Risk profile.
+========================================================= */
+(() => {
+    const art = document.querySelector(".insurance-hero-art");
+    const svg = art && art.querySelector(".hero-links");
+    if (!svg) return;
+    const labels = [...art.querySelectorAll(".hero-signal-labels > div svg")];
+    const statics = [...svg.querySelectorAll(".hero-link-static path")];
+    const nodes = [...svg.querySelectorAll(".hero-link-nodes circle")];
+    const riskPath = svg.querySelector(".hero-link-risk");
+    const card = art.querySelector(".risk-profile-card");
+    const c = (el, box) => { const r = el.getBoundingClientRect(); return { x: r.left + r.width / 2 - box.left, y: r.top + r.height / 2 - box.top, r }; };
+    let running = false;
+
+    const draw = () => {
+        const box = art.getBoundingClientRect();
+        if (!box.width) return;
+        svg.setAttribute("viewBox", `0 0 ${box.width} ${box.height}`);
+        const visibleLabels = labels.filter((l) => l.getBoundingClientRect().width > 0);
+        statics.forEach((p, i) => {
+            const a = art.querySelector(`[data-anchor="in${i}"]`);
+            const l = visibleLabels[i];
+            if (!a || !l) { p.removeAttribute("d"); nodes[i]?.setAttribute("r", 0); return; }
+            const s = c(l, box), e = c(a, box);
+            const x1 = s.r.right - box.left + 8, mx = (x1 + e.x) / 2;
+            p.setAttribute("d", `M${x1} ${s.y} C${mx} ${s.y} ${mx} ${e.y} ${e.x} ${e.y}`);
+            nodes[i].setAttribute("cx", e.x); nodes[i].setAttribute("cy", e.y); nodes[i].setAttribute("r", 2.6);
+        });
+        const out = art.querySelector('[data-anchor="out"]');
+        if (out && card) {
+            const s = c(out, box), r = card.getBoundingClientRect();
+            const ex = r.left - box.left + r.width * .25, ey = r.bottom - box.top - 4;
+            riskPath.setAttribute("d", `M${s.x} ${s.y} C${s.x} ${s.y - 40} ${ex} ${ey + 40} ${ex} ${ey}`);
+            const n = nodes[4]; n.setAttribute("cx", ex); n.setAttribute("cy", ey);
+        }
+    };
+    const loop = () => { if (!running) return; draw(); requestAnimationFrame(loop); };
+    draw();
+    if ("IntersectionObserver" in window) {
+        new IntersectionObserver(([e]) => { const was = running; running = e.isIntersecting; if (running && !was) loop(); }).observe(art);
+    } else { running = true; loop(); }
+    window.addEventListener("resize", draw);
+})();

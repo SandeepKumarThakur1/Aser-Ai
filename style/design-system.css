@@ -4592,3 +4592,736 @@ html.al-lock body {
     .ha-bar { transform: none; }
     .ha-dot { display: none; }
 }
+
+
+/* =========================================================
+   WEBSITE CORRECTIONS — Sharath review (Nov 2026)
+========================================================= */
+
+/* 1–2. Header: logo only, aligned with page content; fixed (never
+   scrolls away) with a frosted-glass blur over the content behind it. */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding-left: max(var(--ds-gutter), calc((100% - var(--ds-max)) / 2));
+    padding-right: max(var(--ds-gutter), calc((100% - var(--ds-max)) / 2));
+    background: rgba(1, 12, 22, .55);
+    backdrop-filter: blur(18px) saturate(160%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+}
+
+.site-header.is-scrolled {
+    background: rgba(1, 11, 20, .68);
+}
+
+body {
+    padding-top: 76px;
+}
+
+@media (max-width: 1100px) {
+    body {
+        padding-top: 68px;
+    }
+
+    .site-header .main-nav {
+        background: rgba(1, 12, 22, .97);
+    }
+}
+
+.site-header .logo {
+    gap: 0;
+}
+
+.site-header .logo .logo-mark {
+    width: 46px;
+}
+
+@media (max-width: 640px) {
+    .site-header .logo .logo-mark {
+        width: 40px;
+    }
+}
+
+/* 7, 9, 16. Footer brand: logo only + new tagline, same size on every page */
+.aser-footer .aser-footer-logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.aser-footer .aser-footer-logo-img,
+.aser-footer img.aser-footer-logo-img {
+    width: 56px !important;
+    height: auto !important;
+    max-width: 56px !important;
+    border-radius: 10px;
+}
+
+.aser-footer .aser-footer-tagline {
+    max-width: 280px;
+    margin: 22px 0 0;
+    color: #a9bacb;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* 6. LinkedIn: whole icon turns LinkedIn blue on hover */
+.aser-footer .aser-footer-social {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .14);
+    color: #e9f1f6;
+    transition: background .25s ease, border-color .25s ease, color .25s ease, transform .25s ease;
+}
+
+.aser-footer .aser-footer-social svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+.aser-footer .aser-footer-social:hover,
+.aser-footer .aser-footer-social:focus-visible {
+    background: #0a66c2;
+    border-color: #0a66c2;
+    color: #fff;
+    box-shadow: none;
+    transform: translateY(-2px);
+}
+
+/* 8. Footer contact icons — same line icons as the Contact page */
+.aser-footer .aser-footer-contact-icon {
+    flex: 0 0 18px;
+    display: inline-flex;
+    padding-top: 2px;
+    color: var(--ds-cyan);
+}
+
+.aser-footer .aser-footer-contact-icon svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* 4. Our Ecosystem: partner logos in their original colours */
+body .way-partners .way-partner {
+    background: #ffffff;
+    border-color: rgba(255, 255, 255, .9);
+}
+
+body .way-partners .way-partner img,
+.way-partner img {
+    filter: none !important;
+    mix-blend-mode: normal;
+    opacity: 1;
+}
+
+body .way-partners .way-partner:hover {
+    background: #ffffff;
+    border-color: var(--ds-cyan);
+    box-shadow: 0 0 0 1px var(--ds-cyan), 0 10px 30px -12px rgba(46, 232, 246, .45);
+}
+
+/* Desktop: keep the main menu centred now the wordmark is gone */
+@media (min-width: 1101px) {
+    .site-header .main-nav {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* 11–12. Platform architecture + icon set (SVG line icons) */
+.architecture .line-icon,
+.architecture .core-module > span,
+.capabilities .cap-icon,
+.bess-tags span > svg {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ds-cyan);
+}
+
+.architecture .line-icon svg,
+.architecture .core-module > span svg,
+.capabilities .cap-icon svg,
+.bess-tags span > svg {
+    width: 26px;
+    height: 26px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.architecture .line-icon svg .fill {
+    fill: currentColor;
+    stroke: none;
+}
+
+.architecture .core-module > span {
+    flex: 0 0 26px;
+}
+
+.capabilities .cap-icon svg {
+    width: 30px;
+    height: 30px;
+}
+
+.bess-tags span > svg {
+    flex: 0 0 22px;
+    width: 22px;
+    height: 22px;
+}
+
+.architecture .architecture-lines {
+    overflow: visible;
+}
+
+/* =========================================================
+   PLATFORM — "Aser Pantheon in action" screen viewer
+========================================================= */
+.pia-section {
+    position: relative;
+    border-top: 1px solid var(--ds-divider);
+    background:
+        radial-gradient(60% 50% at 60% 55%, rgba(46, 232, 246, .07), transparent 70%),
+        var(--ds-bg);
+    overflow: hidden;
+}
+
+.pia-inner {
+    width: var(--ds-container);
+    margin: 0 auto;
+}
+
+.pia-section .section-heading h2 span {
+    color: var(--ds-cyan);
+}
+
+.pia-viewer {
+    margin-top: clamp(32px, 4vw, 52px);
+    display: grid;
+    grid-template-columns: minmax(220px, 268px) 1fr;
+    gap: clamp(20px, 3vw, 40px);
+    align-items: start;
+}
+
+.pia-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.pia-tab {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--ds-text-2, #a9bacb);
+    font: 500 14px/1.3 var(--ds-sans, Inter, sans-serif);
+    text-align: left;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color .25s ease, background .25s ease, border-color .25s ease;
+}
+
+.pia-tab:hover {
+    color: #fff;
+    background: rgba(46, 232, 246, .04);
+}
+
+.pia-tab.is-active {
+    color: #fff;
+    border-color: rgba(46, 232, 246, .35);
+    background: linear-gradient(90deg, rgba(46, 232, 246, .10), rgba(46, 232, 246, .02));
+}
+
+.pia-num {
+    flex: 0 0 auto;
+    color: rgba(46, 232, 246, .55);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-variant-numeric: tabular-nums;
+}
+
+.pia-tab.is-active .pia-num {
+    color: var(--ds-cyan);
+}
+
+.pia-progress {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: var(--ds-cyan);
+    opacity: 0;
+}
+
+.pia-tab.is-active .pia-progress {
+    opacity: 1;
+    animation: piaProgress var(--pia-interval, 6000ms) linear forwards;
+}
+
+.pia-viewer.is-paused .pia-tab.is-active .pia-progress {
+    animation-play-state: paused;
+}
+
+@keyframes piaProgress {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.pia-stage {
+    min-width: 0;
+}
+
+.pia-slide {
+    margin: 0;
+    animation: piaIn .55s var(--ds-ease, ease) both;
+}
+
+.pia-slide[hidden] {
+    display: none;
+}
+
+@keyframes piaIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: none; }
+}
+
+.pia-caption {
+    min-height: 52px;
+    margin: 0 0 18px;
+    padding-left: 16px;
+    border-left: 2px solid var(--ds-cyan);
+    color: var(--ds-text, #eaf2f7);
+    font-size: clamp(16px, 1.35vw, 19px);
+    line-height: 1.45;
+    display: flex;
+    align-items: center;
+}
+
+.pia-screen {
+    border: 1px solid rgba(46, 232, 246, .28);
+    border-radius: 14px;
+    overflow: hidden;
+    background: #0a1a28;
+    box-shadow:
+        0 40px 80px -40px rgba(0, 0, 0, .9),
+        0 0 60px -20px rgba(46, 232, 246, .25);
+}
+
+.pia-chrome {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    height: 34px;
+    padding: 0 14px;
+    border-bottom: 1px solid rgba(46, 232, 246, .14);
+    background: rgba(4, 20, 33, .95);
+}
+
+.pia-chrome i {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .16);
+}
+
+.pia-chrome span {
+    margin-left: 12px;
+    color: #6f8597;
+    font-size: 11px;
+    letter-spacing: .4px;
+}
+
+.pia-image {
+    aspect-ratio: 16 / 9.4;
+    display: grid;
+    place-items: center;
+    background: #eef2f7;
+}
+
+.pia-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center top;
+}
+
+.pia-controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.pia-count {
+    color: #8799a9;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-variant-numeric: tabular-nums;
+}
+
+.pia-count b {
+    color: #fff;
+    font-weight: 600;
+}
+
+.pia-arrow {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(46, 232, 246, .4);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--ds-cyan);
+    cursor: pointer;
+    transition: background .25s ease, color .25s ease;
+}
+
+.pia-arrow:hover,
+.pia-arrow:focus-visible {
+    background: var(--ds-cyan);
+    color: #021320;
+}
+
+.pia-arrow svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.pia-tab:focus-visible,
+.pia-arrow:focus-visible {
+    outline: 2px solid var(--ds-cyan);
+    outline-offset: 2px;
+}
+
+@media (max-width: 900px) {
+    .pia-viewer {
+        grid-template-columns: 1fr;
+    }
+
+    .pia-tabs {
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 8px;
+        padding-bottom: 6px;
+        scrollbar-width: none;
+    }
+
+    .pia-tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+    .pia-tab {
+        flex: 0 0 auto;
+        width: auto;
+        border-color: rgba(46, 232, 246, .18);
+        white-space: nowrap;
+    }
+
+    .pia-caption {
+        min-height: 0;
+    }
+}
+
+@media (max-width: 560px) {
+    .pia-chrome span {
+        display: none;
+    }
+
+    .pia-controls {
+        justify-content: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pia-slide { animation: none; }
+    .pia-tab.is-active .pia-progress { animation: none; width: 100%; }
+}
+
+/* 3. Home "How ASER AI delivers": output ports sit on the bottom edge,
+   exactly where the four outgoing connector lines leave the core. */
+.aser3-core .aser3-port.b1,
+.aser3-core .aser3-port.b2,
+.aser3-core .aser3-port.b3,
+.aser3-core .aser3-port.b4 {
+    top: auto;
+    right: auto;
+    bottom: -4px;
+    transform: translateX(-50%);
+}
+
+.aser3-core .aser3-port.b1 { left: 20%; }
+.aser3-core .aser3-port.b2 { left: 40%; }
+.aser3-core .aser3-port.b3 { left: 60%; }
+.aser3-core .aser3-port.b4 { left: 80%; }
+
+/* 13. BESS hero: lines flow from the BESS unit out to the dashboards */
+.solution-hero-visual .data-connections {
+    overflow: visible;
+}
+
+.solution-hero-visual .connection-lines path {
+    opacity: .7;
+    stroke-dasharray: 7 7;
+    animation: bessFlowOut 2.6s linear infinite;
+}
+
+.solution-hero-visual .connection-lines path:nth-child(2) { animation-delay: -.8s; }
+.solution-hero-visual .connection-lines path:nth-child(3) { animation-delay: -1.6s; }
+
+@keyframes bessFlowOut {
+    from { stroke-dashoffset: 0; }
+    to { stroke-dashoffset: -28; }
+}
+
+.solution-hero-visual .connection-particles circle {
+    animation: none;
+}
+
+.solution-hero-visual .connection-particles .node-source {
+    animation: bessSourcePulse 2.2s ease-in-out infinite;
+}
+
+@keyframes bessSourcePulse {
+    0%, 100% { opacity: .65; }
+    50% { opacity: 1; }
+}
+
+/* Battery health panel sits on its connection point */
+@media (min-width: 1001px) {
+    .solution-hero .battery-panel {
+        top: 17%;
+        left: 22%;
+    }
+}
+
+/* Mini charts draw forward, fade out, then restart from the start */
+.solution-hero-visual .chart-line {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    animation: chartForward 5s ease-in-out infinite;
+}
+
+.solution-hero-visual .hero-data-panel:nth-of-type(2) .chart-line { animation-delay: .6s; }
+.solution-hero-visual .hero-data-panel:nth-of-type(3) .chart-line { animation-delay: 1.2s; }
+
+@keyframes chartForward {
+    0% { stroke-dashoffset: 400; opacity: 1; }
+    65% { stroke-dashoffset: 0; opacity: 1; }
+    85% { stroke-dashoffset: 0; opacity: 0; }
+    100% { stroke-dashoffset: 0; opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .solution-hero-visual .chart-line { animation: none; stroke-dashoffset: 0; }
+    .solution-hero-visual .connection-lines path { animation: none; }
+}
+
+/* =========================================================
+   14. Insurance hero — redrawn BESS container + link lines
+========================================================= */
+.insurance-hero-art .bess-container-art {
+    perspective: none;
+    filter: drop-shadow(0 0 18px rgba(0, 184, 230, .28));
+}
+
+.bess-container-art .bess-svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.bess-svg .bess-plinth { fill: rgba(10, 44, 62, .85); stroke: rgba(95, 211, 244, .35); stroke-width: 1; }
+.bess-svg .bess-roof { fill: url(#bessRoof); stroke: rgba(140, 230, 250, .8); stroke-width: 1.2; stroke-linejoin: round; }
+.bess-svg .bess-edge { fill: none; stroke: rgba(170, 240, 255, .9); stroke-width: 1.3; }
+.bess-svg .bess-face-front { fill: url(#bessFront); stroke: rgba(95, 211, 244, .8); stroke-width: 1.2; }
+.bess-svg .bess-face-side { fill: url(#bessSide); stroke: rgba(95, 211, 244, .7); stroke-width: 1.2; }
+.bess-svg .bess-band { fill: rgba(0, 0, 0, .18); stroke: rgba(95, 211, 244, .35); stroke-width: .8; }
+.bess-svg .bess-label { fill: #bfefff; font: 600 8.5px/1 Inter, sans-serif; letter-spacing: 1.6px; }
+.bess-svg .bess-hazard { fill: #ffb547; }
+.bess-svg .bess-hazard-mark { stroke: #3a2600; stroke-width: 1.6; stroke-linecap: round; }
+.bess-svg .bess-door { fill: rgba(4, 26, 41, .55); stroke: rgba(95, 211, 244, .55); stroke-width: .9; }
+.bess-svg .bess-louvre { stroke: rgba(130, 220, 245, .45); stroke-width: 1.4; stroke-linecap: round; }
+.bess-svg .bess-panel-line { stroke: rgba(95, 211, 244, .22); stroke-width: .8; }
+.bess-svg .bess-handle { fill: rgba(170, 240, 255, .55); }
+.bess-svg .bess-skid { fill: rgba(2, 14, 24, .9); stroke: rgba(95, 211, 244, .4); stroke-width: .8; }
+.bess-svg .bess-hvac { fill: rgba(3, 20, 33, .7); stroke: rgba(95, 211, 244, .65); stroke-width: 1; }
+.bess-svg .bess-fan { fill: rgba(0, 0, 0, .25); stroke: rgba(130, 220, 245, .6); stroke-width: 1; }
+.bess-svg .bess-fan-hub { fill: rgba(130, 220, 245, .8); }
+.bess-svg .bess-fan-blades { stroke: rgba(130, 220, 245, .45); stroke-width: 1.2; animation: bessFan 3s linear infinite; }
+.bess-svg .bess-anchor { fill: none; }
+.bess-svg .bess-roof-node { fill: #2ee8f6; filter: drop-shadow(0 0 5px #2ee8f6); }
+
+.bess-svg .bess-led { fill: #39f29a; filter: drop-shadow(0 0 4px #39f29a); animation: bessLed 2.8s ease-in-out infinite; }
+.bess-svg .bess-led.warn { fill: #ffb547; filter: drop-shadow(0 0 4px #ffb547); }
+
+@keyframes bessLed { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+@keyframes bessFan { to { transform: rotate(360deg); } }
+
+/* link lines overlay covers the whole art box */
+.insurance-hero-art .hero-links {
+    inset: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+}
+
+.hero-links .hero-link-static path {
+    fill: none;
+    stroke: rgba(46, 232, 246, .55);
+    stroke-width: 1.4;
+}
+
+.hero-links .hero-link-risk {
+    fill: none;
+    stroke: #2ee8f6;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-dasharray: 1 7;
+    filter: drop-shadow(0 0 4px rgba(46, 232, 246, .8));
+    animation: riskDots 1.4s linear infinite;
+}
+
+@keyframes riskDots { to { stroke-dashoffset: -16; } }
+
+.hero-links .hero-link-nodes circle { fill: #2ee8f6; }
+
+@media (prefers-reduced-motion: reduce) {
+    .bess-svg .bess-fan-blades,
+    .bess-svg .bess-led,
+    .hero-links .hero-link-risk { animation: none; }
+}
+
+@media (min-width: 1001px) {
+    .insurance-hero-art .bess-container-art {
+        right: 2%;
+        bottom: 40px;
+        width: 66%;
+        height: 260px;
+    }
+
+    .insurance-hero-art .risk-profile-card {
+        top: 4%;
+    }
+}
+
+/* 15, 17, 19. One closing-line style on every solution / company CTA:
+   sits under the button, cyan vertical rule, white text (as on The ASER AI Way). */
+.aser-closing-line {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    margin: 34px 0 0 !important;
+    padding: 2px 0 2px 16px;
+    border-left: 2px solid var(--ds-cyan);
+    color: var(--ds-text, #eaf2f7);
+    font-family: var(--ds-heading);
+    font-size: clamp(16px, 1.3vw, 19px);
+    font-weight: 600;
+    line-height: 1.45;
+    text-align: left;
+}
+
+.cta-content .aser-closing-line,
+.research-cta-content .aser-closing-line {
+    position: relative;
+    z-index: 2;
+}
+
+/* 25, 27. Leadership page headings: two clean lines on desktop */
+@media (min-width: 1101px) {
+    body .team-intro .team-container {
+        grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    }
+
+    body .team-intro .team-hero-content {
+        max-width: 780px;
+    }
+
+    body .team-intro .team-hero-content h1 {
+        font-size: clamp(34px, 3vw, 46px);
+        line-height: 1.12;
+    }
+
+    .aser-team-page .team-cta-copy h2,
+    .team-cta .team-cta-copy h2 {
+        font-size: clamp(34px, 3.2vw, 48px);
+        line-height: 1.15;
+    }
+}
+
+/* 28. News & Media closing band: eyebrow + two-line heading + intro */
+.ds-cta-band-rich .ds-cta-band-inner {
+    gap: 0;
+}
+
+.ds-cta-band-rich .pg-eyebrow {
+    margin-bottom: 18px;
+}
+
+.ds-cta-band-rich h2 {
+    margin: 0;
+    line-height: 1.15;
+}
+
+.ds-cta-band-rich h2 span {
+    color: var(--ds-cyan);
+}
+
+.ds-cta-band-rich p {
+    max-width: 620px;
+    margin: 20px auto 32px;
+    color: var(--ds-text-2, #a9bacb);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* BESS hero on phones: dashboards sit below the button instead of over it */
+@media (max-width: 600px) {
+    .solution-hero {
+        padding-bottom: 300px !important;
+    }
+
+    .solution-hero .solution-hero-visual {
+        top: auto;
+        bottom: 16px;
+        height: 290px;
+        width: 100%;
+        right: 0;
+    }
+}

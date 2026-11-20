@@ -6670,7 +6670,7 @@ h6,
 
     .insurance-hero-grid {
         min-height: auto;
-        padding-top: 130px;
+        /* padding-top: 130px; */
         padding-bottom: 30px;
         grid-template-columns: 1fr;
         gap: 0;
